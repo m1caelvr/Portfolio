@@ -22,7 +22,8 @@
   aspect-ratio: 1;
 }
 
-html, html * {
+html,
+html * {
   scroll-behavior: smooth;
 }
 
@@ -59,8 +60,9 @@ nav ul {
 nav ul a {
   width: 1.5rem;
   aspect-ratio: 1;
+  color: var(--primary-text-color);
 }
-nav ul a img.chevron-icon-focus {
+nav ul a .chevron-icon-focus {
   transform: rotate(-90deg);
 }
 nav ul a:nth-child(1) {
@@ -95,7 +97,7 @@ main {
 
 header {
   --blur-value: 15px;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 0;
   left: 50%;
@@ -110,7 +112,8 @@ header {
   backdrop-filter: blur(var(--blur-value));
   background: rgba(204, 204, 204, 0.02);
 }
-header strong, header ul li {
+header strong,
+header ul li {
   font-size: 1.3rem;
   font-weight: 800;
 }
