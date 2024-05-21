@@ -130,7 +130,7 @@ header ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 1.4rem;
   border-radius: 0.7rem;
   transition: 0.3s ease;
 }
@@ -181,7 +181,7 @@ section {
   animation: slide-in 1s ease forwards;
   transition-delay: 0.2s;
   font-size: 4rem;
-  font-weight: 1000;
+  font-weight: 2000;
 }
 .section-lading aside {
   display: flex;
@@ -191,6 +191,8 @@ section {
   overflow: hidden;
 }
 .section-lading aside img {
+  animation: slide-in-toTop 1.5s ease forwards;
+  transition-delay: 1s;
   max-height: 100%;
   object-fit: contain;
   aspect-ratio: 9/14;
@@ -205,6 +207,11 @@ section {
   right: -2rem;
   max-height: 2rem;
   width: max-content;
+}
+.section-lading .footer-lading a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section-lading .footer-lading::before {
   content: "";
@@ -237,7 +244,20 @@ section {
     opacity: 0;
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-toTop {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
     opacity: 1;
   }
 }

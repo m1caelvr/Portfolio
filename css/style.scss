@@ -129,7 +129,7 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: .8rem 1.6rem;
+      padding: .8rem 1.4rem;
       border-radius: .7rem;
       transition: .3s ease;
       &:hover {
@@ -185,7 +185,7 @@ section {
       animation: slide-in 1s ease forwards;
       transition-delay: .2s;
       font-size: 4rem;
-      font-weight: 1000;
+      font-weight: 2000;
     }
   }
 
@@ -197,6 +197,8 @@ section {
     overflow: hidden;
   
     img {
+      animation: slide-in-toTop 1.5s ease forwards;
+      transition-delay: 1s;
       max-height: 100%;
       object-fit: contain;
       aspect-ratio: 9/14;
@@ -215,6 +217,12 @@ section {
     right: -2rem;
     max-height: 2rem;
     width: max-content;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     &::before {
       content: "";
@@ -251,7 +259,18 @@ section {
     opacity: 0;
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-toTop {
+  0% {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  70% {opacity: 0;}
+  100% {
+    transform: translate(0);
     opacity: 1;
   }
 }
