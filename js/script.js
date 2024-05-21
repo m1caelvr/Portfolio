@@ -1,3 +1,5 @@
+toggleFill("homeIcon", "fill");
+
 const main = document.getElementById("main");
 const sections = document.querySelectorAll(".section");
 
@@ -25,6 +27,7 @@ function observeFunction(i) {
   if (i === "section-landing") {
     toggleFill("homeIcon", "fill");
     alterarFillIcon("notFill");
+    headerAdjust("show");
     if (chevronIcon.classList.contains("chevron-icon-focus")) {
       chevronIcon.classList.remove("chevron-icon-focus");
     }
@@ -32,6 +35,7 @@ function observeFunction(i) {
     chevronIcon.classList.add("chevron-icon-focus");
     toggleFill("homeIcon", "notFill");
     alterarFillIcon("fill");
+    headerAdjust("noShow");
   }
 }
 const actived = document.querySelectorAll(".active");
@@ -67,4 +71,17 @@ function toggleFill(svgId, mode) {
     }
   });
 }
-toggleFill("homeIcon", "fill");
+
+function headerAdjust(i) {
+  const header = document.getElementById("header");
+
+  if (i === "noShow") {
+    if (!header.classList.contains("header-no-show")) {
+      header.classList.add("header-no-show");
+    }
+  } else {
+    if (header.classList.contains("header-no-show")) {
+      header.classList.remove("header-no-show");
+    }
+  }
+}
