@@ -9,32 +9,53 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Micael-Rodrigues</title>
 </head>
-<body>
+<body id="body">
     <nav>
         <ul>
-            <a href=""><ion-icon name="home"></ion-icon></a>
-            <a href=""><input type="radio" name="" id=""></a>
+            <a href="">
+                <img id="home-icon" class="color-icon-primary" src="./svg/home.svg" alt="">
+            </a>
+            <a href="#section-main">
+                <img id="chevron-icon" class="color-icon-primary" src="svg/chevron-down-circle-outline.svg" alt="" srcset="">
+            </a>
         </ul>
     </nav>
+
     <main id="main">
-        <section class="section-lading">
+        <header>
+            <strong>MICAEL<span>RODRIGUES</span></strong>
+            <ul>
+                <li>Sobre <img class="color-icon-primary" src="./svg/chevron-down.svg" alt=""></li>
+                <li>Contacts <img class="color-icon-primary" src="./svg/chevron-down.svg" alt=""></li>
+                <li>Projects</li>
+                <button>Acesse meu CV</button>
+            </ul>
+        </header>
+        
+        <section id="section-landing" class="section-lading section">
             <div class="initial-text">
-                <h4>Sejam bem vindos ao meu portifólio, eu sou <b>Micael Rodrigues</b>.</h4>
+                <h4>Sejam bem vindos ao meu portifólio, eu sou <strong>Micael Rodrigues</strong>.</h4>
                 <strong>
                     <h1>Desenvolvedor WEB</h1>
                 </strong>
             </div>
             <aside>
-                <img src="https://i.pinimg.com/564x/67/f8/89/67f8895c407c6b1c1c5344a32b997371.jpg" alt="retrato de um homem">
+                <img src="https://i.pinimg.com/564x/67/f8/89/67f8895c407c6b1c1c5344a32b997371.jpg" alt="retrato de um homem" draggable="false">
             </aside>
             <div class="footer-lading">
-                <a href="#section-main">LinkedIn</a>
-                <a href="">GITHUB</a>
-                <a href="">Instagram</a>
+                <a class="anchor-social-medias" href="http://linkedin.com/in/micael-silva-67077621b" target="_blank" rel="noopener noreferrer">
+                    <img class="color-icon-primary" src="./svg/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a class="anchor-social-medias" href="https://github.com/m1caelvr" target="_blank" rel="noopener noreferrer">
+                    <img class="color-icon-primary" src="./svg/github.svg" alt="GITHUB">
+                </a>
+                <a class="anchor-social-medias" href="http://instagram.com/m1vr.rz" target="_blank" rel="noopener noreferrer">
+                    <img class="color-icon-primary" src="./svg/instagram.svg" alt="Instagram">
+                </a>
             </div>
         </section>
 
-        <section id="section-main" class="section-main">
+        <section id="section-main" class="section-main section">
             <h2>Projetos</h2>
             <article>
                 <h3>Projeto 1: Site Pessoal</h3>
