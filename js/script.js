@@ -1,30 +1,28 @@
-// const main = document.getElementById("main");
-// const sections = document.querySelectorAll(".section");
+function observarPosicaoSectionLanding() {
+  const sectionLanding = document.getElementById('section-landing');
 
-// main.addEventListener("scroll", checkSectionInView);
-// window.addEventListener("load", checkSectionInView);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log('A seção está dentro da janela.');
+        // Adicione suas ações aqui quando a seção estiver visível
+      } else {
+        console.log('A seção está fora da janela.');
+        // Adicione suas ações aqui quando a seção estiver fora de vista
+      }
+    });
+  }, { threshold: 0 });
 
-// function checkSectionInView() {
-//   const scrollPosition = main.scrollTop;
-//   console.log(scrollPosition);
+  observer.observe(sectionLanding);
+}
 
-//   sections.forEach((section) => {
-//     const sectionTop = section.offsetTop;
-//     const sectionBottom = sectionTop + section.offsetHeight;
+observarPosicaoSectionLanding();
 
-//     if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-//       section.classList.add("active");
-//       observeFunction(section.id);
-//     } else {
-//       section.classList.remove("active");
-//     }
-//   });
-// }
 
 function detectarSeccaoEmFoco() {
   const secoes = document.querySelectorAll('main > section');
 
-  document.querySelector('main').addEventListener('scroll', function() {
+  function verificarSeccaoEmFoco() {
     let seccaoEmFoco = null;
 
     secoes.forEach(secao => {
@@ -38,14 +36,22 @@ function detectarSeccaoEmFoco() {
     });
 
     if (seccaoEmFoco) {
-      const sectionInFocus = seccaoEmFoco.id; // Assume que a seção só tem uma classe
-      observeFunction(sectionInFocus)
+      const sectionInFocus = seccaoEmFoco.id;
+      observeFunction(sectionInFocus);
       console.log('Seção em foco:', sectionInFocus);
     }
-  });
+  }
+
+  // Usando 'DOMContentLoaded' em vez de 'load'
+  document.addEventListener('DOMContentLoaded', verificarSeccaoEmFoco);
+
+  // Mantendo o evento de 'scroll' apenas para ambientes que suportam rolagem
+  if ('scrollY' in window) {
+    window.addEventListener('scroll', verificarSeccaoEmFoco);
+  }
 }
 
-document.addEventListener('DOMContentLoaded', detectarSeccaoEmFoco);
+detectarSeccaoEmFoco(); // Chama a função uma vez para garantir que seja executada mesmo se os eventos não funcionarem conforme o esperado
 
 function observeFunction(i) {
   const chevronIcon = document.getElementById("chevronIcon");
