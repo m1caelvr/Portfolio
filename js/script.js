@@ -1,26 +1,51 @@
-toggleFill("homeIcon", "fill");
+// const main = document.getElementById("main");
+// const sections = document.querySelectorAll(".section");
 
-const main = document.getElementById("main");
-const sections = document.querySelectorAll(".section");
+// main.addEventListener("scroll", checkSectionInView);
+// window.addEventListener("load", checkSectionInView);
 
-main.addEventListener("scroll", checkSectionInView);
-window.addEventListener("load", checkSectionInView);
+// function checkSectionInView() {
+//   const scrollPosition = main.scrollTop;
+//   console.log(scrollPosition);
 
-function checkSectionInView() {
-  const scrollPosition = main.scrollTop;
+//   sections.forEach((section) => {
+//     const sectionTop = section.offsetTop;
+//     const sectionBottom = sectionTop + section.offsetHeight;
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionBottom = sectionTop + section.offsetHeight;
+//     if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+//       section.classList.add("active");
+//       observeFunction(section.id);
+//     } else {
+//       section.classList.remove("active");
+//     }
+//   });
+// }
 
-    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-      section.classList.add("active");
-      observeFunction(section.id);
-    } else {
-      section.classList.remove("active");
+function detectarSeccaoEmFoco() {
+  const secoes = document.querySelectorAll('main > section');
+
+  document.querySelector('main').addEventListener('scroll', function() {
+    let seccaoEmFoco = null;
+
+    secoes.forEach(secao => {
+      const retangulo = secao.getBoundingClientRect();
+      if (
+        retangulo.top >= 0 &&
+        retangulo.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      ) {
+        seccaoEmFoco = secao;
+      }
+    });
+
+    if (seccaoEmFoco) {
+      const sectionInFocus = seccaoEmFoco.id; // Assume que a seção só tem uma classe
+      observeFunction(sectionInFocus)
+      console.log('Seção em foco:', sectionInFocus);
     }
   });
 }
+
+document.addEventListener('DOMContentLoaded', detectarSeccaoEmFoco);
 
 function observeFunction(i) {
   const chevronIcon = document.getElementById("chevronIcon");

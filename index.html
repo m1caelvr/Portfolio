@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Micael-Rodrigues</title>
 </head>
 <body id="body">
-    <header id="header">
+    <header id="header" class="window">
         <strong>MICAEL<span>RODRIGUES</span></strong>
         <ul>
             <li>Sobre <img class="color-icon-primary" src="./svg/chevron-down.svg" alt=""></li>
@@ -20,12 +21,12 @@
         </ul>
     </header>
 
-    <nav>
+    <nav class="window">
         <ul>
             <a href="">
                 <svg id="homeIcon" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
-                    <path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-                    <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                    <path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                    <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
                 </svg>
             </a>
             <a href="#section-main">
@@ -38,11 +39,11 @@
     </nav>
 
     <main id="main">        
-        <section id="section-landing" class="section-lading section">
+        <section id="section-landing" class="section section-landing headline">
             <div class="initial-text">
-                <h4>Sejam bem vindos ao meu portifólio, eu sou <strong>Micael Rodrigues</strong>.</h4>
+                <h4 class="headline">Sejam bem vindos ao meu portifólio, eu sou <strong>Micael Rodrigues</strong>.</h4>
                 <strong>
-                    <h1>Desenvolvedor WEB</h1>
+                    <h1 class="">Desenvolvedor WEB</h1>
                 </strong>
             </div>
             <aside>
@@ -61,16 +62,55 @@
             </div>
         </section>
 
-        <section id="section-main" class="section-main section">
-            <h2>Projetos</h2>
-            <article>
-                <h3>Projeto 1: Site Pessoal</h3>
-                <p>Desenvolvi um site pessoal para mostrar meus projetos e habilidades.</p>
-            </article>
-            <article>
-                <h3>Projeto 2: Blog</h3>
-                <p>Criei um blog onde compartilho dicas e tutoriais sobre desenvolvimento web.</p>
-            </article>
+        <section id="section-main" class="section section-main">
+            <section class="about">
+                <h3>Quem eu sou?</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Quos quae accusantium pariatur consectetur magni modi animi 
+                    officiis cupiditate eos esse! Accusantium repudiandae 
+                    repellendus porro dolorum dolore optio voluptas minus ratione.
+                </p>
+            </section>
+            <section class="skills">
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>TAILWIND</li>
+                    <li>MySQL</li>
+                    <li>PostergreSQL</li>
+                    <li>PHP</li>
+                    <li>JAVA</li>
+                    <li>React JS</li>
+                    <li>SCRUM</li>
+                    <!-- Adicione mais habilidades conforme necessário -->
+                </ul>
+            </section class="projects">
+            <section>
+                <h3>Projetos</h3>
+                <article>
+                    <h4>Portfólio pessoal</h4>
+                    <p>Desenvolvi um site pessoal para mostrar meus projetos e habilidades.</p>
+                </article>
+                <article>
+                    <h4>CalendSchool</h4>
+                    <p>Criei um blog onde compartilho dicas e tutoriais sobre desenvolvimento web.</p>
+                </article>
+                <!-- Adicione mais projetos conforme necessário -->
+            </section>
+            <section class="contact">
+                <h3>Contate-me através dos seguintes canais:</h3>
+                <ul>
+                    <li><a href="">LinkedIn</a></li>
+                    <li><a href="">GitHub</a></li>
+                    <li><a href="">Gmail</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">WhatsApp</a></li>
+                </ul>
+            </section>
+
             <footer>
                 <p>© 2024 [Seu Nome]</p>
             </footer>
@@ -80,5 +120,6 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/scrollreveal.js"></script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: var(--primary-family-font);
+}
+
+/* tailwind */
+.color-icon-primary {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+    aspect-ratio: 1;
+}
+/* tailwind */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, html * {
+    scroll-behavior: smooth;
+}
+
+html.sr .headline,
+html.sr .window
+{visibility: hidden;}
