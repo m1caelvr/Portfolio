@@ -1,57 +1,74 @@
-function observarPosicaoSectionLanding() {
-  const sectionLanding = document.getElementById('section-landing');
+// function observarPosicaoSectionLanding() {
+//   const sectionLanding = document.getElementById('section-landing');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        console.log('A seção está dentro da janela.');
-        // Adicione suas ações aqui quando a seção estiver visível
-      } else {
-        console.log('A seção está fora da janela.');
-        // Adicione suas ações aqui quando a seção estiver fora de vista
-      }
-    });
-  }, { threshold: 0 });
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         console.log('A seção está dentro da janela.');
+//         // Adicione suas ações aqui quando a seção estiver visível
+//       } else {
+//         console.log('A seção está fora da janela.');
+//         // Adicione suas ações aqui quando a seção estiver fora de vista
+//       }
+//     });
+//   }, { threshold: 0 });
 
-  observer.observe(sectionLanding);
-}
+//   observer.observe(sectionLanding);
+// }
+// observarPosicaoSectionLanding();
 
-observarPosicaoSectionLanding();
+// function detectarSeccaoEmFoco() {
+//   const secoes = document.querySelectorAll('main > section');
+//   const mainElement = document.getElementById('main');
+//   console.log("Foi");
 
+//   function verificarSeccaoEmFoco() {
+//     let seccaoEmFoco = null;
 
-function detectarSeccaoEmFoco() {
-  const secoes = document.querySelectorAll('main > section');
+//     secoes.forEach(secao => {
+//       const retangulo = secao.getBoundingClientRect();
+//       if (
+//         retangulo.top >= 0 &&
+//         retangulo.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+//       ) {
+//         seccaoEmFoco = secao;
+//       }
+//     });
 
-  function verificarSeccaoEmFoco() {
-    let seccaoEmFoco = null;
+//     if (seccaoEmFoco) {
+//       const sectionInFocus = seccaoEmFoco.id;
+//       observeFunction(sectionInFocus);
+//       console.log('Seção em foco:', sectionInFocus);
+//     }
+//   }
 
-    secoes.forEach(secao => {
-      const retangulo = secao.getBoundingClientRect();
-      if (
-        retangulo.top >= 0 &&
-        retangulo.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-      ) {
-        seccaoEmFoco = secao;
-      }
-    });
+//   verificarSeccaoEmFoco();
+// }
 
-    if (seccaoEmFoco) {
-      const sectionInFocus = seccaoEmFoco.id;
-      observeFunction(sectionInFocus);
-      console.log('Seção em foco:', sectionInFocus);
+const sections = document.querySelectorAll('main > section');
+function checkSectionInView() {
+  console.log("ooo");
+  const main = document.getElementById('main');
+  const scrollPosition = main.scrollTop;
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionBottom = sectionTop + section.offsetHeight;
+
+    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+      section.classList.add("active");
+      observeFunction(section.id);
+    } else {
+      section.classList.remove("active");
     }
-  }
-
-  // Usando 'DOMContentLoaded' em vez de 'load'
-  document.addEventListener('DOMContentLoaded', verificarSeccaoEmFoco);
-
-  // Mantendo o evento de 'scroll' apenas para ambientes que suportam rolagem
-  if ('scrollY' in window) {
-    window.addEventListener('scroll', verificarSeccaoEmFoco);
-  }
+  });
 }
 
-detectarSeccaoEmFoco(); // Chama a função uma vez para garantir que seja executada mesmo se os eventos não funcionarem conforme o esperado
+const main = document.getElementById('main');
+main.addEventListener('scroll', function () {
+  checkSectionInView();
+});
+checkSectionInView();
 
 function observeFunction(i) {
   const chevronIcon = document.getElementById("chevronIcon");

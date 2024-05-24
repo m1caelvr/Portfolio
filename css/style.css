@@ -6,14 +6,15 @@
   --primary-text-color: #fafafa;
   --prymary-hover-color: rgba(250, 250, 250, 10%);
   --prymary-hover-color2: rgba(250, 250, 250, 20%);
+  --secundary-text-color: rgb(136 136 136);
   --background-color: hsl(240 10% 3.9%);
-  --background-color: red;
+  --background-color: #000;
 }
 
 body {
   min-width: 100vw;
   min-height: 100vh;
-  background: #000;
+  background: var(--background-color);
   color: var(--primary-text-color);
   font-size: 16px;
 }
@@ -80,11 +81,21 @@ body > header {
   border-bottom: 0.05rem solid var(--prymary-hover-color2);
   -webkit-backdrop-filter: blur(var(--blur-value));
   backdrop-filter: blur(var(--blur-value));
-  background: rgba(204, 204, 204, 0.02);
+  background: #000;
   transition: 0.3s ease;
 }
 body > header.header-no-show {
   transform: translate(-50%, -100%);
+}
+body > header strong {
+  display: flex;
+  align-items: center;
+}
+body > header strong img {
+  height: 5rem;
+  margin-right: 0.5rem;
+  object-fit: contain;
+  aspect-ratio: 1;
 }
 body > header strong,
 body > header ul li {
@@ -121,15 +132,6 @@ body > header ul li img {
   margin-left: 0.3rem;
   width: 1.2rem;
 }
-body > header ul > button {
-  margin-left: 0.5rem;
-  border: none;
-  padding: 0.9rem 1.5rem;
-  border-radius: 3rem;
-  font-weight: 900;
-  background: var(--primary-text-color);
-  white-space: nowrap;
-}
 
 main {
   position: relative;
@@ -152,19 +154,55 @@ main > section {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
 }
 .section-landing .initial-text {
   z-index: 1;
   justify-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
-.section-landing .initial-text h4 {
+.section-landing .initial-text > h1 {
+  font-size: 4.8rem;
+  font-weight: 900;
+}
+.section-landing .initial-text div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.section-landing .initial-text div h2 {
   font-size: 14px;
   font-weight: 400;
+  color: var(--secundary-text-color);
+  line-height: 1;
 }
-.section-landing .initial-text strong > h1 {
-  font-size: 4rem;
-  font-weight: 2000;
+.section-landing .initial-text div a.curriculo_button_acess {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  height: 4rem;
+  width: 100%;
+  border-radius: 1.5rem;
+  font-weight: 500;
+  color: var(--background-color);
+  background: var(--primary-text-color);
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.section-landing .initial-text div a.curriculo_button_acess img {
+  aspect-ratio: 1;
+  height: calc(100% - 1rem);
+  position: relative;
+  top: 0;
 }
 .section-landing aside {
   display: flex;
