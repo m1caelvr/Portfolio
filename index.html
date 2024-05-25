@@ -29,17 +29,34 @@
 
     <nav class="window">
         <ul>
-            <a href="">
+            <a class="home" href="">
                 <svg id="homeIcon" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
                     <path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
                     <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
                 </svg>
             </a>
-            <a href="#section-main">
+            <a class="chevron-icons" href="#section-main">
                 <svg id="chevronIcon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
                     <path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/>
                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M352 216l-96 96-96-96"/>
                 </svg>
+                <ol id="nav-section-main">
+                    <svg class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
+                    </svg>
+                
+                    <svg class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
+                    </svg>
+                
+                    <svg class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
+                    </svg>
+
+                    <svg class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
+                    </svg>
+                </ol>
             </a>
         </ul>
     </nav>
@@ -52,7 +69,10 @@
                     <h2 class="headline">Sejam bem vindos ao meu portifólio, eu sou <strong>Micael Rodrigues</strong>.</h2>
                     <a class="curriculo_button_acess" href="https://drive.google.com/file/d/19GblBhDRyEYBLdeEsdJ9PXKt_lVCd472/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                         Acesse meu CV com um click!
-                        <img src="./svg/arrow-up.svg" alt="">
+                        <div class="arrow-icon">    
+                            <img src="./svg/arrow-up.svg" alt="">
+                            <img src="./svg/arrow-up.svg" alt="">
+                        </div>
                     </a>
                 </div>
             </div>
@@ -73,7 +93,7 @@
         </section>
 
         <section id="section-main" class="section section-main">
-            <section class="about">
+            <section class="about section-secundary">
                 <h3>Quem eu sou?</h3>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -82,7 +102,7 @@
                     repellendus porro dolorum dolore optio voluptas minus ratione.
                 </p>
             </section>
-            <section class="skills">
+            <section class="skills section-secundary">
                 <h3>Habilidades</h3>
                 <ul>
                     <li>HTML5</li>
@@ -95,10 +115,9 @@
                     <li>JAVA</li>
                     <li>React JS</li>
                     <li>SCRUM</li>
-                    <!-- Adicione mais habilidades conforme necessário -->
                 </ul>
-            </section class="projects">
-            <section>
+            </section>
+            <section class="projects section-secundary">
                 <h3>Projetos</h3>
                 <article>
                     <h4>Portfólio pessoal</h4>
@@ -108,9 +127,8 @@
                     <h4>CalendSchool</h4>
                     <p>Criei um blog onde compartilho dicas e tutoriais sobre desenvolvimento web.</p>
                 </article>
-                <!-- Adicione mais projetos conforme necessário -->
             </section>
-            <section class="contact">
+            <section class="contact section-secundary">
                 <h3>Contate-me através dos seguintes canais:</h3>
                 <ul>
                     <li><a href="">LinkedIn</a></li>
@@ -121,9 +139,9 @@
                 </ul>
             </section>
 
-            <footer>
+            <!-- <footer>
                 <p>© 2024 [Seu Nome]</p>
-            </footer>
+            </footer> -->
         </section>
     </main>
 
