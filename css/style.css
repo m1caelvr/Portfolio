@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 :root {
   font-size: 62.5%;
   --viewport-padding: 15vw;
@@ -7,17 +6,18 @@
   --prymary-hover-color: rgba(250, 250, 250, 10%);
   --prymary-hover-color2: rgba(250, 250, 250, 20%);
   --secundary-text-color: rgb(136 136 136);
-  --background-color: hsl(240 10% 3.9%);
+  --background-secundary-color: #09090b;
   --background-color: #000;
   --transition-primary: .3s ease;
 }
 
 body {
-  min-width: 100vw;
-  min-height: 100vh;
   background: var(--background-color);
   color: var(--primary-text-color);
+  min-height: 100vh;
+  min-width: 100vw;
   font-size: 16px;
+  line-height: 1;
 }
 
 nav {
@@ -45,6 +45,10 @@ nav ul a {
   position: relative;
   aspect-ratio: 1;
   color: var(--primary-text-color);
+  cursor: default;
+}
+nav ul a .ionicon {
+  cursor: pointer;
 }
 nav ul a.chevron-icons > .ionicon {
   transform: rotate(-90deg);
@@ -53,31 +57,62 @@ nav ul a.chevron-icons > .ionicon.chevron-icon-focus {
   transform: rotate(0);
 }
 nav ul a.chevron-icons ol {
+  --distance: -9rem;
   transition: var(--transition-primary);
-  position: absolute;
-  top: var(--width);
-  left: 0;
-  display: flex;
+  top: calc(var(--width) + 0.5rem);
+  width: calc(var(--width) * 2.1);
   flex-direction: column;
+  position: absolute;
   align-items: end;
+  left: var(--distance);
+  display: flex;
   gap: 0.8rem;
-  width: calc(var(--width) * 2.3);
 }
 nav ul a.chevron-icons ol * {
   transition: var(--transition-primary);
 }
 nav ul a.chevron-icons ol .ionicon {
+  position: relative;
   color: var(--primary-text-color);
   width: 1.7rem;
   aspect-ratio: 1;
   padding: 0.085rem;
   border-radius: 50%;
-  visibility: hidden;
+  transition: 0.3s ease;
+  left: 0;
+  transition-delay: 0s;
+}
+nav ul a.chevron-icons ol .ionicon:nth-child(2) {
+  transition-delay: 0.1s;
+}
+nav ul a.chevron-icons ol .ionicon:nth-child(3) {
+  transition-delay: 0.15s;
+}
+nav ul a.chevron-icons ol .ionicon:nth-child(4) {
+  transition-delay: 0.2s;
+}
+nav ul a.chevron-icons ol .ionicon:nth-child(5) {
+  transition-delay: 0.25s;
 }
 nav ul a.chevron-icons ol .ionicon.visible {
-  visibility: visible;
+  left: calc(-1 * var(--distance));
+  transition-delay: 0s;
+}
+nav ul a.chevron-icons ol .ionicon.visible:nth-child(2) {
+  transition-delay: 0.1s;
+}
+nav ul a.chevron-icons ol .ionicon.visible:nth-child(3) {
+  transition-delay: 0.15s;
+}
+nav ul a.chevron-icons ol .ionicon.visible:nth-child(4) {
+  transition-delay: 0.2s;
+}
+nav ul a.chevron-icons ol .ionicon.visible:nth-child(5) {
+  transition-delay: 0.25s;
 }
 nav ul a.chevron-icons ol .ionicon.focus {
+  filter: drop-shadow(0 0 0.5rem var(--primary-text-color)) drop-shadow(0 0 1rem var(--primary-text-color));
+  transition: 0.2s ease;
   transform: rotate(90deg);
 }
 nav ul a:nth-child(1) {
@@ -102,21 +137,24 @@ nav ul a:nth-child(2) {
 
 body > header {
   --blur-value: 15px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  padding: 2.5rem var(--viewport-padding);
   border-bottom: 0.05rem solid var(--prymary-hover-color2);
   -webkit-backdrop-filter: blur(var(--blur-value));
   backdrop-filter: blur(var(--blur-value));
-  background: var(--background-color);
+  background: transparent;
+  padding: 2.5rem var(--viewport-padding);
   transition: var(--transition-primary);
+  justify-content: space-between;
+  transform: translate(-50%, 0);
+  align-items: center;
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  z-index: 1;
+  left: 50%;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 body > header.header-no-show {
   transform: translate(-50%, -100%);
@@ -148,7 +186,38 @@ body > header ul * {
 body > header ul > * {
   cursor: pointer;
 }
-body > header ul li {
+body > header ul li.footer-lading {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+}
+body > header ul li.footer-lading a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > header ul li.footer-lading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 1rem), -50%);
+  width: 11rem;
+  height: 0.05rem;
+  background: rgba(204, 204, 204, 0.5921568627);
+}
+body > header ul li.footer-lading .anchor-social-medias {
+  height: 100%;
+  aspect-ratio: 1;
+}
+body > header ul li.footer-lading .anchor-social-medias img {
+  height: 100%;
+  aspect-ratio: 1;
+  cursor: pointer;
+  fill: var(--primary-text-color);
+}
+body > header ul li.about_li_button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,13 +225,13 @@ body > header ul li {
   border-radius: 0.7rem;
   transition: var(--transition-primary);
 }
-body > header ul li:hover {
+body > header ul li.about_li_button:hover {
   background: var(--prymary-hover-color);
 }
-body > header ul li:hover img {
+body > header ul li.about_li_button:hover img {
   transform: rotate(180deg);
 }
-body > header ul li img {
+body > header ul li.about_li_button img {
   margin-left: 0.3rem;
   width: 1.2rem;
 }
@@ -175,7 +244,6 @@ main {
   height: 100vh;
   padding-inline: var(--viewport-padding);
 }
-
 main > section {
   scroll-snap-align: start;
   width: 100%;
@@ -212,6 +280,7 @@ main > section {
   line-height: 1;
 }
 .section-landing .initial-text div a.curriculo_button_acess {
+  --transition-button: .25s ease;
   position: relative;
   display: flex;
   gap: 0.5rem;
@@ -220,7 +289,7 @@ main > section {
   text-align: center;
   border: none;
   height: 4rem;
-  width: 100%;
+  width: 80%;
   border-radius: 1.5rem;
   font-weight: 500;
   color: var(--background-color);
@@ -231,16 +300,20 @@ main > section {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  transition: var(0.3s ease);
+  transition: var(--transition-button);
+  overflow: hidden;
+}
+.section-landing .initial-text div a.curriculo_button_acess:hover {
+  transform: scale(1.05);
 }
 .section-landing .initial-text div a.curriculo_button_acess .arrow-icon {
   position: relative;
+  margin-left: 0.5rem;
   height: 100%;
   aspect-ratio: 1;
 }
 .section-landing .initial-text div a.curriculo_button_acess .arrow-icon > * {
   position: absolute;
-  border: red solid 1px;
   transform: translate(0, -50%);
 }
 .section-landing .initial-text div a.curriculo_button_acess .arrow-icon img:nth-child(1) {
@@ -248,12 +321,14 @@ main > section {
   left: 0;
   aspect-ratio: 1;
   height: calc(100% - 1rem);
+  transition: var(--transition-button);
 }
 .section-landing .initial-text div a.curriculo_button_acess .arrow-icon img:nth-child(2) {
   top: 7rem;
   left: -5rem;
   aspect-ratio: 1;
   height: calc(100% - 1rem);
+  transition: var(--transition-button);
 }
 .section-landing .initial-text div a.curriculo_button_acess:hover .arrow-icon img:nth-child(1) {
   top: -5rem;
@@ -276,39 +351,6 @@ main > section {
   object-fit: contain;
   aspect-ratio: 9/14;
   filter: contrast(110%);
-}
-.section-landing .footer-lading {
-  display: flex;
-  gap: 1rem;
-  justify-content: end;
-  position: absolute;
-  bottom: 2rem;
-  right: -2rem;
-  max-height: 2rem;
-  width: max-content;
-}
-.section-landing .footer-lading a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section-landing .footer-lading::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(calc(-100% - 1rem), -50%);
-  width: 11rem;
-  height: 0.05rem;
-  background: rgba(204, 204, 204, 0.5921568627);
-}
-.section-landing .footer-lading .anchor-social-medias {
-  width: 1.5rem;
-  aspect-ratio: 1;
-}
-.section-landing .footer-lading .anchor-social-medias img {
-  cursor: pointer;
-  fill: var(--primary-text-color);
 }
 
 .section-main {

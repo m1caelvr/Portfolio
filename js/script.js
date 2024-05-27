@@ -3,19 +3,11 @@ const sections_in_sections_main = document.querySelectorAll('section#section-mai
 const nav_section_main_svgs = document.querySelectorAll('#nav-section-main > svg');
 const main = document.getElementById('main');
 
-main.addEventListener('scroll', function () {
-  checkSectionInView();
-});
-sectionMain.addEventListener('scroll', function () {
-  checkSecundarySection();
-});
-
-checkSectionInView();
 function checkSectionInView() {
-  const sections_in_sections_main = document.querySelectorAll('main > section');
+  const sections_in_main = document.querySelectorAll('main > section');
   const scrollPosition = main.scrollTop;
 
-  sections_in_sections_main.forEach((section) => {
+  sections_in_main.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionBottom = sectionTop + section.offsetHeight;
 
@@ -65,12 +57,9 @@ function checkSecundarySection() {
   }
 }
 
-const actived = document.querySelectorAll(".active");
-actived.forEach((active) => {
-  observeFunction(active);
-});
 function observeFunction(sectionId) {
   const chevronIcon = document.getElementById("chevronIcon");
+  // console.log(chevronIcon);
   if (sectionId === "section-landing") {
     alterIcon_home("homeIcon", "fill");
     alterIcon_chevronIcon("notFill");
@@ -152,3 +141,17 @@ function observeFunction(sectionId) {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  main.addEventListener('scroll', function () {
+    checkSectionInView();
+  });
+  sectionMain.addEventListener('scroll', function () {
+    checkSecundarySection();
+  });
+  checkSectionInView();
+
+  const actived = document.querySelectorAll(".active");
+  actived.forEach((active) => {
+    observeFunction(active);
+  });
+});
