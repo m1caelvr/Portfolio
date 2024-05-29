@@ -134,20 +134,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  main.addEventListener('scroll', function () {
-    const scrollTop = sectionMain.scrollTop;
-    const scrollHeight = sectionMain.scrollHeight;
-    const clientHeight = sectionMain.clientHeight;
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  function sectionContactInView() {    
     const sectionContact = document.getElementById('section-contact');
-
-    if (scrollTop + clientHeight >= scrollHeight) {
-      console.log('Você chegou ao final do elemento #section-main');
+    // console.log(1);
+    if (isElementInViewport(sectionContact)) {
       iconSecundarySectionInFocus(sectionContact);
+      console.log('O elemento #section-contact está dentro da janela visível.');
     }
-  });
+  }
+
+  function handleScrollEvent() {
+    checkSecundarySection();
+    sectionContactInView();
+  }
 
   main.addEventListener('scroll', checkSectionInView);
-  sectionMain.addEventListener('scroll', checkSecundarySection);
+  sectionMain.addEventListener('scroll', handleScrollEvent);
   checkSectionInView();
 
   const actived = document.querySelectorAll(".active");

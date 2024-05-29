@@ -30,7 +30,7 @@ html, html * {
     scroll-behavior: smooth;
 }
 
+/* html.sr .itens-section, */
 html.sr .headline,
-html.sr .itens-section,
 html.sr .window
 {visibility: hidden;}
