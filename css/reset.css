@@ -8,11 +8,17 @@
     line-height: 1;
     font-family: var(--primary-family-font);
 }
+a {text-decoration: none;}
 
 /* tailwind */
 .color-icon-primary {
     filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
     aspect-ratio: 1;
+}
+.user-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 /* tailwind */
 
@@ -25,5 +31,6 @@ html, html * {
 }
 
 html.sr .headline,
+html.sr .itens-section,
 html.sr .window
 {visibility: hidden;}

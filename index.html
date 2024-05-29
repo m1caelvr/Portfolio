@@ -11,31 +11,20 @@
     <title>Micael-Rodrigues</title>
 </head>
 <body id="body">
-    <header id="header" class="window">
-        <strong><img src="img/MR.png" draggable="false" >MICAEL<span>RODRIGUES</span></strong>
+    <header id="header" class="window user-select">
+        <strong><img src="img/MR.png">MICAEL<span>RODRIGUES</span></strong>
         <ul>
-            <!-- <li class="footer-lading">
-                <a class="anchor-social-medias" href="http://linkedin.com/in/micael-silva-67077621b" target="_blank" rel="noopener noreferrer">
-                    <img class="color-icon-primary" src="./svg/linkedin.svg" alt="LinkedIn">
-                </a>
-                <a class="anchor-social-medias" href="https://github.com/m1caelvr" target="_blank" rel="noopener noreferrer">
-                    <img class="color-icon-primary" src="./svg/github.svg" alt="GITHUB">
-                </a>
-                <a class="anchor-social-medias" href="http://instagram.com/m1vr.rz" target="_blank" rel="noopener noreferrer">
-                    <img class="color-icon-primary" src="./svg/instagram.svg" alt="Instagram">
-                </a>
-            </li> -->
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="http://linkedin.com/in/micael-silva-67077621b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/m1caelvr" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="http://" target="_blank" rel="noopener noreferrer">Gmail</a></li>
-            <li><a href="http://" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <!-- <li><a href="http://instagram.com/m1vr.rz" target="_blank" rel="noopener noreferrer">Instagram</a></li> -->
             <li class="about_li_button">
                 <h3>Sobre</h3>
                 <img class="color-icon-primary" src="./svg/chevron-down.svg" alt="">
                 <div class="about_li_button_hover">
                     <ul class="header-menu">
                         <li class="checkbox">
-                            <input type="checkbox" class="theme-checkbox">
+                            <input type="checkbox" class="theme-checkbox" checked>
                             <input type="checkbox" name="" id="">
                         </li>
                         <li>
@@ -58,7 +47,7 @@
         </ul>
     </header>
 
-    <nav class="window">
+    <nav class="window user-select">
         <ul>
             <a class="home" href="">
                 <svg class="ionicon" id="homeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -66,7 +55,7 @@
                     <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
                 </svg>
             </a>
-            <a class="chevron-icons" href="#section-main">
+            <a class="chevron-icons">
                 <svg class="ionicon" id="chevronIcon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/>
                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M352 216l-96 96-96-96"/>
@@ -95,26 +84,37 @@
     <main id="main">
         <section id="section-landing" class="section section-landing window">
             <div class="initial-text">
-                <h1 class="">Desenvolvedor WEB</h1>
+                <strong>
+                    <h1 class="window">< Desenvolvedor WEB /></h1>
+                </strong>
+                <!-- <span class="window">Sejam bem vindos ao meu portifólio! Eu sou Micael Rodrigues.</span> -->
+                <h2 class="window">Sejam bem vindos ao meu portifólio! Eu sou Micael Rodrigues.</h2>
+                <!-- <h2 class="window">Unindo design e código, sigo transformando projetos em experiências visuais únicas.</h2> -->
+                <span class="aside-text window">
+                    <div class="circle_on"></div>
+                    Unindo design e código, sigo transformando projetos em experiências visuais únicas.
+                </span>
+                <a class="curriculo_button_acess" href="https://drive.google.com/file/d/19GblBhDRyEYBLdeEsdJ9PXKt_lVCd472/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    Acesse meu CV com um click!
+                    <div class="arrow-icon">
+                        <img src="./svg/arrow-up.svg" alt="">
+                        <img src="./svg/arrow-up.svg" alt="">
+                    </div>
+                </a>
                 <div>
-                    <h2 class="window">Sejam bem vindos ao meu portifólio, eu sou <strong>Micael Rodrigues</strong>.</h2>
-                    <a class="curriculo_button_acess" href="https://drive.google.com/file/d/19GblBhDRyEYBLdeEsdJ9PXKt_lVCd472/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                        Acesse meu CV com um click!
-                        <div class="arrow-icon">
-                            <img src="./svg/arrow-up.svg" alt="">
-                            <img src="./svg/arrow-up.svg" alt="">
-                        </div>
-                    </a>
                 </div>
             </div>
             <aside>
-                <img class="window" src="./img/me.jpg" alt="retrato de um homem" draggable="false">
+                <img class="window" src="./img/me.jpg" alt="retrato de um homem">
             </aside>
+            <div class="scroll-lading">
+                <img src="svg/mouse.svg" alt="">
+            </div>
         </section>
 
         <section id="section-main" class="section section-main">
             <section class="about section-secundary">
-                <h3>Quem eu sou?</h3>
+                <h1>Quem sou eu?</h1>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                     Quos quae accusantium pariatur consectetur magni modi animi 
@@ -123,7 +123,7 @@
                 </p>
             </section>
             <section class="skills section-secundary">
-                <h3>Habilidades</h3>
+                <h1>Habilidades</h1>
                 <ul>
                     <li>HTML5</li>
                     <li>CSS3</li>
@@ -138,39 +138,150 @@
                 </ul>
             </section>
             <section class="projects section-secundary">
-                <h3>Projetos</h3>
-                <article>
-                    <h4>Portfólio pessoal</h4>
-                    <p>Desenvolvi um site pessoal para mostrar meus projetos e habilidades.</p>
-                </article>
-                <article>
-                    <h4>CalendSchool</h4>
-                    <p>Criei um blog onde compartilho dicas e tutoriais sobre desenvolvimento web.</p>
-                </article>
+                <h1>Projetos</h1>
+                <p>Esses são apenas alguns projetos que desenvolvi na minha jornada como Dev. Para conferir mais, acesse meu GitHub. <br>
+                    <button class="git-button">
+                        <img src="svg/github.svg" alt="">
+                        GitHub
+                    </button>
+                </p>
+                <div class="projects-area">
+                    <article>
+                        <img class="project-image" src="img/me.jpg" alt="">
+                        <legend>
+                            <h4>Portfólio pessoal</h4>
+                            <p>Desenvolvi um site pessoal para mostrar meus projetos e habilidades.</p>
+                        </legend>
+                        <div class="button-project">
+                            <!-- https://github.com/m1caelvr/Portfolio -->
+                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                        </div>
+                    </article>
+                    <article>
+                        <img class="project-image" src="img/me.jpg" alt="">
+                        <legend>
+                            <h4>GRshop</h4>
+                            <p>Projeto freelancer de um modelo de E-commerce WEB de roupas.</p>
+                            <a href="https://grcloset.netlify.app" target="_blank" rel="noopener noreferrer">grcloset.netlify.app</a>
+                        </legend>
+                        <div class="button-project">
+                            <!-- https://github.com/m1caelvr/GRshop -->
+                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                        </div>
+                    </article>
+                    <article>
+                        <img class="project-image" src="img/me.jpg" alt="">
+                        <legend>
+                            <h4>Weight calculator</h4>
+                            <p>Projeto pessoal com base no estudo de IMCs ideais para cada pessoa.</p>
+                            <a href="https://weightcalculator-webmind.netlify.app" target="_blank" rel="noopener noreferrer">weightcalculator-webmind.netlify.app</a>
+                        </legend>
+                        <div class="button-project">
+                            <!-- https://github.com/m1caelvr/pesoIdeal -->
+                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                        </div>
+                    </article>
+                    <article>
+                        <img class="project-image" src="img/me.jpg" alt="">
+                        <legend>
+                            <h4>CalendSchool</h4>
+                            <p>Agenda WEB criada para Escola Técnica Gil Rodrigues [Jaboatão - PE]</p>
+                        </legend>
+                        <div class="button-project">
+                            <!-- https://github.com/m1caelvr/CalendSchool -->
+                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                        </div>
+                    </article>
+                    <article>
+                        <img class="project-image" src="img/me.jpg" alt="">
+                        <legend>
+                            <h4>Chat design</h4>
+                            <p>Projeto front-end do #boracodar da ROCKETSEAT</p>
+                        </legend>
+                        <div class="button-project">
+                            <!-- https://github.com/m1caelvr/ChatDesign -->
+                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                        </div>
+                    </article>
+                    <article>
+                        <img class="project-image" src="img/me.jpg" alt="">
+                        <legend>
+                            <h4>Aesthetkit</h4>
+                            <p>Framework CSS feito com JS.</p>
+                        </legend>
+                        <div class="button-project">
+                            <!-- https://github.com/m1caelvr/Aesthetkit -->
+                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                        </div>
+                    </article>
+                </div>
             </section>
-            <section class="contact section-secundary">
-                <h3>Contate-me através dos seguintes canais:</h3>
-                <ul>
-                    <li><a href="">LinkedIn</a></li>
-                    <li><a href="">GitHub</a></li>
-                    <li><a href="">Gmail</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">WhatsApp</a></li>
+            <section id="section-contact" class="contact section-secundary">
+                <footer>
+                    <div class="footer-text user-select">
+                        <h4>FICOU INTERESSADO EM ALGO?</h4>
+                        <p>Entre em contato comigo agora mesmo! Sinta-se à vontade para me enviar uma mensagem.</p>
+                        <label>
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                Enviar uma mensagem
+                                <img src="./svg/send-outline.svg" alt="">
+                            </a>
+                        </label>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img class="color-icon-primary" src="./svg/linkedin.svg" alt="LinkedIn">
+                                <!-- LinkedIn -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="color-icon-primary" src="./svg/github.svg" alt="GITHUB">
+                                <!-- GitHub -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="color-icon-primary" src="./svg/logo-gmail.svg" alt="Instagram">
+                                <!-- Gmail -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="color-icon-primary" src="./svg/instagram.svg" alt="Instagram">
+                                <!-- Instagram -->
+                            </a>
+                        </li>
+                    <li>
+                        <a href="https://codepen.io/m1caelvr">
+                            <img class="color-icon-primary" src="./svg/logo-codepen.svg" alt="Instagram">
+                            <!-- Codepen -->
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="color-icon-primary" src="./svg/logo-whatsapp.svg" alt="Instagram">
+                            <!-- WhatsApp -->
+                        </a>
+                    </li>
                 </ul>
+            </footer>
             </section>
-            <footer>
+            <!-- <footer>
                 <div>
                     <h1>Contate-me</h1>
                     <h2></h2>
                     <button></button>
                 </div>
-            </footer>
+            </footer> -->
         </section>
     </main>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/draggable.js"></script>
 <script src="./js/scrollreveal.js"></script>
 </body>
 </html>
