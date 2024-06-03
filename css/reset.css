@@ -20,6 +20,56 @@ a {text-decoration: none;}
     -moz-user-select: none;
     user-select: none;
 }
+.button-hover {
+    color: #fff;
+    cursor: pointer;
+    /* display: block; */
+    font-size:16px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0 0 2em;
+    max-width: 160px; 
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%; 
+    height: 50px;
+    background-color: transparent;
+    border-radius: 999rem;
+
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    
+} 
+.button-hover:focus,
+.button-hover:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+}
+.button-outline-hover {
+    outline: 1px solid;
+    outline-color: var(--primary-text-color);
+    outline-offset: 0px;
+    transition:
+        var(--transition-button),
+        outline-color var(--transition-outline-color),
+        outline-offset var(--transition-outline),
+        outline var(--transition-outline);
+    
+    &:hover {
+        outline-offset: 25px;
+        outline-color: rgba(255, 255, 255, 0);
+        box-shadow: 0 0 10px rgba(250, 250, 250, 0.5);
+    }
+}
 /* tailwind */
 
 ::-webkit-scrollbar {
