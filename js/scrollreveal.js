@@ -20,10 +20,12 @@ const addIntersectionObserver = (elements, delay = 0) => {
 
 const sectionsToReveal = [
     { selector: '.landing-reveal', delay: 250 },
-    { selector: '.opacity-reveal', delay: 100 },
+    { selector: '.opacity-reveal-delay', delay: 100 },
+    { selector: '.opacity-reveal', delay: 0 },
+    { selector: '.scale-reveal-footer', delay: 100 },
     { selector: '.scale-reveal', delay: 150 },
-    { selector: '.skills-reveal', delay: 150 },
-    { selector: '.itens-section', delay: 150 }
+    { selector: '.skills-reveal', delay: 0 },
+    { selector: '.itens-section', delay: 100 }
 ];
 
 sectionsToReveal.forEach(section => {

@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
-  function sectionContactInView() {    
+  function sectionContactInView() {
     const sectionContact = document.getElementById('section-contact');
     // console.log(1);
     if (isElementInViewport(sectionContact)) {

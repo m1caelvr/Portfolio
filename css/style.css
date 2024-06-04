@@ -358,7 +358,6 @@ main {
       transition: var(--transition-button);
 
       &:hover {
-        transform: scale(1.05);
         box-shadow: 0 0 10px rgba(250, 250, 250, 0.5);
       }
       
@@ -533,12 +532,6 @@ main {
       align-items: start;
       gap: 3rem;
 
-      /* h1 {
-        height: 100%;
-        display: flex;
-        align-items: center;
-      } */
-
       ul {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -557,6 +550,7 @@ main {
           box-sizing: border-box;
           width: 100%;
           height: 100%;
+          gap: 1rem;
 
           &:last-child {
             grid-column: 3;

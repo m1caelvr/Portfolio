@@ -65,10 +65,14 @@ a {text-decoration: none;}
         outline var(--transition-outline);
     
     &:hover {
-        /* transform: scale(1.05); */
+        transform: scale(1.05);
         outline-offset: 25px;
         outline-color: rgba(255, 255, 255, 0);
     }
+}
+.send-button.button-outline-hover:hover {
+    transform: scale(1.04);
+    outline-offset: 20px;
 }
 /* tailwind */
 
