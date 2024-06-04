@@ -421,9 +421,27 @@ main {
     position: absolute;
     left: 50%;
     bottom: 4rem;
-    transform: translate(-50%, 0) rotate(180deg);
-    filter: opacity(70%);
-    animation: scroll_indicator 4s infinite ease-in-out;
+    transform: translate(-50%, 0);
+    
+    img {
+      animation: scroll_indicator 4s infinite ease-in-out forwards;
+      transform: translate(-50%, 0) rotate(180deg);
+      cursor: pointer;
+      filter:
+        invert(1)
+        opacity(70%)
+        drop-shadow(0 0 5px #fafafa00);
+      transition: .5s ease;
+      animation-play-state: running;
+    
+      &:hover {
+        animation-play-state: paused;
+        filter:
+          invert(1)
+          opacity(100%)
+          drop-shadow(0 0 5px #fafafa);
+      }
+    }
   }
 }
 
@@ -507,7 +525,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10vh;
 
     .skills-area {
       display: grid;
@@ -557,6 +574,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: max-content;
+    padding-top: 10vh;
     gap:
       var(--spacing)
       calc(
@@ -789,8 +807,8 @@ main {
   }
 }
 @keyframes scroll_indicator {
-  0%, 35%, 75%, 100%{transform: translate(-50%, 0) rotate(180deg)}
-  15%, 55% {transform: translate(-50%, 1rem) rotate(180deg)}
+  0%, 35%, 75%, 100% { transform: translate(-50%, 0) rotate(180deg); }
+  15%, 55% { transform: translate(-50%, 1rem) rotate(180deg); }
 }
 @keyframes slide-out {
   100% {

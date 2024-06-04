@@ -166,4 +166,16 @@ document.addEventListener('DOMContentLoaded', function() {
   actived.forEach((active) => {
     observeFunction(active.id);
   });
+
+
+  document.querySelectorAll('[data-section]').forEach(svg => {
+    svg.addEventListener('click', function() {
+        const sectionId = this.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+  });
+
 });

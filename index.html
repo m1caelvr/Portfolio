@@ -51,31 +51,31 @@
 
     <nav class="user-select opacity-reveal">
         <ul>
-            <a class="home" href="">
-                <svg class="ionicon" id="homeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <a class="home">
+                <svg data-section="section-landing" class="ionicon" id="homeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
                     <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
                 </svg>
             </a>
             <a class="chevron-icons">
-                <svg class="ionicon" id="chevronIcon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg data-section="section-main" class="ionicon" id="chevronIcon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/>
                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M352 216l-96 96-96-96"/>
                 </svg>
                 <ol id="nav-section-main">
-                    <svg class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <svg data-section="section-about" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
                     </svg>
                 
-                    <svg class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <svg data-section="section-skills" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
                     </svg>
                 
-                    <svg class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <svg data-section="section-projects" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
                     </svg>
 
-                    <svg class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <svg data-section="section-contact" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
                     </svg>
                 </ol>
@@ -108,12 +108,12 @@
                 <img class="landing-reveal" src="./img/me.jpg" alt="retrato de um homem">
             </aside>
             <div class="scroll-lading opacity-reveal">
-                <img class="color-icon-primary" src="./svg/mouse.svg" alt="">
+                <img data-section="section-main" class="color-icon-primary" src="./svg/mouse.svg" alt="">
             </div>
         </section>
 
         <section id="section-main" class="section section-main">
-            <section class="about section-secundary">
+            <section id="section-about" class="about section-secundary">
                 <div class="about-card">
                     <figure class="scale-reveal">
                         <img src="./img/Retrato.jpg" alt="retrato do responsável">
@@ -138,7 +138,7 @@
                     </article>
                 </div>
             </section>
-            <section class="skills section-secundary">
+            <section id="section-skills" class="skills section-secundary">
                 <div class="skills-area">
                     <h1>Habilidades</h1>
                     <ul>
@@ -211,7 +211,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="projects section-secundary">
+            <section id="section-projects" class="projects section-secundary">
                 <h1>Projetos</h1>
                 <h2>Esses são apenas alguns projetos que desenvolvi na minha jornada como Dev. Para conferir mais, acesse meu GitHub. <br>
                     <button class="git-button">
@@ -341,7 +341,7 @@
                             </a>
                         </li>
                     </ul>
-            </footer>
+                </footer>
             </section>
             <!-- <footer>
                 <div>
