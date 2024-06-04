@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://unpkg.com/scrollreveal@4"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://unpkg.com/scrollreveal@4"></script>
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/scrollRevel.css">
+    <link rel="stylesheet" href="./css/reset.css">
     <title>Micael-Rodrigues</title>
 </head>
 <body id="body">
-    <header id="header" class="window user-select">
+    <header id="header" class="user-select opacity-reveal">
         <strong><img src="img/MR.png">MICAEL<span>RODRIGUES</span></strong>
         <ul>
             <li><a href="http://linkedin.com/in/micael-silva-67077621b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -47,7 +49,7 @@
         </ul>
     </header>
 
-    <nav class="window user-select">
+    <nav class="user-select opacity-reveal">
         <ul>
             <a class="home" href="">
                 <svg class="ionicon" id="homeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -82,19 +84,17 @@
     </nav>
 
     <main id="main">
-        <section id="section-landing" class="section section-landing window">
+        <section id="section-landing" class="section section-landing ">
             <div class="initial-text">
-                <strong>
-                    <h1 class="window">&lt;Desenvolvedor WEB /&gt;</h1>
+                <strong class="landing-reveal">
+                    <h1>&lt;Desenvolvedor WEB /&gt;</h1>
                 </strong>
-                <!-- <span class="window">Sejam bem vindos ao meu portifólio! Eu sou Micael Rodrigues.</span> -->
-                <h2 class="window">Sejam bem vindos ao meu portifólio! Eu sou Micael Rodrigues.</h2>
-                <!-- <h2 class="window">Unindo design e código, sigo transformando projetos em experiências visuais únicas.</h2> -->
-                <span class="aside-text window">
+                <h2 class="landing-reveal">Sejam bem vindos ao meu portifólio! Eu sou Micael Rodrigues.</h2>
+                <span class="aside-text landing-reveal">
                     <div class="circle_on"></div>
                     Unindo design e código, sigo transformando projetos em experiências visuais únicas.
                 </span>
-                <a class="cv_button_acess button-outline-hover" href="https://drive.google.com/file/d/19GblBhDRyEYBLdeEsdJ9PXKt_lVCd472/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a class="cv_button_acess button-outline-hover landing-reveal" href="https://drive.google.com/file/d/19GblBhDRyEYBLdeEsdJ9PXKt_lVCd472/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     Acesse meu CV com um click!
                     <div class="arrow-icon">
                         <img src="./svg/arrow-up.svg" alt="">
@@ -105,20 +105,20 @@
                 </div>
             </div>
             <aside>
-                <img class="window" src="./img/me.jpg" alt="retrato de um homem">
+                <img class="landing-reveal" src="./img/me.jpg" alt="retrato de um homem">
             </aside>
-            <div class="scroll-lading">
-                <img src="svg/mouse.svg" alt="">
+            <div class="scroll-lading opacity-reveal">
+                <img class="color-icon-primary" src="./svg/mouse.svg" alt="">
             </div>
         </section>
 
         <section id="section-main" class="section section-main">
             <section class="about section-secundary">
                 <div class="about-card">
-                    <figure>
+                    <figure class="scale-reveal">
                         <img src="./img/Retrato.jpg" alt="retrato do responsável">
                     </figure>
-                    <article>
+                    <article class="scale-reveal">
                         <h1>Quem sou eu?</h1>
                         <p>
                             Meu nome é Micael Rodrigues - <i>Desenvolvedor WEB Full-Stack</i>.
@@ -130,34 +130,92 @@
                         </p>
                         <p>
                             No decorrer da minha carreira de estudos, pude adquirir vários conhecimentos
-                            tanto com tecnologias como <b>Phyton, JavaScript</b> e <b>SQL</b>
-                            (veja mais em <a href="#"><i>Habilidades.</i></a>) quanto com metodologias de gerência de
-                            projetos como - <b>Scrum</b> onde também tive a oportunidade
+                            tanto com tecnologias como <br><b>Phyton, JavaScript, php</b> e <b>SQL</b>
+                            (veja mais em <a href="#"><i>Habilidades.</i></a>) quanto com metodologias 
+                            como - <b>Scrum</b> onde também tive a oportunidade
                             de gerenciar projetos como <i>Scrum Master</i>.
                         </p>
                     </article>
                 </div>
             </section>
             <section class="skills section-secundary">
-                <h1>Habilidades</h1>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>TAILWIND</li>
-                    <li>MySQL</li>
-                    <li>PostergreSQL</li>
-                    <li>PHP</li>
-                    <li>JAVA</li>
-                    <li>React JS</li>
-                    <li>SCRUM</li>
-                </ul>
+                <div class="skills-area">
+                    <h1>Habilidades</h1>
+                    <ul>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/html.svg" alt="">
+                            <h3>
+                                HTML5
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/css.svg" alt="">
+                            <h3>
+                                CSS3
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/scss.svg" alt="">
+                            <h3>
+                                SCSS
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/js.svg" alt="">
+                            <h3>
+                                JavaScript
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/react.svg" alt="">
+                            <h3>
+                                React.js
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/mysql.svg" alt="">
+                            <h3>
+                                MySQL
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/postsql.svg" alt="">
+                            <h3>
+                                PostgreSQL
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/php.svg" alt="">
+                            <h3>
+                                PHP
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/java.svg" alt="">
+                            <h3>
+                                JAVA
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/github.svg" alt="">
+                            <h3>
+                                GIT
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/scrum.svg" alt="">
+                            <h3>
+                                SCRUM
+                            </h3>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <section class="projects section-secundary">
                 <h1>Projetos</h1>
                 <h2>Esses são apenas alguns projetos que desenvolvi na minha jornada como Dev. Para conferir mais, acesse meu GitHub. <br>
                     <button class="git-button">
-                        <img src="svg/github.svg" alt="">
+                        <img src="./svg/github.svg" alt="">
                         GitHub
                     </button>
                 </h2>
@@ -260,13 +318,13 @@
                         </li>
                         <li>
                             <a href="https://codepen.io/m1caelvr" target="_blank" rel="noopener noreferrer">
-                                <img class="color-icon-primary" src="./svg/logo-codepen.svg" alt="Instagram">
+                                <img class="color-icon-primary" src="./svg/logos-skills/codepen.svg" alt="Instagram">
                                 <!-- Codepen -->
                             </a>
                         </li>
                         <li>
                             <a href="https://mail.google.com/mail/u/0/?authuser=micael.vitor222@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <img class="color-icon-primary" src="./svg/logo-gmail.svg" alt="Instagram">
+                                <img class="color-icon-primary" src="./svg/gmail.svg" alt="Instagram">
                                 <!-- Gmail -->
                             </a>
                         </li>
