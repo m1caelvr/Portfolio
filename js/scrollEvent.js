@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const main = document.getElementById('main');
-  const sectionMain = document.getElementById('section-main');
-  const sectionsInMain = document.querySelectorAll('main > section');
-  const sectionsInSectionMain = document.querySelectorAll('section#section-main > section');
-  const navSectionMainSvgs = document.querySelectorAll('#nav-section-main > svg');
+const main = document.getElementById('main');
+const sectionMain = document.getElementById('section-main');
+const sectionsInMain = document.querySelectorAll('main > section');
+const sectionsInSectionMain = document.querySelectorAll('section#section-main > section');
+const navSectionMainSvgs = document.querySelectorAll('#nav-section-main > svg');
 
+document.addEventListener('DOMContentLoaded', function() {
   function getZoomLevel() {
     return window.devicePixelRatio || 1;
   }
@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const paths = svg.querySelectorAll("path");
 
       if (mode === "fill") {
+        const sectionAbout = document.getElementById('section-about');
+        sectionAbout.scrollIntoView({ behavior: 'smooth' });
+
         paths[0].setAttribute("fill", "");
         paths[1].setAttribute("fill", "none");
         paths[1].setAttribute("stroke", "#000");
@@ -146,10 +149,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   function sectionContactInView() {
     const sectionContact = document.getElementById('section-contact');
-    // console.log(1);
     if (isElementInViewport(sectionContact)) {
       iconSecundarySectionInFocus(sectionContact);
-      console.log('O elemento #section-contact está dentro da janela visível.');
+      // console.log('O elemento #section-contact está dentro da janela visível.');
     }
   }
 
@@ -167,15 +169,30 @@ document.addEventListener('DOMContentLoaded', function() {
     observeFunction(active.id);
   });
 
-
   document.querySelectorAll('[data-section]').forEach(svg => {
     svg.addEventListener('click', function() {
-        const sectionId = this.getAttribute('data-section');
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
+      const sectionId = this.getAttribute('data-section');
+      const section = document.getElementById(sectionId);
+  
+      // console.log(section.id);
+      
+      // if (section.id === 'section-landing') {
+
+      //   setTimeout(() => {
+      //     section.scrollIntoView({ behavior: 'smooth' });
+      //     console.log(1);
+      //   }, 500); // 500ms delay
+      // } else {
+      // }
+      section.scrollIntoView({ behavior: 'smooth' });
+
     });
   });
 
 });
+
+// function scrollToSectionMain() {
+//   console.log(1);
+
+// }
+

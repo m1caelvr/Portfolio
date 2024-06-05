@@ -6,15 +6,16 @@
     <!-- <script src="https://unpkg.com/scrollreveal@4"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/scrollRevel.css">
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="./css/globals.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Micael-Rodrigues</title>
 </head>
 <body id="body">
     <header id="header" class="user-select opacity-reveal-delay">
-        <strong><img src="img/MR.png">MICAEL<span>RODRIGUES</span></strong>
+        <strong><img src="img/MR.png" alt="logo do desenvolvedor">MICAEL<span>RODRIGUES</span></strong>
         <ul>
             <li><a href="http://linkedin.com/in/micael-silva-67077621b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             <li><a href="https://github.com/m1caelvr" target="_blank" rel="noopener noreferrer">GitHub</a></li>
@@ -22,7 +23,7 @@
             <!-- <li><a href="http://instagram.com/m1vr.rz" target="_blank" rel="noopener noreferrer">Instagram</a></li> -->
             <li class="about_li_button">
                 <h3>Sobre</h3>
-                <img class="color-icon-primary" src="./svg/chevron-down.svg" alt="">
+                <img class="color-icon-primary" src="./svg/chevron-down.svg" alt="svg indicador">
                 <div class="about_li_button_hover">
                     <ul class="header-menu">
                         <li class="checkbox">
@@ -52,7 +53,7 @@
     <nav class="user-select opacity-reveal-delay">
         <ul>
             <a class="home">
-                <svg data-section="section-landing" class="ionicon" id="homeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg data-section="section-landing" class="ionicon home" id="homeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
                     <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
                 </svg>
@@ -219,71 +220,89 @@
                 </h2>
                 <div class="projects-list">
                     <article class="itens-section">
-                        <img class="project-image" src="img/me.jpg" alt="">
+                        <figure>
+                            <img class="project-image" src="img/portfolio.png" alt="">
+                        </figure>
                         <div class="legend">
                             <h1>Portfólio pessoal</h1>
                             <p>Desenvolvi um site pessoal para mostrar meus projetos e habilidades.</p>
                         </div>
                         <div class="button-project">
-                            <!-- https://github.com/m1caelvr/Portfolio -->
-                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            <a href="https://github.com/m1caelvr/Portfolio" target="_blank" rel="noopener noreferrer">
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            </a>
                         </div>
                     </article>
                     <article class="itens-section">
-                        <img class="project-image" src="img/me.jpg" alt="">
+                        <figure>
+                            <img class="project-image" src="https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/imgDesktop.png" alt="">
+                        </figure>
                         <div class="legend">
                             <h1>GRshop</h1>
                             <p>Projeto freelancer de um modelo de E-commerce WEB de roupas.</p>
                             <a href="https://grcloset.netlify.app" target="_blank" rel="noopener noreferrer">grcloset.netlify.app</a>
                         </div>
                         <div class="button-project">
-                            <!-- https://github.com/m1caelvr/GRshop -->
-                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            <a href="http://github.com/m1caelvr/GRshop" target="_blank" rel="noopener noreferrer">
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            </a>
                         </div>
                     </article>
                     <article class="itens-section">
-                        <img class="project-image" src="img/me.jpg" alt="">
+                        <figure>
+                            <img class="project-image" src="img/image1.png" alt="">
+                        </figure>
                         <div class="legend">
                             <h1>Weight calculator</h1>
                             <p>Projeto pessoal com base no estudo de IMCs ideais para cada pessoa.</p>
                             <a href="https://weightcalculator-webmind.netlify.app" target="_blank" rel="noopener noreferrer">weightcalculator-webmind.netlify.app</a>
                         </div>
                         <div class="button-project">
-                            <!-- https://github.com/m1caelvr/pesoIdeal -->
-                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            <a href="http://github.com/m1caelvr/pesoIdeal" target="_blank" rel="noopener noreferrer">
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            </a>
                         </div>
                     </article>
                     <article class="itens-section">
-                        <img class="project-image" src="img/me.jpg" alt="">
+                        <figure>
+                            <img class="project-image" src="https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/d.png" alt="">
+                        </figure>
                         <div class="legend">
                             <h1>CalendSchool</h1>
                             <p>Agenda WEB criada para Escola Técnica Gil Rodrigues [Jaboatão - PE]</p>
                         </div>
                         <div class="button-project">
-                            <!-- https://github.com/m1caelvr/CalendSchool -->
-                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            <a href="http://github.com/m1caelvr/CalendSchool" target="_blank" rel="noopener noreferrer">
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            </a>
                         </div>
                     </article>
                     <article class="itens-section">
-                        <img class="project-image" src="img/me.jpg" alt="">
+                        <figure>
+                            <img class="project-image" src="https://raw.githubusercontent.com/m1caelvr/ChatDesign/main/chat-project/IMG/Chat-template.PNG" alt="">
+                        </figure>
                         <div class="legend">
                             <h1>Chat design</h1>
                             <p>Projeto front-end do #boracodar da ROCKETSEAT</p>
                         </div>
                         <div class="button-project">
-                            <!-- https://github.com/m1caelvr/ChatDesign -->
-                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            <a href="http://github.com/m1caelvr/ChatDesign" target="_blank" rel="noopener noreferrer">
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            </a>
                         </div>
                     </article>
                     <article class="itens-section">
-                        <img class="project-image" src="img/me.jpg" alt="">
+                        <figure class="Aesthetkit">
+                            <img class="project-image" src="img/me.jpg" alt="">
+                        </figure>
                         <div class="legend">
                             <h1>Aesthetkit</h1>
                             <p>Framework CSS feito com JS.</p>
                         </div>
                         <div class="button-project">
-                            <!-- https://github.com/m1caelvr/Aesthetkit -->
-                            <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            <a href="http://github.com/m1caelvr/Aesthetkit" target="_blank" rel="noopener noreferrer">
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                            </a>
                         </div>
                     </article>
                 </ul>
@@ -299,7 +318,6 @@
                                 <img src="./svg/send.svg" alt="">
                             </a>
                         </label>
-                        <!-- <button class="button-hover"></button> -->
                     </div>
                     <ul>
                         <li class="scale-reveal-footer">
