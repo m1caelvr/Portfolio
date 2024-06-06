@@ -1,34 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 :root {
-    font-size: 62.5%;
-    --primary-family-font: "Manrope", sans-serif;
-    --transition-primary: .3s ease;
-    --transition-outline-color: .15s ease;
-    --transition-outline: .3s ease;
-    --transition-button: .25s ease;
-    --viewport-padding: 15vw;
-    /* --background-secundary-color: #09090b; */
-    --background-color: #000;
-    --background-secundary-color: #121212;
-    --background-hover-color: #09090b;
-    --primary-text-color: #fafafa;
-    --prymary-hover-color: #27272a;
-    --secundary-text-color: #888888;
-    --paragraph-primary-color: #a1a1aa;
-    --border-color: #e5e7eb26;
-    --primary-border-value: 1px solid var(--border-color);
-  }
+  font-size: 62.5%;
+  --primary-family-font: "Manrope", sans-serif;
+  --transition-primary: .3s ease;
+  --transition-outline-color: .15s ease;
+  --transition-outline: .3s ease;
+  --transition-button: .25s ease;
+  --viewport-padding: 15vw;
+  /* --background-secundary-color: #09090b; */
+  --background-color: #000;
+  --background-secundary-color: #121212;
+  --background-hover-color: #09090b;
+  --primary-text-color: #fafafa;
+  --prymary-hover-color: #27272a;
+  --secundary-text-color: #888888;
+  --paragraph-primary-color: #a1a1aa;
+  --border-color: rgba(229, 231, 235, 0.16);
+  --primary-border-value: 1px solid var(--border-color);
+}
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    line-height: 1;
-    font-family: var(--primary-family-font);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  line-height: 1;
+  font-family: var(--primary-family-font);
 }
 
 html, html * { scroll-behavior: smooth; }
 ::-webkit-scrollbar { display: none; }
 a {text-decoration: none;}
+
+
+/* 
+mob: max 768px
+tablet: max 1023
+desk: min 1024
+*/

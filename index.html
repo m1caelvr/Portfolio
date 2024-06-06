@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micael-Rodrigues</title>
+    <link rel="shortcut icon" href="./img/MR-shadow.png" type="image/x-icon">
     <!-- <script src="https://unpkg.com/scrollreveal@4"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./css/scrollRevel.css">
+    <link rel="stylesheet" href="./css/globals.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/tailwind.css">
-    <link rel="stylesheet" href="./css/globals.css">
+    <link rel="stylesheet" href="./css/scrollRevel.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Micael-Rodrigues</title>
 </head>
 <body id="body">
     <header id="header" class="user-select opacity-reveal-delay">
-        <strong><img src="img/MR.png" alt="logo do desenvolvedor">MICAEL<span>RODRIGUES</span></strong>
+        <strong><img src="./img/MR-logo.png" alt="logo do desenvolvedor">MICAEL<span>RODRIGUES</span></strong>
         <ul>
             <li><a href="http://linkedin.com/in/micael-silva-67077621b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             <li><a href="https://github.com/m1caelvr" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="http://" target="_blank" rel="noopener noreferrer">Gmail</a></li>
             <!-- <li><a href="http://instagram.com/m1vr.rz" target="_blank" rel="noopener noreferrer">Instagram</a></li> -->
-            <li class="about_li_button">
-                <h3>Sobre</h3>
+            <li class="about_li_button" id="about-li-button">
+                <h3 id="about-header">Sobre</h3>
                 <img class="color-icon-primary" src="./svg/chevron-down.svg" alt="svg indicador">
-                <div class="about_li_button_hover">
+                <div class="about-li-hover-area" id="about-li-hover-area">
                     <ul class="header-menu">
                         <li class="checkbox">
                             <input type="checkbox" class="theme-checkbox" checked>
@@ -33,15 +35,21 @@
                         <li>
                             <span>
                                 Sobre mim
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam laudantium voluptas totam necessitatibus illum autem. Excepturi ipsam repudiandae facilis ipsa delectus quo pariatur eos fuga. Quae voluptatem harum minus delectus!</p>
+                                <p>
+                                    Veja um pouco sobre mim e minha trajetória, cursos e formações.
+                                </p>
                             </span>
                             <span>
                                 Projetos
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam laudantium voluptas totam necessitatibus illum autem. Excepturi ipsam repudiandae facilis ipsa delectus quo pariatur eos fuga. Quae voluptatem harum minus delectus!</p>
+                                <p>
+                                    Alguns dos meus projetos que vim desenvolvendo na minha jornada como dev.
+                                </p>
                             </span>
                             <span>
                                 Contate-me
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam laudantium voluptas totam necessitatibus illum autem. Excepturi ipsam repudiandae facilis ipsa delectus quo pariatur eos fuga. Quae voluptatem harum minus delectus!</p>
+                                <p>
+                                    Caso tenha interesse, entre em contato comigo através das plataformas listadas.
+                                </p>
                             </span>
                         </li>
                     </ul>
@@ -67,15 +75,12 @@
                     <svg data-section="section-about" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
                     </svg>
-                
                     <svg data-section="section-skills" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
                     </svg>
-                
                     <svg data-section="section-projects" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
                     </svg>
-
                     <svg data-section="section-contact" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
                     </svg>
@@ -90,10 +95,10 @@
                 <strong class="landing-reveal">
                     <h1>&lt;Desenvolvedor WEB /&gt;</h1>
                 </strong>
-                <h2 class="landing-reveal">Sejam bem vindos ao meu portifólio! Eu sou Micael Rodrigues.</h2>
+                <h3 class="landing-reveal">Sejam bem vindos ao meu portifólio! Eu sou Micael Rodrigues.</h3>
                 <span class="aside-text landing-reveal">
                     <div class="circle_on"></div>
-                    Unindo design e código, sigo transformando projetos em experiências visuais únicas.
+                    <h2>Unindo design e código, sigo transformando projetos e ideias em experiências visuais únicas.</h2>
                 </span>
                 <a class="cv_button_acess button-outline-hover landing-reveal" href="https://drive.google.com/file/d/19GblBhDRyEYBLdeEsdJ9PXKt_lVCd472/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     Acesse meu CV com um click!
@@ -104,7 +109,7 @@
                 </a>
             </div>
             <aside>
-                <img class="landing-reveal" src="./img/me.jpg" alt="retrato de um homem">
+                <img class="opacity-reveal" src="./img/me.jpg" alt="retrato de um homem">
             </aside>
             <div class="scroll-lading opacity-reveal-delay">
                 <img data-section="section-main" class="color-icon-primary" src="./svg/mouse.svg" alt="">
@@ -140,7 +145,8 @@
             <section id="section-skills" class="skills section-secundary">
                 <div class="skills-area">
                     <h1 class="opacity-reveal">Habilidades</h1>
-                    <ul class="user-select">
+                    <h2>Linguagens:</h2>
+                    <ul class="skills-area-li user-select center">
                         <li class="skills-reveal">
                             <img class="color-icon-primary" src="./svg/logos-skills/html.svg" alt="">
                             <h3>
@@ -166,9 +172,15 @@
                             </h3>
                         </li>
                         <li class="skills-reveal">
-                            <img class="color-icon-primary" src="./svg/logos-skills/react.svg" alt="">
+                            <img class="color-icon-primary" src="./svg/logos-skills/php.svg" alt="">
                             <h3>
-                                React.js
+                                PHP
+                            </h3>
+                        </li>
+                        <li class="skills-reveal">
+                            <img class="color-icon-primary" src="./svg/logos-skills/java.svg" alt="">
+                            <h3>
+                                JAVA
                             </h3>
                         </li>
                         <li class="skills-reveal">
@@ -183,18 +195,24 @@
                                 PostgreSQL
                             </h3>
                         </li>
+                    </ul>
+                    <h2>Frameworks e Bibliotecas:</h2>
+                    <ul class="skills-area-li user-select">
                         <li class="skills-reveal">
-                            <img class="color-icon-primary" src="./svg/logos-skills/php.svg" alt="">
+                            <img class="color-icon-primary" src="./svg/logos-skills/react.svg" alt="">
                             <h3>
-                                PHP
+                                React.js
                             </h3>
                         </li>
                         <li class="skills-reveal">
-                            <img class="color-icon-primary" src="./svg/logos-skills/java.svg" alt="">
+                            <img class="color-icon-primary" src="./svg/logos-skills/laravel.svg" alt="">
                             <h3>
-                                JAVA
+                                Laravel
                             </h3>
                         </li>
+                    </ul>
+                    <h2>Controle de projetos:</h2>
+                    <ul class="skills-area-li user-select">
                         <li class="skills-reveal">
                             <img class="color-icon-primary" src="./svg/logos-skills/github.svg" alt="">
                             <h3>
@@ -374,5 +392,6 @@
 <script src="./js/scrollEvent.js"></script>
 <script src="./js/draggable.js"></script>
 <script src="./js/scrollreveal.js"></script>
+<script src="./js/cursorEvents.js"></script>
 </body>
 </html>
