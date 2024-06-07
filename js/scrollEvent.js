@@ -2,7 +2,7 @@ const main = document.getElementById('main');
 const sectionMain = document.getElementById('section-main');
 const sectionsInMain = document.querySelectorAll('main > section');
 const sectionsInSectionMain = document.querySelectorAll('section#section-main > section');
-const navSectionMainSvgs = document.querySelectorAll('#nav-section-main > svg');
+const navSectionMainSvgs = document.querySelectorAll('#nav-section-main > li svg');
 
 document.addEventListener('DOMContentLoaded', function() {
   function getZoomLevel() {
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function iconSecundarySectionInFocus(section) {
+    console.log(1);
     navSectionMainSvgs.forEach(svg => svg.classList.remove('focus'));
 
     if (section.classList.contains('about')) {
@@ -124,10 +125,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function headerAdjust(show) {
       const header = document.getElementById("header");
+      // const hoverArea = document.getElementById('about-li-button');
 
       if (show === "noShow") {
         if (!header.classList.contains("header-no-show")) {
           header.classList.add("header-no-show");
+          // hoverArea.removeAttribute('extend');
         }
       } else {
         if (header.classList.contains("header-no-show")) {
@@ -173,26 +176,10 @@ document.addEventListener('DOMContentLoaded', function() {
     svg.addEventListener('click', function() {
       const sectionId = this.getAttribute('data-section');
       const section = document.getElementById(sectionId);
-  
-      // console.log(section.id);
-      
-      // if (section.id === 'section-landing') {
 
-      //   setTimeout(() => {
-      //     section.scrollIntoView({ behavior: 'smooth' });
-      //     console.log(1);
-      //   }, 500); // 500ms delay
-      // } else {
-      // }
       section.scrollIntoView({ behavior: 'smooth' });
 
     });
   });
 
 });
-
-// function scrollToSectionMain() {
-//   console.log(1);
-
-// }
-

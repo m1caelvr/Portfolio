@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +16,13 @@
     <link rel="stylesheet" href="./css/scrollRevel.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body id="body">
     <header id="header" class="user-select opacity-reveal-delay">
-        <strong><img src="./img/MR-logo.png" alt="logo do desenvolvedor">MICAEL<span>RODRIGUES</span></strong>
+        <strong><img src="./img/MR-logo.png" alt="logo do desenvolvedor"><span>MICAELRODRIGUES</span></strong>
         <ul>
-            <li><a href="http://linkedin.com/in/micael-silva-67077621b" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="http://linkedin.com/in/micael-silva-67077621b" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a></li>
             <li><a href="https://github.com/m1caelvr" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="http://" target="_blank" rel="noopener noreferrer">Gmail</a></li>
             <!-- <li><a href="http://instagram.com/m1vr.rz" target="_blank" rel="noopener noreferrer">Instagram</a></li> -->
@@ -30,22 +33,22 @@
                     <ul class="header-menu">
                         <li class="checkbox">
                             <input type="checkbox" class="theme-checkbox" checked>
-                            <input type="checkbox" name="" id="">
+                            <!-- <input type="checkbox" name="" id=""> -->
                         </li>
                         <li>
-                            <span>
+                            <span data-section="section-about">
                                 Sobre mim
                                 <p>
                                     Veja um pouco sobre mim e minha trajetória, cursos e formações.
                                 </p>
                             </span>
-                            <span>
+                            <span data-section="section-projects">
                                 Projetos
                                 <p>
                                     Alguns dos meus projetos que vim desenvolvendo na minha jornada como dev.
                                 </p>
                             </span>
-                            <span>
+                            <span data-section="section-contact">
                                 Contate-me
                                 <p>
                                     Caso tenha interesse, entre em contato comigo através das plataformas listadas.
@@ -61,29 +64,57 @@
     <nav class="user-select opacity-reveal-delay">
         <ul>
             <a class="home">
-                <svg data-section="section-landing" class="ionicon home" id="homeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-                    <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                <svg data-section="section-landing" class="ionicon home" id="homeIcon"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
+                        fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="32" />
+                    <path d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="currentColor"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
                 </svg>
             </a>
             <a class="chevron-icons">
-                <svg data-section="section-main" class="ionicon" id="chevronIcon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/>
-                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M352 216l-96 96-96-96"/>
+                <svg data-section="section-main" class="ionicon" id="chevronIcon" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none"
+                        stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="32" d="M352 216l-96 96-96-96" />
                 </svg>
                 <ol id="nav-section-main">
-                    <svg data-section="section-about" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
-                    </svg>
-                    <svg data-section="section-skills" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
-                    </svg>
-                    <svg data-section="section-projects" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
-                    </svg>
-                    <svg data-section="section-contact" class="ionicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"/>
-                    </svg>
+                    <li data-section="section-about">
+                        <img class="color-icon-primary shadow" src="./svg/logo-nav/about.svg" alt="">
+                        <svg class="ionicon chevron" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="48" d="M184 112l144 144-144 144" />
+                        </svg>
+                    </li>
+                    <li data-section="section-skills">
+                        <img class="color-icon-primary shadow" src="./svg/logo-nav/skills.svg" alt="">
+                        <svg class="ionicon chevron" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="48" d="M184 112l144 144-144 144" />
+                        </svg>
+                    </li>
+                    <li data-section="section-projects">
+                        <img class="color-icon-primary shadow" src="./svg/logo-nav/projects.svg" alt="">
+                        <svg class="ionicon chevron" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="48" d="M184 112l144 144-144 144" />
+                        </svg>
+                    </li>
+                    <li data-section="section-contact">
+                        <img class="color-icon-primary shadow" src="./svg/logo-nav/footer.svg" alt="">
+                        <svg class="ionicon chevron" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="48" d="M184 112l144 144-144 144" />
+                        </svg>
+                    </li>
                 </ol>
             </a>
         </ul>
@@ -98,9 +129,12 @@
                 <h3 class="landing-reveal">Sejam bem vindos ao meu portifólio! Eu sou Micael Rodrigues.</h3>
                 <span class="aside-text landing-reveal">
                     <div class="circle_on"></div>
-                    <h2>Unindo design e código, sigo transformando projetos e ideias em experiências visuais únicas.</h2>
+                    <h2>Unindo design e código, sigo transformando projetos e ideias em experiências visuais únicas.
+                    </h2>
                 </span>
-                <a class="cv_button_acess button-outline-hover landing-reveal" href="https://drive.google.com/file/d/19GblBhDRyEYBLdeEsdJ9PXKt_lVCd472/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a class="cv_button_acess button-outline-hover landing-reveal"
+                    href="https://drive.google.com/file/d/19GblBhDRyEYBLdeEsdJ9PXKt_lVCd472/view?usp=sharing"
+                    target="_blank" rel="noopener noreferrer">
                     Acesse meu CV com um click!
                     <div class="arrow-icon">
                         <img src="./svg/arrow-up.svg" alt="">
@@ -135,7 +169,7 @@
                         <p>
                             No decorrer da minha carreira de estudos, pude adquirir vários conhecimentos
                             tanto com tecnologias como <br><b>Phyton, JavaScript, php</b> e <b>SQL</b>
-                            (veja mais em <a href="#"><i>Habilidades.</i></a>) quanto com metodologias 
+                            (veja mais em <a href="#"><i>Habilidades.</i></a>) quanto com metodologias
                             como - <b>Scrum</b> onde também tive a oportunidade
                             de gerenciar projetos como <i>Scrum Master</i>.
                         </p>
@@ -230,7 +264,8 @@
             </section>
             <section id="section-projects" class="projects section-secundary">
                 <h1 class="opacity-reveal-delay">Projetos</h1>
-                <h2 class="opacity-reveal-delay">Esses são apenas alguns projetos que desenvolvi na minha jornada como Dev. Para conferir mais, acesse meu GitHub. <br>
+                <h2 class="opacity-reveal-delay">Esses são apenas alguns projetos que desenvolvi na minha jornada como
+                    Dev. Para conferir mais, acesse meu GitHub. <br>
                     <button class="git-button opacity-reveal-delay">
                         <img src="./svg/github.svg" alt="">
                         GitHub
@@ -247,22 +282,27 @@
                         </div>
                         <div class="button-project">
                             <a href="https://github.com/m1caelvr/Portfolio" target="_blank" rel="noopener noreferrer">
-                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary ">
+                                    GitHub</button>
                             </a>
                         </div>
                     </article>
                     <article class="itens-section">
                         <figure>
-                            <img class="project-image" src="https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/imgDesktop.png" alt="">
+                            <img class="project-image"
+                                src="https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/imgDesktop.png"
+                                alt="">
                         </figure>
                         <div class="legend">
                             <h1>GRshop</h1>
                             <p>Projeto freelancer de um modelo de E-commerce WEB de roupas.</p>
-                            <a href="https://grcloset.netlify.app" target="_blank" rel="noopener noreferrer">grcloset.netlify.app</a>
+                            <a href="https://grcloset.netlify.app" target="_blank"
+                                rel="noopener noreferrer">grcloset.netlify.app</a>
                         </div>
                         <div class="button-project">
                             <a href="http://github.com/m1caelvr/GRshop" target="_blank" rel="noopener noreferrer">
-                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary ">
+                                    GitHub</button>
                             </a>
                         </div>
                     </article>
@@ -273,17 +313,21 @@
                         <div class="legend">
                             <h1>Weight calculator</h1>
                             <p>Projeto pessoal com base no estudo de IMCs ideais para cada pessoa.</p>
-                            <a href="https://weightcalculator-webmind.netlify.app" target="_blank" rel="noopener noreferrer">weightcalculator-webmind.netlify.app</a>
+                            <a href="https://weightcalculator-webmind.netlify.app" target="_blank"
+                                rel="noopener noreferrer">weightcalculator-webmind.netlify.app</a>
                         </div>
                         <div class="button-project">
                             <a href="http://github.com/m1caelvr/pesoIdeal" target="_blank" rel="noopener noreferrer">
-                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary ">
+                                    GitHub</button>
                             </a>
                         </div>
                     </article>
                     <article class="itens-section">
                         <figure>
-                            <img class="project-image" src="https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/d.png" alt="">
+                            <img class="project-image"
+                                src="https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/d.png"
+                                alt="">
                         </figure>
                         <div class="legend">
                             <h1>CalendSchool</h1>
@@ -291,13 +335,16 @@
                         </div>
                         <div class="button-project">
                             <a href="http://github.com/m1caelvr/CalendSchool" target="_blank" rel="noopener noreferrer">
-                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary ">
+                                    GitHub</button>
                             </a>
                         </div>
                     </article>
                     <article class="itens-section">
                         <figure>
-                            <img class="project-image" src="https://raw.githubusercontent.com/m1caelvr/ChatDesign/main/chat-project/IMG/Chat-template.PNG" alt="">
+                            <img class="project-image"
+                                src="https://raw.githubusercontent.com/m1caelvr/ChatDesign/main/chat-project/IMG/Chat-template.PNG"
+                                alt="">
                         </figure>
                         <div class="legend">
                             <h1>Chat design</h1>
@@ -305,7 +352,8 @@
                         </div>
                         <div class="button-project">
                             <a href="http://github.com/m1caelvr/ChatDesign" target="_blank" rel="noopener noreferrer">
-                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary ">
+                                    GitHub</button>
                             </a>
                         </div>
                     </article>
@@ -319,17 +367,19 @@
                         </div>
                         <div class="button-project">
                             <a href="http://github.com/m1caelvr/Aesthetkit" target="_blank" rel="noopener noreferrer">
-                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary "> GitHub</button>
+                                <button class="git-button"><img src="svg/github.svg" alt="" class="color-icon-primary ">
+                                    GitHub</button>
                             </a>
                         </div>
                     </article>
-                </ul>
+                    </ul>
             </section>
             <section id="section-contact" class="contact section-secundary">
                 <footer class="scale-reveal">
                     <div class="footer-text user-select">
                         <h4 class="opacity-reveal">FICOU INTERESSADO EM ALGO?</h4>
-                        <p class="opacity-reveal">Entre em contato comigo agora mesmo! Sinta-se à vontade para me enviar uma mensagem.</p>
+                        <p class="opacity-reveal">Entre em contato comigo agora mesmo! Sinta-se à vontade para me enviar
+                            uma mensagem.</p>
                         <label class="send-button opacity-reveal button-outline-hover">
                             <a href="http://" target="_blank" rel="noopener noreferrer">
                                 Enviar uma mensagem
@@ -339,7 +389,8 @@
                     </div>
                     <ul>
                         <li class="scale-reveal-footer">
-                            <a href="https://www.linkedin.com/in/micael-silva-67077621b" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/micael-silva-67077621b" target="_blank"
+                                rel="noopener noreferrer">
                                 <img class="color-icon-primary" src="./svg/linkedin.svg" alt="LinkedIn">
                                 <!-- LinkedIn -->
                             </a>
@@ -357,19 +408,22 @@
                             </a>
                         </li>
                         <li class="scale-reveal-footer">
-                            <a href="https://mail.google.com/mail/u/0/?authuser=micael.vitor222@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://mail.google.com/mail/u/0/?authuser=micael.vitor222@gmail.com"
+                                target="_blank" rel="noopener noreferrer">
                                 <img class="color-icon-primary" src="./svg/gmail.svg" alt="Instagram">
                                 <!-- Gmail -->
                             </a>
                         </li>
                         <li class="scale-reveal-footer">
-                            <a href="https://instagram.com/m1vr.rz?utm_source=qr" target="_blank" rel="noopener noreferrer">
+                            <a href="https://instagram.com/m1vr.rz?utm_source=qr" target="_blank"
+                                rel="noopener noreferrer">
                                 <img class="color-icon-primary" src="./svg/instagram.svg" alt="Instagram">
                                 <!-- Instagram -->
                             </a>
                         </li>
                         <li class="scale-reveal-footer">
-                            <a href="https://api.whatsapp.com/send?phone=8196123305" target="_blank" rel="noopener noreferrer">
+                            <a href="https://api.whatsapp.com/send?phone=8196123305" target="_blank"
+                                rel="noopener noreferrer">
                                 <img class="color-icon-primary" src="./svg/logo-whatsapp.svg" alt="Instagram">
                                 <!-- WhatsApp -->
                             </a>
@@ -387,11 +441,13 @@
         </section>
     </main>
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="./js/scrollEvent.js"></script>
-<script src="./js/draggable.js"></script>
-<script src="./js/scrollreveal.js"></script>
-<script src="./js/cursorEvents.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/scrollEvent.js"></script>
+    <script src="./js/draggable.js"></script>
+    <script src="./js/scrollreveal.js"></script>
+    <script src="./js/cursorEvents.js"></script>
+    <script src="./js/headerAdjust.js"></script>
 </body>
+
 </html>

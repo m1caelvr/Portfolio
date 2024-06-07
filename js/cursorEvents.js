@@ -13,4 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hoverArea.addEventListener('mouseenter', handleMouseEnter);
     hoverArea.addEventListener('mouseleave', handleMouseLeave);
+    // hoverArea.addEventListener('click', handleMouseEnter);
+    // hoverArea.addEventListener('click', handleMouseLeave);
 });

@@ -1,67 +1,71 @@
 nav {
-    position: fixed;
-    top: 50%;
-    left: 3vw;
-    height: 15rem;
-    width: max-content;
-    transform: translate(0, -50%);
-    z-index: 1;
-    * {
-      transition: var(--transition-primary);
-    }
-  
-    ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: column;
-      gap: 0.5rem;
-  
-      a {
-        --width: 1.7rem;
-        width: var(--width);
-        position: relative;
-        aspect-ratio: 1;
-        color: var(--primary-text-color);
-        cursor: default;
-  
-        .ionicon {
-          cursor: pointer;
+  position: fixed;
+  bottom: 50%;
+  left: 3vw;
+  height: 15rem;
+  width: max-content;
+  transform: translate(0, 50%);
+  z-index: 1;
+
+  &, * {
+    transition: var(--transition-primary);
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    a {
+      --width: 1.7rem;
+      width: var(--width);
+      position: relative;
+      aspect-ratio: 1;
+      color: var(--primary-text-color);
+      cursor: default;
+
+      .ionicon {
+        cursor: pointer;
+      }
+
+      &.chevron-icons {
+        > .ionicon {
+          transform: rotate(-90deg);
         }
+        > .ionicon.chevron-icon-focus {
+          transform: rotate(0);
+        }
+
+        ol {
+          --distance: -9rem;
+          transition: var(--transition-primary);
+          top: calc(var(--width) + 0.5rem);
+          width: calc(var(--width) * 2.1);
+          flex-direction: column;
+          position: absolute;
+          align-items: end;
+          left: var(--distance);
+          display: flex;
+          gap: 0.8rem;
   
-        &.chevron-icons {
-          > .ionicon {
-            transform: rotate(-90deg);
-          }
-          > .ionicon.chevron-icon-focus {
-            transform: rotate(0);
-          }
-          
-          ol {
-            --distance: -9rem;
-            transition: var(--transition-primary);
-            top: calc(var(--width) + .5rem);
-            width: calc(var(--width) * 2.1);
-            flex-direction: column;
-            position: absolute;
-            align-items: end;
-            left: var(--distance);
-            display: flex;
-            gap: .8rem;
-            /* & * {transition: var(--transition-primary);} */
-            
+          li {
+            img {
+              display: none;
+            }
             .ionicon {
               position: relative;
               color: var(--primary-text-color);
-              width: 1.7rem;
+              width: var(--width);
               aspect-ratio: 1;
-              padding: .085rem;
+              padding: 0.085rem;
               border-radius: 50%;
               transition:
-                all .3s ease,
-                left .3s ease;
+                all 0.3s ease,
+                left 0.3s ease;
               left: 0;
-              
+  
               &:nth-child(1) {
                 transition-delay: 0s;
               }
@@ -82,35 +86,158 @@ nav {
                 left: calc(-1 * var(--distance));
               }
               &.focus {
-                filter:
-                  drop-shadow(0 0 .5rem var(--primary-text-color))
-                  drop-shadow(0 0 1rem var(--primary-text-color));
-                  transform: rotate(90deg);
-                  /* transition: .2s ease; */
+                filter: drop-shadow(0 0 0.5rem var(--primary-text-color)) drop-shadow(0 0 1rem var(--primary-text-color));
+                transform: rotate(90deg);
+                /* transition: .2s ease; */
               }
             }
           }
         }
       }
+    }
+
+    a:nth-child(1) {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 1;
+    }
+    &::after {
+      content: "";
+      order: 2;
+      width: 0.02rem;
+      height: 3rem;
+      background: var(--primary-text-color);
+      position: relative;
+      border-radius: 50%;
+      transition: var(--transition-primary);
+    }
+    a:nth-child(2) {
+      order: 3;
+    }
+  }
+}
+
+header.header-mobile.header-no-show + nav {bottom: 4rem !important;}
+header.header-mobile + nav {
+  transform: translate(0) translateX(-50%);
+  height: max-content;
+  bottom: 4rem;
+  left: 50%;
+
+  ul {
+    border: 2px solid var(--prymary-hover-color);
+    background: rgba(250, 250, 250, 10%);
+    backdrop-filter: blur(20px);
+    flex-direction: row;
+    padding: 1.3rem 2rem;
+    border-radius: 999px;
+    overflow: hidden;
+    
+    &::after {
+      height: 0.02rem;
+      width: 3rem;
+      transition: var(--transition-primary);
+    }
+
+    &:has(.chevron-icons ol .ionicon.visible) {
+      padding: 1.3rem 5rem;
+    }
+
+    &:has(.chevron-icons ol .ionicon.visible)::after,
+    &:has(.chevron-icons ol .ionicon.visible) a:nth-child(1),
+    &:has(.chevron-icons ol .ionicon.visible) a #chevronIcon {
+      transform: translateY(-15rem);
+    }
+
+    a {
+      --width-icon-mobile: 2.5rem;
+      width: var(--width-icon-mobile);
+
+      &:nth-child(1) {z-index: 5;}
+      &:nth-child(2) {z-index: 4;}
+    
+      &.chevron-icons {
+        > .ionicon {
+          z-index: 3;
+          
+          &.chevron-icon-focus {
+            transform: rotate(-180deg);
+          }
+        }
+
+        ol {
+          top: 0;
+          flex-direction: row;
+          width: max-content;
+          transform: translateX(0);
+          z-index: -1;
+          gap: 1.5rem;
+          
+          li {
+            width: var(--width-icon-mobile);
+            transform: translateY(10rem);
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            display: flex;
+            cursor: pointer;
+
+            &:has(.ionicon.visible) {
+              transform: translateY(0);
+              z-index: 10;
+            }
+
+            &:nth-child(1) {
+              transition-delay: 0s;
+            }
+            &:nth-child(2) {
+              transition-delay: 0s, 0.03s;
+            }
+            &:nth-child(3) {
+              transition-delay: 0s, 0.06s;
+            }
+            &:nth-child(4) {
+              transition-delay: 0s, 0.09s;
+            }
+            &:nth-child(5) {
+              transition-delay: 0s, 0.12s;
+            }
+
+            img {
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              aspect-ratio: 1;
+              width: 2rem;
+            }
+
+            .ionicon {
+              width: var(--width-icon-mobile);
+              transform: rotate(90deg);
+              opacity: 0;
+              transition:
+                all 0.3s ease,
+                transform 0.3s ease;
+              
+              &.chevron {width: calc(var(--width-icon-mobile) - .5rem);}
+
+              &.visible {
+                left: 0;
+                transform: rotate(90deg);
+              }
   
-      a:nth-child(1) {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        order: 1;
-      }
-      &::after {
-        content: "";
-        order: 2;
-        width: 0.02rem;
-        height: 3rem;
-        background: var(--primary-text-color);
-        position: relative;
-        border-radius: 50%;
-      }
-      a:nth-child(2) {
-        order: 3;
+              &.visible.focus {
+                transform: translateY(1.7rem) rotate(90deg);
+                opacity: 1;
+              }
+            }
+          }
+        }
       }
     }
   }
+}

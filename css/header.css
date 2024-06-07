@@ -3,65 +3,90 @@ header {
     -webkit-backdrop-filter: blur(var(--blur-value));
     backdrop-filter: blur(var(--blur-value));
     border-bottom: 0.05rem solid var(--prymary-hover-color);
-    background: transparent;
+    background: rgba(250, 250, 250, 0.02);
     padding: 2.5rem var(--viewport-padding);
     transition: var(--transition-primary);
+    width: clamp(100vw, 100vw, 100vw);
     justify-content: space-between;
     transform: translate(-50%, 0);
     align-items: center;
+    /* overflow: hidden; */
     position: fixed;
     display: flex;
-    width: clamp(100vw, 100vw, 100vw);
     z-index: 2;
     left: 50%;
     top: 0;
-  
+
     &.header-no-show {
-      transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
     }
-  
+    
+    &.header-mobile {
+        border: 1px solid var(--prymary-hover-color);
+        background: rgba(250, 250, 250, 7%);
+        border-radius: 10rem;
+        margin-top: 5vw;
+        width: 90vw;
+        padding: 1rem var(--viewport-padding);
+        
+        &.header-no-show {
+            transform:
+                translate(
+                    -50%, calc(-100% - var(--viewport-padding)
+                ));
+        }
+        strong:has(> img)  img {
+            height: 3.5rem;
+        }
+
+        ul li:has(> a) {
+            /* border: 1px solid red; */
+            display: none;
+        }
+    }
+
     strong {
-      display: flex;
-      align-items: center;
-  
-      img {
-        height: 5rem;
-        margin-right: .5rem;
-        object-fit: contain;
-        aspect-ratio: 1;
-        filter: drop-shadow(0 0 2px #fff);
-      }
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 5rem;
+            margin-right: 0.5rem;
+            object-fit: contain;
+            aspect-ratio: 1;
+            filter: drop-shadow(0 0 2px #fff);
+        }
     }
-  
+
     strong,
     ul li {
-      font-size: 1.3rem;
-      font-weight: 800;
+        font-size: 1.3rem;
+        font-weight: 800;
     }
-  
+
     & > ul {
         display: flex;
         justify-content: end;
         align-items: center;
         gap: 1rem;
-        
+
         & * {
             cursor: pointer;
             color: var(--primary-text-color);
         }
-    
+
         li.footer-lading {
             position: relative;
             display: flex;
             gap: 1rem;
             height: 100%;
-        
+
             a {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-        
+
             &::before {
                 content: "";
                 position: absolute;
@@ -72,11 +97,11 @@ header {
                 height: 0.05rem;
                 background: #cccccc97;
             }
-        
+
             .anchor-social-medias {
                 height: 100%;
                 aspect-ratio: 1;
-                
+
                 img {
                     height: 2rem;
                     aspect-ratio: 1;
@@ -98,9 +123,8 @@ header {
             background: var(--prymary-hover-color);
         }
 
-
         li.about_li_button {
-            --time-animation: .2s;
+            --time-animation: 0.2s;
             position: relative;
             transition: 0.25s ease;
             display: flex;
@@ -118,16 +142,15 @@ header {
                 background: var(--prymary-hover-color);
 
                 img {
-                transform: rotate(180deg);
+                    transform: rotate(180deg);
                 }
             }
 
             & * {
                 transition: 0.25s ease;
             }
-            
-            &:not([extend])
-            .about-li-hover-area {
+
+            &:not([extend]) .about-li-hover-area {
                 animation: no-extend-about var(--time-animation) ease forwards;
             }
 
@@ -136,18 +159,18 @@ header {
                 cursor: default;
                 top: 100%;
                 right: 0;
-                
+
                 ul {
                     animation: extend-about var(--time-animation) ease forwards;
                     width: 30rem;
                     overflow: hidden;
                     margin-top: 1rem;
                     padding: 1.6rem;
-                    border-radius: .5rem;
+                    border-radius: 0.5rem;
                     flex-direction: column;
                     border: var(--primary-border-value);
                     background: var(--background-hover-color);
-                    
+
                     li:nth-child(1) {
                         display: flex;
                         justify-content: space-between;
@@ -176,7 +199,7 @@ header {
                             font-size: var(--toggle-size);
                         }
                         .theme-checkbox::before {
-                            --padding-value: .45rem;
+                            --padding-value: 0.45rem;
                             content: "";
                             width: 1.3rem;
                             aspect-ratio: 1;
@@ -207,32 +230,35 @@ header {
                         flex-direction: column;
                         white-space: nowrap;
                         display: flex;
-                        gap: .5rem;
-                        
+                        gap: 0.5rem;
+
                         span {
-                            border-radius: .5rem;
+                            border-radius: 0.5rem;
                             padding: 1.2rem;
-                            transition: .25s ease;
+                            transition: 0.25s ease;
                             font-weight: 500;
                             line-height: 1;
                             font-size: 1.5rem;
                             /* cursor: pointer; */
 
                             p {
-                            margin-top: .5rem;
-                            color: var(--paragraph-primary-color);
-                            white-space: normal;
-                            line-height: 1.4;
-                            font-weight: 300;
+                                margin-top: 0.5rem;
+                                color: var(--paragraph-primary-color);
+                                white-space: normal;
+                                line-height: 1.4;
+                                font-weight: 300;
                             }
 
                             &:hover {
-                            background-color: var(--prymary-hover-color);
+                                background-color: var(--prymary-hover-color);
                             }
                         }
                     }
                 }
-                ul, ul * { cursor: default; }
+                ul,
+                ul * {
+                    cursor: default;
+                }
             }
         }
     }

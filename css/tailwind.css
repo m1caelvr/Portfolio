@@ -1,5 +1,12 @@
 .color-icon-primary {
     filter: invert(1);
+
+    &.shadow {
+        filter:
+            invert(1)
+            drop-shadow(0 0 .2rem #000)
+            drop-shadow(0 0 .3rem #0000007c);
+    }
 }
 
 .user-select {
