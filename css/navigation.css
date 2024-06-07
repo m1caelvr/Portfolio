@@ -119,11 +119,11 @@ nav {
   }
 }
 
-header.header-mobile.header-no-show + nav {bottom: 4rem !important;}
+header.header-mobile.header-no-show + nav {bottom: 2.5rem !important;}
 header.header-mobile + nav {
   transform: translate(0) translateX(-50%);
   height: max-content;
-  bottom: 4rem;
+  bottom: 2.5rem;
   left: 50%;
 
   ul {
