@@ -76,13 +76,13 @@ main {
       aspect-ratio: 1;
       height: 1rem;
       background-color: var(--secundary-text-color);
-      filter: drop-shadow(0 0 1px #fff);
+      filter: drop-shadow(0 0 1px var(--background-color));
       animation: 1.3s shadow-circle infinite ease;
     }
     
     a.cv_button_acess {
       position: relative;
-      margin-top: .5rem;
+      margin-bottom: 2rem;
       display: flex;
       gap: .5rem;
       justify-content: center;
@@ -141,6 +141,33 @@ main {
       &:hover .arrow-icon img:nth-child(2) {
         top: 50%;
         left: 0;
+      }
+    }
+
+    .contact-area {
+      display: none;
+      justify-content: center;
+      width: 100%;
+
+      ul {
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+
+        &, & * { color: var(--paragraph-primary-color); }
+        
+        &::before,
+        &::after {
+          content: "";
+          position: relative;
+          display: inline;
+          background-color: var(--paragraph-primary-color);
+          width: 100%;
+          height: 1px;
+          border-radius: 99rem;
+        }
       }
     }
   }
@@ -484,8 +511,10 @@ main {
               justify-content: center;
               align-items: center;
               cursor: pointer;
-              transition: transform .2s ease;
               transform: scale(1);
+              transition:
+                background-color .2s ease,
+                transform .2s ease;
               
               img {
                 width: 2rem;
@@ -494,6 +523,7 @@ main {
 
               &:hover {
                 transform: scale(103.5%);
+                background-color: var(--background-color-hover);
               }
             }
           }
@@ -589,8 +619,8 @@ main {
 
           &:hover {
             box-shadow:
-              inset 0 0 15px rgba(255, 255, 255, .3),
-              0 0 10px rgba(255, 255, 255, .2);
+              inset 0 0 15px var(--box-shadow),
+              0 0 10px var(--box-shadow);
           }
         }
       }
@@ -625,8 +655,8 @@ main {
 @keyframes shadow-circle {
   0% {
     filter:
-    drop-shadow(0 0 0 #fff)
-    drop-shadow(0 0 0 #fff);
+    drop-shadow(0 0 0 var(--background-color))
+    drop-shadow(0 0 0 var(--background-color));
   }
   100% {
     filter:
@@ -694,7 +724,7 @@ main {
     display: none;
   }
   
-  section.projects{
+  section.projects {
     .projects-list {
       grid-template-columns: repeat(2, 1fr) !important;
     }
@@ -702,7 +732,13 @@ main {
 }
 @media screen and (max-width: 768px) {
   ul.skills-area-li {
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
+    display: grid !important;
+
+    li {
+      max-width: 100% !important;
+    }
   }
   .section-landing {
     display: flex;
@@ -734,6 +770,8 @@ main {
       }
 
       .cv_button_acess { width: 100% !important; }
+
+      .contact-area { display: flex; }
     }
 
     aside {
@@ -755,7 +793,11 @@ main {
       }
     }
   }
-
+  /* section.projects {
+    .projects-list {
+      grid-template-columns: 1fr !important;
+    }
+  } */
   section.contact {
     margin-block: 5rem;
     padding-bottom: 6rem !important;
@@ -763,6 +805,14 @@ main {
 }
 
 @media screen and (max-width: 515px) {
+  .initial-text {
+    strong > h1 {
+      font-size: 3.5rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
   .initial-text {
     strong > h1 {
       font-size: 3rem !important;

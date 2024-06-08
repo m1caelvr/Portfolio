@@ -3,22 +3,40 @@
 :root {
   font-size: 62.5%;
   --primary-family-font: "Manrope", sans-serif;
-  --transition-primary: .3s ease;
+  /* --background-secundary-color: #09090b; */
   --transition-outline-color: .15s ease;
+  --transition-primary: .3s ease;
   --transition-outline: .3s ease;
   --transition-button: .25s ease;
   --viewport-padding: 15vw;
-  /* --background-secundary-color: #09090b; */
+
   --background-color: #000;
+  --background-color2: #fafafa05;
+  --background-color-hover: #050505;
   --background-secundary-color: #121212;
   --background-hover-color: #09090b;
-  --primary-text-color: #fafafa;
+  --box-shadow: rgba(255, 255, 255, .2);
   --prymary-hover-color: #27272a;
+  --primary-text-color: #fafafa;
   --secundary-text-color: #888888;
   --paragraph-primary-color: #a1a1aa;
-  --border-color: rgba(229, 231, 235, 0.16);
+  --border-color: rgba(229, 231, 235, 0.161);
   --primary-border-value: 1px solid var(--border-color);
 }
+/* :root {
+  --background-color: #fff;
+  --background-color2: rgba(5, 5, 5, 0.05);
+  --background-color-hover: #050505;
+  --background-secundary-color: rgb(237, 237, 237);
+  --background-hover-color: rgb(246, 246, 239);
+  --box-shadow: rgba(0, 0, 0, .2);
+  --prymary-hover-color: rgb(216, 216, 213);
+  --primary-text-color: rgb(5, 5, 5);
+  --secundary-text-color: rgb(119, 119, 119);
+  --paragraph-primary-color: rgb(94, 94, 85);
+  --border-color: rgba(26, 24, 20, 0.161);
+  --primary-border-value: 1px solid var(--border-color);
+} */
 
 * {
   padding: 0;
