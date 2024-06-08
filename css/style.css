@@ -76,7 +76,7 @@ main {
       aspect-ratio: 1;
       height: 1rem;
       background-color: var(--secundary-text-color);
-      filter: drop-shadow(0 0 1px #fff);
+      filter: drop-shadow(0 0 1px var(--background-color));
       animation: 1.3s shadow-circle infinite ease;
     }
     
@@ -589,8 +589,8 @@ main {
 
           &:hover {
             box-shadow:
-              inset 0 0 15px rgba(255, 255, 255, .3),
-              0 0 10px rgba(255, 255, 255, .2);
+              inset 0 0 15px var(--box-shadow),
+              0 0 10px var(--box-shadow);
           }
         }
       }
@@ -625,8 +625,8 @@ main {
 @keyframes shadow-circle {
   0% {
     filter:
-    drop-shadow(0 0 0 #fff)
-    drop-shadow(0 0 0 #fff);
+    drop-shadow(0 0 0 var(--background-color))
+    drop-shadow(0 0 0 var(--background-color));
   }
   100% {
     filter:
@@ -703,6 +703,12 @@ main {
 @media screen and (max-width: 768px) {
   ul.skills-area-li {
     justify-content: space-between;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+
+    li {
+      max-width: 100% !important;
+    }
   }
   .section-landing {
     display: flex;

@@ -3,7 +3,7 @@ header {
     -webkit-backdrop-filter: blur(var(--blur-value));
     backdrop-filter: blur(var(--blur-value));
     border-bottom: 0.05rem solid var(--prymary-hover-color);
-    background: rgba(250, 250, 250, 0.02);
+    background: var(--background-color2);
     padding: 2.5rem var(--viewport-padding);
     transition: var(--transition-primary);
     width: clamp(100vw, 100vw, 100vw);
@@ -19,30 +19,6 @@ header {
 
     &.header-no-show {
         transform: translate(-50%, -100%);
-    }
-    
-    &.header-mobile {
-        border: 1px solid var(--prymary-hover-color);
-        background: rgba(250, 250, 250, 7%);
-        border-radius: 10rem;
-        margin-top: 5vw;
-        width: 90vw;
-        padding: 1rem var(--viewport-padding);
-        
-        &.header-no-show {
-            transform:
-                translate(
-                    -50%, calc(-100% - var(--viewport-padding)
-                ));
-        }
-        strong:has(> img)  img {
-            height: 3.5rem;
-        }
-
-        ul li:has(> a) {
-            /* border: 1px solid red; */
-            display: none;
-        }
     }
 
     strong {
@@ -123,6 +99,16 @@ header {
             background: var(--prymary-hover-color);
         }
 
+        /* li.about_li_button:active, */
+        li.about_li_button:hover,
+        li.about_li_button:focus {
+            background: var(--prymary-hover-color);
+    
+            img {
+                transform: rotate(180deg);
+            }
+        }
+
         li.about_li_button {
             --time-animation: 0.2s;
             position: relative;
@@ -156,7 +142,7 @@ header {
                     animation: extend-about var(--time-animation) ease forwards;
                     width: 30rem;
                     overflow: hidden;
-                    margin-top: 1.2rem;
+                    margin-top: 1rem;
                     padding: 1.6rem;
                     border-radius: 0.5rem;
                     flex-direction: column;
@@ -256,12 +242,32 @@ header {
     }
 }
 
-@media screen and (min-width: 1051px) {
-    li.about_li_button:hover {
-        background: var(--prymary-hover-color);
+header.header-mobile {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    background: var(--background-color2);
+    border-radius: 10rem;
+    margin-top: 5vw;
+    width: 90vw;
+    padding: 1rem var(--viewport-padding);
+    
+    &.header-no-show {
+        transform:
+            translate(
+                -50%, calc(-100% - var(--viewport-padding)
+            ));
+    }
+    strong:has(> img)  img {
+        height: 3.5rem;
+    }
 
-        img {
-            transform: rotate(180deg);
+    ul li:has(> a) {
+        /* border: 1px solid red; */
+        display: none;
+    }
+
+    .about-li-hover-area {
+        ul {
+            margin-top: 2rem !important;
         }
     }
 }
