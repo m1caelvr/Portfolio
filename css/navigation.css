@@ -239,10 +239,6 @@ header.header-mobile + nav {
                 opacity: 1;
               }
             }
-
-            img :has(+ :has(.visible.focus)) {
-              border: 1px solid red;
-            }
           }
         }
       }
