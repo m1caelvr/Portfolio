@@ -163,6 +163,7 @@ main {
   }
 
   .scroll-lading {
+    z-index: 5;
     position: absolute;
     left: 50%;
     bottom: 4rem;
@@ -269,6 +270,7 @@ main {
 
   section.skills {
     display: flex;
+    padding-top: 3rem;
     justify-content: center;
     align-items: start;
     min-height: max-content;
@@ -686,6 +688,11 @@ main {
       display: flex !important;
     }
   }
+
+  .scroll-lading {
+    bottom: 7rem;
+    display: none;
+  }
   
   section.projects{
     .projects-list {
@@ -746,11 +753,6 @@ main {
         height: 100%;
         object-fit: cover;
       }
-    }
-
-    .scroll-lading {
-      bottom: 7rem;
-      display: none;
     }
   }
 

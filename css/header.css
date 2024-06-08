@@ -138,14 +138,6 @@ header {
                 width: 1.2rem;
             }
 
-            &:hover {
-                background: var(--prymary-hover-color);
-
-                img {
-                    transform: rotate(180deg);
-                }
-            }
-
             & * {
                 transition: 0.25s ease;
             }
@@ -164,7 +156,7 @@ header {
                     animation: extend-about var(--time-animation) ease forwards;
                     width: 30rem;
                     overflow: hidden;
-                    margin-top: 1rem;
+                    margin-top: 1.2rem;
                     padding: 1.6rem;
                     border-radius: 0.5rem;
                     flex-direction: column;
@@ -260,6 +252,16 @@ header {
                     cursor: default;
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1051px) {
+    li.about_li_button:hover {
+        background: var(--prymary-hover-color);
+
+        img {
+            transform: rotate(180deg);
         }
     }
 }

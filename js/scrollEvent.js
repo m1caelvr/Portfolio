@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function iconSecundarySectionInFocus(section) {
-    console.log(1);
     navSectionMainSvgs.forEach(svg => svg.classList.remove('focus'));
 
     if (section.classList.contains('about')) {
