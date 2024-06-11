@@ -38,6 +38,9 @@
     outline-offset: 0px;
     text-shadow: none;
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     
 } 
 .button-hover:focus,
@@ -49,14 +52,19 @@
     text-shadow: 1px 1px 2px #427388; 
 }
 .button-outline-hover {
-    outline: 1px solid;
-    outline-color: var(--primary-text-color);
-    outline-offset: 0px;
-    transition:
+    --transition-value:
         var(--transition-button),
         outline-color var(--transition-outline-color),
         outline-offset var(--transition-outline),
         outline var(--transition-outline);
+
+    outline: 1px solid;
+    outline-color: var(--primary-text-color);
+    outline-offset: 0px;
+    transition: var(--transition-value);
+    -o-transition: var(--transition-value);
+    -moz-transition: var(--transition-value);
+    -webkit-transition: var(--transition-value);
     
     &:hover {
         transform: scale(1.05);

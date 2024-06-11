@@ -61,26 +61,10 @@ nav {
               aspect-ratio: 1;
               padding: 0.085rem;
               border-radius: 50%;
+              left: 0;
               transition:
                 all 0.3s ease,
                 left 0.3s ease;
-              left: 0;
-  
-              &:nth-child(1) {
-                transition-delay: 0s;
-              }
-              &:nth-child(2) {
-                transition-delay: 0s, 0.03s;
-              }
-              &:nth-child(3) {
-                transition-delay: 0s, 0.06s;
-              }
-              &:nth-child(4) {
-                transition-delay: 0s, 0.09s;
-              }
-              &:nth-child(5) {
-                transition-delay: 0s, 0.12s;
-              }
   
               &.visible {
                 left: calc(-1 * var(--distance));
@@ -88,8 +72,20 @@ nav {
               &.focus {
                 filter: drop-shadow(0 0 0.5rem var(--primary-text-color)) drop-shadow(0 0 1rem var(--primary-text-color));
                 transform: rotate(90deg);
-                /* transition: .2s ease; */
               }
+            }
+
+            &:nth-child(1) svg {
+              transition-delay: 0s, 0s;
+            }
+            &:nth-child(2) svg {
+              transition-delay: 0s, .03s;
+            }
+            &:nth-child(3) svg {
+              transition-delay: 0s, .06s;
+            }
+            &:nth-child(4) svg {
+              transition-delay: 0s, .09s;
             }
           }
         }
@@ -129,12 +125,17 @@ header.header-mobile + nav {
   ul {
     border: 1px solid rgba(250, 250, 250, 0.2);
     background: var(--background-color2);
-    backdrop-filter: blur(20px);
     flex-direction: row;
     padding: 1.3rem 2rem;
     border-radius: 999px;
     overflow: hidden;
     
+    backdrop-filter: blur(20px);
+    -o-backdrop-filter: blur(20px);
+    -ms-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+        
     &::after {
       height: 0.02rem;
       width: 3rem;
@@ -187,26 +188,11 @@ header.header-mobile + nav {
             position: relative;
             display: flex;
             cursor: pointer;
+            transition: .3s ease, transform .3s ease;
 
             &:has(.ionicon.visible) {
               transform: translateY(0);
               z-index: 10;
-            }
-
-            &:nth-child(1) {
-              transition-delay: 0s;
-            }
-            &:nth-child(2) {
-              transition-delay: 0s, 0.03s;
-            }
-            &:nth-child(3) {
-              transition-delay: 0s, 0.06s;
-            }
-            &:nth-child(4) {
-              transition-delay: 0s, 0.09s;
-            }
-            &:nth-child(5) {
-              transition-delay: 0s, 0.12s;
             }
 
             img {
@@ -238,6 +224,19 @@ header.header-mobile + nav {
                 transform: translateY(1.8rem) rotate(90deg);
                 opacity: 1;
               }
+            }
+
+            &:nth-child(1) {
+              transition-delay: 0s, 0s;
+            }
+            &:nth-child(2) {
+              transition-delay: 0s, .03s;
+            }
+            &:nth-child(3) {
+              transition-delay: 0s, .06s;
+            }
+            &:nth-child(4) {
+              transition-delay: 0s, .09s;
             }
           }
         }
