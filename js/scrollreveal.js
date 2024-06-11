@@ -19,6 +19,7 @@ const addIntersectionObserver = (elements, delay = 0, threshold = 0) => {
 };
 
 const sectionsToReveal = [
+    { selector: '.loading-reveal', delay: 300, threshold: 0 },
     { selector: '.landing-reveal', delay: 250, threshold: 0 },
     { selector: '.opacity-reveal-delay', delay: 100, threshold: 0 },
     { selector: '.opacity-reveal', delay: 0, threshold: 0 },

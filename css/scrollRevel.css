@@ -1,3 +1,11 @@
+.loading-reveal {
+    opacity: 0;
+    transition: .8s ease;
+    
+    &.show {
+        opacity: 1;
+    }
+}
 .landing-reveal {
     opacity: 0;
     transition: .8s ease;

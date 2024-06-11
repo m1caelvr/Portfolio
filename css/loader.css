@@ -1,0 +1,67 @@
+.loader[loading] {
+    background-color: var(--background-color);
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    display: flex;
+    opacity: 1;
+    animation: close 1s forwards;
+    animation-delay: 4.1s;
+
+    & > .area-loader {
+        /* border: 1px solid rgba(255, 0, 0, 0.257); */
+        padding: 2rem;
+        width: max-content;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        h1 {
+            font-size: clamp(2.5rem, 3.5rem, 4rem) !important;
+            display: flex;
+            justify-content: center;
+            animation: close-loading .3s ease forwards;
+            animation-delay: 3.8s;
+        }
+
+        .loading {
+            width: 100%;
+            height: 5px;
+            border-radius: 99rem;
+            opacity: 1;
+            animation: close-loading .3s ease forwards;
+            animation-delay: 3.8s;
+
+            span {
+                background-color: var(--primary-text-color);
+                border-radius: 99rem;
+                display: block;
+                height: 100%;
+                width: 0%;
+                box-shadow: 0 0 1rem #fff, 0 0 .4rem #ffffff7b;
+
+                animation: loading 3s ease forwards;
+                animation-delay: 1s;
+            }
+        }
+    }
+}
+
+@keyframes loading {
+    to { width: 100%; }
+}
+@keyframes close-loading {
+    to {opacity: 0;}
+}
+@keyframes close {
+    0% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+    100% {
+        /* transform: translateY(-100vh); */
+        opacity: 0;
+        display: none;
+    }
+}
