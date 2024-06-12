@@ -183,6 +183,7 @@ main {
     img {
       transition-delay: 1s;
       max-height: 100%;
+      max-width: 100%;
       object-fit: contain;
       filter: contrast(110%);
       aspect-ratio: 9/14;
@@ -266,6 +267,25 @@ main {
       figure {
         display: grid;
         justify-content: center;
+        overflow: hidden;
+        width: max-content;
+        border-radius: 3rem;
+        position: relative;
+        height: 100%;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          box-shadow:
+            /* -3rem 0 7rem #000 inset, */
+            -3rem 0 3rem #000 inset
+            ;
+        }
+
+        img {
+          border-radius: 3rem;
+        }
       }
 
       article {

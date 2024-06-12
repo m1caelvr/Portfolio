@@ -1,20 +1,22 @@
 .loader[loading] {
+    --delay: 3.8s;
     background-color: var(--background-color);
     position: fixed;
     z-index: 10;
     inset: 0;
+    display: none;
     display: flex;
     opacity: 1;
     animation: close 1s forwards;
-    animation-delay: 4.1s;
+    animation-delay: calc(var(--delay) + .3s);
 
     & > .area-loader {
         /* border: 1px solid rgba(255, 0, 0, 0.257); */
-        padding: 2rem;
-        width: max-content;
-        margin: auto;
         display: flex;
         flex-direction: column;
+        width: max-content;
+        padding: 2rem;
+        margin: auto;
         gap: 3rem;
 
         h1 {
@@ -22,7 +24,19 @@
             display: flex;
             justify-content: center;
             animation: close-loading .3s ease forwards;
-            animation-delay: 3.8s;
+            animation-delay: var(--delay);
+            /* border: 1px solid red; */
+            overflow: hidden;
+
+            span {
+                transform: translateY(100%);
+                animation: up calc(var(--delay) - .3s) ease forwards;
+                animation-delay: .8s;
+            }
+            span:last-child {
+                transform: translateY(-100%);
+                animation-delay: 1s;
+            }
         }
 
         .loading {
@@ -31,7 +45,7 @@
             border-radius: 99rem;
             opacity: 1;
             animation: close-loading .3s ease forwards;
-            animation-delay: 3.8s;
+            animation-delay: var(--delay);
 
             span {
                 background-color: var(--primary-text-color);
@@ -40,14 +54,15 @@
                 height: 100%;
                 width: 0%;
                 box-shadow: 0 0 1rem #fff, 0 0 .4rem #ffffff7b;
-
                 animation: loading 3s ease forwards;
                 animation-delay: 1s;
             }
         }
     }
 }
-
+@keyframes up {
+    to { transform: translateY(0); }
+}
 @keyframes loading {
     to { width: 100%; }
 }
