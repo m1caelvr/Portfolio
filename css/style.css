@@ -431,6 +431,7 @@ main {
         background-color: var(--background-secundary-color);
 
         figure {
+          --transition: .3s;
           border-radius: calc(var(--border-radius) / 2);
           box-shadow: 0 1rem 2.5rem #000;
           position: relative;
@@ -438,6 +439,7 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
 
           img.project-image {
             width: 100%;
@@ -445,40 +447,75 @@ main {
             object-fit: cover;
             border-radius: calc(var(--border-radius) / 2);
             position: relative;
+            transform: scale(1);
+            transition: var(--transition) ease;
           }
-        }
 
-        figure.Aesthetkit {
-          &::before {
-            content: "";
-            backdrop-filter: blur(50px);
-            -o-backdrop-filter: blur(50px);
-            -ms-backdrop-filter: blur(50px);
-            -moz-backdrop-filter: blur(50px);
-            -webkit-backdrop-filter: blur(50px);
+          &::after {
+            content: attr(more-info);
             position: absolute;
-            top: 0;
+            font-weight: 800;
+            text-shadow: 0 0 5px #000;
+            font-size: 1.5rem;
+            top: 30%;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 1;
+            z-index: 7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition) ease;
+            background-image:
+              linear-gradient(to top, rgba(0, 0, 0, 0.8) 20%, #00000000),
+              linear-gradient(to top, rgba(0, 0, 0, 0.6) 50%, #00000000);
           }
-          &::after {
-            content: "Em construção...";
-            transform: translate(-50%, -50%) rotate(-25deg);
-            font-weight: bold;
-            text-align: center;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            z-index: 2;
-            width: 150%;
-            padding: 1rem 0;
-            background-color: #ffbe0c;
-            text-shadow: 0 .8rem 1rem #000000d3;
-            box-shadow:
-              inset 0 0 2rem rgba(0, 0, 0, 0.8),
-              0 0 2.5rem #000;
+
+          &:hover img {
+            transform: scale(1.065);
+            filter: blur(2.5px);
+          }
+
+          &:hover::after {
+            top: 0;
+            opacity: 1;
+          }
+        }
+
+        figure.in-development {
+          .blur {
+            &::before {
+              content: "";
+              backdrop-filter: blur(50px);
+              -o-backdrop-filter: blur(50px);
+              -ms-backdrop-filter: blur(50px);
+              -moz-backdrop-filter: blur(50px);
+              -webkit-backdrop-filter: blur(50px);
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 1;
+            }
+            &::after {
+              content: "Em construção...";
+              transform: translate(-50%, -50%) rotate(-25deg);
+              font-weight: bold;
+              text-align: center;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: 2;
+              width: 150%;
+              padding: 1rem 0;
+              background-color: #ffbe0c;
+              text-shadow: 0 .8rem 1rem #000000d3;
+              box-shadow:
+                inset 0 0 2rem rgba(0, 0, 0, 0.8),
+                0 0 2.5rem #000;
+            }
           }
         }
 
@@ -656,6 +693,31 @@ main {
         }
       }
     }
+  }
+}
+
+/* @keyframes up-more-info {
+  0% {
+    display: flex;
+    opacity: 0;
+    top: 100%;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    display: flex;
+  }
+} */
+@keyframes down-more-info {
+  0% {
+    top: 0;
+    opacity: 1;
+    display: flex;
+  }
+  100% {
+    display: flex;
+    opacity: 0;
+    top: 100%;
   }
 }
 

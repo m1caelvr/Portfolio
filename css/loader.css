@@ -1,3 +1,5 @@
+h1.tittle { display: none; }
+
 .loader[loading] {
     --delay: 3.8s;
     background-color: var(--background-color);
@@ -19,7 +21,7 @@
         margin: auto;
         gap: 3rem;
 
-        h1 {
+        h1.tittle {
             font-size: clamp(2.5rem, 3.5rem, 4rem) !important;
             display: flex;
             justify-content: center;
@@ -49,11 +51,11 @@
 
             span {
                 background-color: var(--primary-text-color);
-                border-radius: 99rem;
+                box-shadow: 0 0 1rem #fff, 0 0 .4rem #ffffff7b;
+                border-radius: 999rem;
                 display: block;
                 height: 100%;
                 width: 0%;
-                box-shadow: 0 0 1rem #fff, 0 0 .4rem #ffffff7b;
                 animation: loading 3s ease forwards;
                 animation-delay: 1s;
             }

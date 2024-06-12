@@ -124,12 +124,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function headerAdjust(show) {
       const header = document.getElementById("header");
-      // const hoverArea = document.getElementById('about-li-button');
 
       if (show === "noShow") {
         if (!header.classList.contains("header-no-show")) {
           header.classList.add("header-no-show");
-          // hoverArea.removeAttribute('extend');
         }
       } else {
         if (header.classList.contains("header-no-show")) {
