@@ -1,0 +1,19 @@
+[
+    {
+        "id": "grshop",
+        "title": "GRshop",
+        "description": "Projeto freelancer de um modelo de E-commerce WEB de roupas",
+        "link": "https://grcloset.netlify.app",
+        "github": "http://github.com/m1caelvr/GRshop",
+        "moreInfo": "Aqui vai uma descrição mais detalhada do projeto GRshop.",
+        "media": [
+            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/imgDesktop.png" },
+            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/desk1.png" },
+            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/desk2.png" },
+            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob1.png" },
+            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob2.png" },
+            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob3.png" },
+            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob4.png" }
+        ]
+    }
+]

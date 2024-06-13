@@ -419,7 +419,7 @@ main {
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       
-      & > * {
+      & > article {
         --gap: 2.5rem;
         --border-radius: 1.5rem;
         padding: 2.5rem;

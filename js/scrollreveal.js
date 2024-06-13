@@ -34,12 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
         for (const mutation of mutationsList) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'loading') {
                 if (!loader.hasAttribute('loading')) {
-                    console.log('O atributo loading foi removido.');
+                    // console.log('O atributo loading foi removido.');
                     sectionsToReveal.forEach(section => {
                         const elements = document.querySelectorAll(section.selector);
                         addIntersectionObserver(elements, section.delay, section.threshold);
                     });
-
                     observer.disconnect();
                 }
             }

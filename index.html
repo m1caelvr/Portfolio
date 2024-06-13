@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/infoProjects.css">
 </head>
 
 <body id="body">
@@ -294,7 +295,7 @@
                 </h2>
                 <div class="projects-list">
                     <article class="itens-section">
-                        <figure more-info="Mais informações">
+                        <figure data-id="grshop" class="figure-project" more-info="Mais informações">
                             <img class="project-image" src="img/portfolio.png" alt="">
                         </figure>
                         <div class="legend">
@@ -311,7 +312,7 @@
                         </div>
                     </article>
                     <article class="itens-section">
-                        <figure more-info="Mais informações">
+                        <figure data-id="grshop" class="figure-project" more-info="Mais informações">
                             <img class="project-image"
                                 src="https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/imgDesktop.png"
                                 alt="">
@@ -332,7 +333,7 @@
                         </div>
                     </article>
                     <article class="itens-section">
-                        <figure more-info="Mais informações">
+                        <figure data-id="grshop" class="figure-project" more-info="Mais informações">
                             <img class="project-image" src="img/image1.png" alt="">
                         </figure>
                         <div class="legend">
@@ -351,7 +352,7 @@
                         </div>
                     </article>
                     <article class="itens-section">
-                        <figure more-info="Mais informações">
+                        <figure data-id="grshop" class="figure-project" more-info="Mais informações">
                             <img class="project-image"
                                 src="https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/d.png"
                                 alt="">
@@ -370,7 +371,7 @@
                         </div>
                     </article>
                     <article class="itens-section">
-                        <figure more-info="Mais informações">
+                        <figure data-id="grshop" class="figure-project" more-info="Mais informações">
                             <img class="project-image"
                                 src="https://raw.githubusercontent.com/m1caelvr/ChatDesign/main/chat-project/IMG/Chat-template.PNG"
                                 alt="">
@@ -389,7 +390,7 @@
                         </div>
                     </article>
                     <article class="itens-section">
-                        <figure more-info="Mais informações" class="Aesthetkit in-development">
+                        <figure data-id="grshop" class="figure-project" more-info="Mais informações" class="Aesthetkit in-development">
                             <div class="blur"></div>
                             <img class="project-image" src="img/me.jpg" alt="">
                         </figure>
@@ -406,7 +407,6 @@
                             </a>
                         </div>
                     </article>
-                    </ul>
             </section>
             <section id="section-contact" class="contact section-secundary">
                 <footer class="scale-reveal">
@@ -465,15 +465,14 @@
                     </ul>
                 </footer>
             </section>
-            <!-- <footer>
-                <div>
-                    <h1>Contate-me</h1>
-                    <h2></h2>
-                    <button></button>
-                </div>
-            </footer> -->
         </section>
     </main>
+    <div id="modal-content" class="modal">
+        <div class="modal-content-inner">
+            <span class="close-btn">×</span>
+            <div id="modal-content-inner"></div>
+        </div>
+    </div>
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -481,7 +480,8 @@
 <script src="./js/scrollEvent.js"></script>
 <script src="./js/draggable.js"></script>
 <script src="./js/scrollreveal.js"></script>
-<script src="./js/cursorEvents.js"></script>
 <script src="./js/headerAdjust.js"></script>
+<script src="./js/infoProjectArea.js"></script>
+<script src="./js/cursorEvents.js"></script>
 </body>
 </html>
