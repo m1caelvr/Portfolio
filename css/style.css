@@ -156,7 +156,14 @@ main {
         justify-content: space-between;
         align-items: center;
 
-        &, & * { color: var(--paragraph-primary-color); }
+        &, & * {
+          color: var(--paragraph-primary-color);
+          transition: .3s ease;
+        }
+
+        li a:hover {
+          color:  var(--primary-text-color);
+        }
         
         &::before,
         &::after {
@@ -391,24 +398,72 @@ main {
       font-size: 1.6rem;
       line-height: 1.4;
       font-weight: 300;
+    }
+    > h2:has(>i) {
+      font-size: 1.2rem;
+    }
+
+
+    .area-projects {
+      margin-top: calc(var(--spacing)/3.5);
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      /* border: 1px solid red; */
       
-      button.git-button {
-        display: flex;
-        background-color: var(--primary-text-color);
-        border: none;
-        border-radius: 1rem;
-        padding: .8rem 1.4rem;
-        gap: .5rem;
-        color: var(--background-color);
-        font-weight: 700;
-        justify-content: center;
+      a:has(>button.git-button) {
+        width: max-content;
+  
+        button.git-button {
+          background-color: var(--primary-text-color);
+          color: var(--background-color);
+          border-radius: 1rem;
+          padding: .8rem 1.4rem;
+          gap: .5rem;
+          font-weight: 700;
+          justify-content: center;
+          align-items: center;
+          max-width: max-content;
+          cursor: pointer;
+          display: flex;
+          border: none;
+          transition-duration: .2s;
+    
+          img {
+            width: 2rem;
+            aspect-ratio: 1;
+          }
+    
+          &:hover {transform: translateY(-.2rem);}
+        }
+      }
+
+      .grid-indicator {
+        --width-indicator: 2.5rem;
+        --padding: .4rem;
+        background-color: var(--background-secundary-color);
+        border-radius: calc(var(--padding)*1.3);
+        gap: calc(var(--padding));
+        padding: var(--padding);
+        justify-content: end;
         align-items: center;
+        height: max-content;
+        overflow: hidden;
         cursor: pointer;
-        margin-top: var(--spacing);
+        display: flex;
+        transition: width .3s ease;
+        width:
+          calc( var(--width-indicator) + var(--padding) * 2 );
+
+        &:hover {
+          width: calc((var(--width-indicator)*3)+(var(--padding)*6));
+        }
 
         img {
-          width: 2rem;
           aspect-ratio: 1;
+          width: 2.5rem;
+          /* border: 1px solid red; */
         }
       }
     }
@@ -616,10 +671,10 @@ main {
       width: 100%;
 
       .footer-text {
-        display: flex;
         flex-direction: column;
-        gap: 2rem;
         padding: 3.4rem;
+        display: flex;
+        gap: 2rem;
         
         p {
           color: var(--paragraph-primary-color);

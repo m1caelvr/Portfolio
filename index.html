@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <header id="header" class="user-select opacity-reveal-delay">
+    <header id="header" class="user-select landing-reveal">
         <strong><img src="./img/MR-logo.png" alt="logo do desenvolvedor"><span>MICAELRODRIGUES</span></strong>
         <ul>
             <li><a href="http://linkedin.com/in/micael-silva-67077621b" target="_blank"
@@ -76,7 +76,7 @@
         </ul>
     </header>
 
-    <nav class="user-select opacity-reveal-delay">
+    <nav class="user-select landing-reveal">
         <ul>
             <a class="home">
                 <svg data-section="section-landing" class="ionicon home" id="homeIcon"
@@ -161,11 +161,11 @@
                     </ul>
                 </div>
             </div>
-            <aside>
-                <img class="opacity-reveal" src="./img/me1.jpg" alt="retrato de um homem">
+            <aside class="landing-reveal">
+                <img src="./img/me1.jpg" alt="retrato de um homem">
                 <!-- <img class="opacity-reveal" src="./img/me.jpg" alt="retrato de um homem"> -->
             </aside>
-            <div class="scroll-lading opacity-reveal-delay">
+            <div class="scroll-lading landing-reveal">
                 <img data-section="section-main" class="color-icon-primary" src="./svg/mouse.svg" alt="">
             </div>
         </section>
@@ -286,13 +286,24 @@
             </section>
             <section id="section-projects" class="projects section-secundary">
                 <h1 class="opacity-reveal-delay">Projetos</h1>
-                <h2 class="opacity-reveal-delay">Esses são apenas alguns projetos que desenvolvi na minha jornada como
-                    Dev. Para conferir mais, acesse meu GitHub. <br>
-                    <button class="git-button opacity-reveal-delay">
-                        <img src="./svg/github.svg" alt="">
-                        GitHub
-                    </button>
+                <h2 class="opacity-reveal-delay">
+                    Esses são apenas alguns projetos que desenvolvi na minha
+                    jornada como Dev. Para conferir mais, acesse meu GitHub.
                 </h2>
+                <h2 class="opacity-reveal-delay">( <i>Clique na imagem para mais informações</i> )</h2>
+                <div class="area-projects">
+                    <a href="http://github.com/m1caelvr" target="_blank" rel="noopener noreferrer">
+                        <button class="git-button opacity-reveal-delay">
+                            <img src="./svg/github.svg" alt="">
+                            GitHub
+                        </button>
+                    </a>
+                    <div class="grid-indicator" id="grid-indicator">
+                        <img src="svg/grid-indicators/1-2.svg" alt="">
+                        <img src="svg/grid-indicators/2-2.svg" alt="">
+                        <img src="svg/grid-indicators/3-3.svg" alt="">
+                    </div>
+                </div>
                 <div class="projects-list">
                     <article class="itens-section">
                         <figure data-id="grshop" class="figure-project" more-info="Mais informações">
@@ -412,10 +423,12 @@
                 <footer class="scale-reveal">
                     <div class="footer-text user-select">
                         <h4 class="opacity-reveal">FICOU INTERESSADO EM ALGO?</h4>
-                        <p class="opacity-reveal">Entre em contato comigo agora mesmo! Sinta-se à vontade para me enviar
-                            uma mensagem.</p>
+                        <p class="opacity-reveal">
+                            Entre em contato comigo agora mesmo!
+                            Sinta-se à vontade para me enviar uma mensagem.
+                        </p>
                         <label class="send-button opacity-reveal button-outline-hover">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://api.whatsapp.com/send?phone=8196123305" target="_blank" rel="noopener noreferrer">
                                 Enviar uma mensagem
                                 <img src="./svg/send.svg" alt="">
                             </a>

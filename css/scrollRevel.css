@@ -1,7 +1,7 @@
 
 .landing-reveal {
     opacity: 0;
-    transition: .8s ease;
+    transition: .9s ease;
     
     &.show {
         opacity: 1;
@@ -38,18 +38,6 @@
     
     &.show {
         animation: skills-reveal .3s ease forwards;
-
-        /* &:nth-child(1) { animation-delay: var(--delay); }
-        &:nth-child(2) { animation-delay: calc(var(--delay) + .1s); }
-        &:nth-child(3) { animation-delay: calc(var(--delay) + .165s); }
-        &:nth-child(4) { animation-delay: calc(var(--delay) + .22s); }
-        &:nth-child(5) { animation-delay: calc(var(--delay) + .275s); }
-        &:nth-child(6) { animation-delay: calc(var(--delay) + .33s); }
-        &:nth-child(7) { animation-delay: calc(var(--delay) + .385s); }
-        &:nth-child(8) { animation-delay: calc(var(--delay) + .44s); }
-        &:nth-child(9) { animation-delay: calc(var(--delay) + .495s); }
-        &:nth-child(10) { animation-delay: calc(var(--delay) + .55s); }
-        &:nth-child(11) { animation-delay: calc(var(--delay) + .605s); } */
     }
 }
 
