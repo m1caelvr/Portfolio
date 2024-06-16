@@ -298,13 +298,24 @@
                             GitHub
                         </button>
                     </a>
+
                     <div class="grid-indicator" id="grid-indicator">
-                        <img src="svg/grid-indicators/1-2.svg" alt="">
-                        <img src="svg/grid-indicators/2-2.svg" alt="">
-                        <img src="svg/grid-indicators/3-3.svg" alt="">
+                        <label for="indicator-1">
+                            <input class="grid-indicator-input" type="radio" name="indicator" id="indicator-1" hidden>
+                            <img src="svg/grid-indicators/1-2.svg" alt="1">
+                        </label>
+                        <label for="indicator-2">
+                            <input class="grid-indicator-input" type="radio" name="indicator" id="indicator-2" hidden checked>
+                            <img src="svg/grid-indicators/2-2.svg" alt="2">
+                        </label>
+                        <label for="indicator-3">
+                            <input class="grid-indicator-input" type="radio" name="indicator" id="indicator-3" hidden>
+                            <img src="svg/grid-indicators/3-3.svg" alt="3">
+                        </label>
                     </div>
+                    
                 </div>
-                <div class="projects-list">
+                <div class="projects-list" id="projects-list">
                     <article class="itens-section">
                         <figure data-id="grshop" class="figure-project" more-info="Mais informações">
                             <img class="project-image" src="img/portfolio.png" alt="">

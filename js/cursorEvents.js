@@ -87,3 +87,22 @@ document.addEventListener('click', (event) => {
         hoverAreaRemove();
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const gridIndicator = document.getElementById('grid-indicator');
+    const indicators = gridIndicator.querySelectorAll('input[name="indicator"]');
+    const projectsList = document.getElementById('projects-list');
+
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('change', () => {
+            gridIndicator.classList.remove('start', 'center', 'end');
+            if (index === 0) {
+                gridIndicator.classList.add('start');
+            } else if (index === 1) {
+                gridIndicator.classList.add('center');
+            } else if (index === 2) {
+                gridIndicator.classList.add('end');
+            }
+        });
+    });
+});

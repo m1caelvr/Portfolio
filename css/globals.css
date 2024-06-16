@@ -9,6 +9,7 @@
   --transition-outline: .3s ease;
   --transition-button: .25s ease;
   --viewport-padding: 15vw;
+  --projects-grid: repeat(3, 1fr);
 
   --background-color: #000;
   --background-color2: #fafafa05;
