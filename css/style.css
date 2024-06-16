@@ -77,7 +77,7 @@ main {
       height: 1rem;
       background-color: var(--secundary-text-color);
       filter: drop-shadow(0 0 1px var(--background-color));
-      animation: 1.3s shadow-circle infinite ease;
+      animation: shadow-circle 1s infinite ease;
     }
     
     a.cv_button_acess {
@@ -491,9 +491,11 @@ main {
     }
 
     .projects-list {
-      margin-top: 2rem;
-      display: grid;
       grid-template-columns: var(--projects-grid);
+      overflow: auto hidden;
+      margin-top: 2rem;
+      /* border: 1px solid red; */
+      display: grid;
       gap: 2rem;
       
       & > article {
@@ -823,15 +825,13 @@ main {
   }
 }
 @keyframes shadow-circle {
-  0% {
+  0%, 100% {
     filter:
-    drop-shadow(0 0 0 var(--background-color))
-    drop-shadow(0 0 0 var(--background-color));
+    drop-shadow(0 0 0 #ffffff00)
   }
-  100% {
+  50% {
     filter:
-      drop-shadow(0 0 5px #ffffff00)
-      drop-shadow(0 0 8px #ffffff00);
+      drop-shadow(0 0 5px #ffffffc6)
   }
 }
 @keyframes scroll_indicator {
@@ -990,8 +990,10 @@ main {
   :root {
     --projects-grid: 1fr;
   }
-  h1 {
-    font-size: 3rem !important;
+  .initial-text {
+    strong > h1 {
+      font-size: 1.7rem !important;
+    }
   }
   h2 {
     font-size: 2rem;

@@ -5,7 +5,8 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(40px);
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -14,8 +15,8 @@
     animation: no-more-info var(--time-animation) ease forwards;
     
     &.show {
-        display: flex;
         display: none;
+        display: flex;
         animation: more-info var(--time-animation) ease forwards;
     }
     img {

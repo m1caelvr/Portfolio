@@ -88,21 +88,51 @@ document.addEventListener('click', (event) => {
     }
 });
 
+const projectsList = document.getElementById('projects-list');
+const gridIndicator = document.getElementById('grid-indicator');
+const indicators = gridIndicator.querySelectorAll('input[name="indicator"]');
+const root = document.documentElement;
+
 document.addEventListener('DOMContentLoaded', function () {
-    const gridIndicator = document.getElementById('grid-indicator');
-    const indicators = gridIndicator.querySelectorAll('input[name="indicator"]');
-    const projectsList = document.getElementById('projects-list');
 
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('change', () => {
             gridIndicator.classList.remove('start', 'center', 'end');
             if (index === 0) {
                 gridIndicator.classList.add('start');
+                root.style.setProperty('--projects-grid', 'repeat(1, 1fr)');
             } else if (index === 1) {
                 gridIndicator.classList.add('center');
+                root.style.setProperty('--projects-grid', 'repeat(2, 1fr)');
             } else if (index === 2) {
                 gridIndicator.classList.add('end');
+                root.style.setProperty('--projects-grid', 'repeat(3, 1fr)');
             }
+
+            heigthProjectList(indicator);
         });
     });
 });
+
+function heigthProjectList(el) {
+    if (projectsList.children.length > 0) {
+        const firstItem = projectsList.querySelector('#projects-list > *:first-child');
+        const itemHeight = firstItem.getBoundingClientRect().height;
+        const maxProjectsVisualizer = 2;
+        const maxHeight = itemHeight * maxProjectsVisualizer;
+        
+        const projectsItems = projectsList.children.length;
+        const columnsValue = parseInt(el.getAttribute('columns-value'));
+        const rows = Math.ceil(projectsItems / columnsValue);
+        console.log(`Número de linhas: ${rows}`);
+
+        if (rows > maxProjectsVisualizer) {
+            projectsList.style.maxHeight = `calc(${maxHeight}px + 2rem * ${maxProjectsVisualizer})`;
+        } else {
+            projectsList.style.maxHeight = 'none';
+        }
+
+    } else {
+        console.error('Nenhum item na lista.');
+    }
+}
