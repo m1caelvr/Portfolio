@@ -127,7 +127,8 @@ function heigthProjectList(el) {
         console.log(`Número de linhas: ${rows}`);
 
         if (rows > maxProjectsVisualizer) {
-            projectsList.style.maxHeight = `calc(${maxHeight}px + 2rem * ${maxProjectsVisualizer})`;
+            // projectsList.style.maxHeight = `calc(${maxHeight}px + 2rem * ${maxProjectsVisualizer})`;
+            projectsList.style.maxHeight = `max-content`;
         } else {
             projectsList.style.maxHeight = 'none';
         }
