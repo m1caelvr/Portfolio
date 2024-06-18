@@ -6,6 +6,8 @@ body {
   min-width: 100vw;
   font-size: 16px;
   line-height: 1;
+
+  p { font-size: var(--paragraph-font-defalt); }
 }
 
 main {
@@ -26,7 +28,6 @@ main {
   }
 }
 
-
 .section-landing {
   position: relative;
   display: grid;
@@ -42,11 +43,10 @@ main {
     gap: 3rem;
     
     strong {
-      /* margin-bottom: 2rem; */
       > h1 {
-        line-height: auto;
+        line-height: 1;
         height: max-content;
-        font-size: 4.8rem;
+        font-size: var(--h1-font-defalt);
         font-weight: 900;
         white-space: nowrap;
       }
@@ -242,7 +242,7 @@ main {
     /* overflow: hidden; */
   }
   h1 {
-    font-size: 4.8rem;
+    font-size: var(--h1-font-defalt);
     font-weight: 900;
   }
   
@@ -310,6 +310,7 @@ main {
         background-color: var(--background-secundary-color);
 
         > h1 {
+          font-size: var(--h1-font-defalt);
           white-space: nowrap;
           margin-bottom: 1rem;
         }
@@ -337,18 +338,13 @@ main {
       grid-template-rows: max-content 1fr;
       width: 100%;
       align-items: start;
-      /* gap: 1rem; */
 
-      h2 {margin-block: 3.5rem 2.5rem;}
+      h2 {margin-block: 3rem 2.5rem;}
 
       ul.skills-area-li {
-        /* margin-bottom: 1.5rem; */
         flex-wrap: wrap;
         display: flex;
         gap: 2rem;
-        /* justify-content: center; */
-
-        /* &.center {justify-content: center;} */
 
         li {
           background-color: var(--background-secundary-color);
@@ -400,7 +396,7 @@ main {
       font-weight: 300;
     }
     > h2:has(>i) {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
 
 
@@ -608,7 +604,7 @@ main {
           line-height: 1;
 
           h1 {
-            font-size: 1.7rem;
+            font-size: 1.8rem;
           }
 
           p {
@@ -910,6 +906,10 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
+  :root {
+    --h1-font-defalt: 3.7rem;
+    --paragraph-font-defalt: 1.2rem;
+  }
   ul.skills-area-li {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
@@ -931,7 +931,6 @@ main {
       
       strong > h1 {
         text-align: center;
-        font-size: 3.8rem;
         max-width: 45rem;
         min-width: 100%;
       }
@@ -956,14 +955,9 @@ main {
     aside {
       order: 1;
       width: 100%;
-      /* overflow: hidden; */
       max-height: 40vh;
       display: flex;
       align-items: start;
-
-      /* &, img {
-        border: 1px solid rgba(255, 0, 0, 0.237);
-      } */
       
       img {
         width: 70%;
@@ -979,28 +973,32 @@ main {
 }
 
 @media screen and (max-width: 515px) {
-  .initial-text {
-    strong > h1 {
-      font-size: 3.5rem !important;
-    }
+  :root {
+    --h1-font-defalt: 3.5rem;
   }
 }
 
 @media screen and (max-width: 470px) {
   :root {
     --projects-grid: 1fr;
-  }
-  .initial-text {
-    strong > h1 {
-      font-size: 1.7rem !important;
-    }
+    --h1-font-defalt: 2.2rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: calc(var(--h1-font-defalt)*.7);
   }
   section.projects {
     .projects-list {
       grid-template-columns: var(--projects-grid) !important;
     }
+  }
+}
+
+@media screen and (max-height: 700px) {
+  aside.landing-reveal {
+    margin-top: -5rem;
+  }
+
+  .mobile-cursor-indicator {
+    scale: .6;
   }
 }
