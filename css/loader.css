@@ -4,7 +4,7 @@ h1.tittle { display: none; }
     --delay: 3.8s;
     background-color: var(--background-color);
     position: fixed;
-    z-index: 10;
+    z-index: 15;
     inset: 0;
     display: none;
     display: flex;

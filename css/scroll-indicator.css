@@ -1,0 +1,121 @@
+.mobile-cursor-indicator.attach {
+    opacity: 0;
+
+    &, & * {
+        animation-play-state: running;
+    } 
+}
+
+.mobile-cursor-indicator {
+    transition: opacity .3s ease;
+    display: none;
+    position: fixed;
+    bottom: 5vw;
+    right: var(--viewport-padding);
+    z-index: 9;
+    transform: scale(.8);
+    opacity: .72;
+    
+    &, & * {
+        animation-play-state: paused;
+    } 
+    
+    .area-indicator-children {
+        position: relative;
+        /* border: 1px solid blue; */
+
+        .arrow-area {
+            --margin: -6.5rem;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 80%;
+            width: 40%;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 90%;
+            overflow: hidden;
+            /* border: 1px solid red; */
+            gap: 200%;
+
+            > img {
+                position: absolute;
+                top: 100%;
+
+                &:first-child {
+                    animation: arrow-top-first var(--time-indicator) ease infinite;
+                }
+                &:last-child {
+                    animation: arrow-top-last var(--time-indicator) ease infinite;
+                }
+            }
+        }
+
+        .touch {
+            position: relative;
+            top: 0;
+            transform: rotate(-35deg);
+            animation: indicator var(--time-indicator) ease infinite;
+        }
+    }
+}
+
+@keyframes indicator {
+    0%, 35%, 70%, 100% {
+        transform: rotate(-35deg);
+        top: 0;
+    }
+    20%, 55% {
+        transform: rotate(-60deg);
+        top: 1rem;
+    }
+}
+@keyframes indicator {
+    0%, 50%, 100% {
+        transform: rotate(-35deg);
+        top: 0;
+    }
+    25%, 75% {
+        transform: rotate(-60deg);
+        top: 1rem;
+    }
+}
+@keyframes arrow-top-first {
+    0%, 25% {
+        top: 100%;
+        opacity: 0;
+        transform: scale(0);
+    }
+    37% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50%, 100% {
+        transform: scale(0);
+        opacity: 0;
+        top: -100%;
+    }
+}
+@keyframes arrow-top-last {
+    0%, 75% {
+        top: 100%;
+        opacity: 0;
+        transform: scale(0);
+    }
+    87% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+        top: -100%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .mobile-cursor-indicator {
+        display: flex;
+    }
+}

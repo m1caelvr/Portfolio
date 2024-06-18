@@ -7,13 +7,41 @@
         "github": "http://github.com/m1caelvr/GRshop",
         "moreInfo": "Aqui vai uma descrição mais detalhada do projeto GRshop.",
         "media": [
-            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/imgDesktop.png" },
-            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/desk1.png" },
-            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/desk2.png" },
-            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob1.png" },
-            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob2.png" },
-            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob3.png" },
-            { "type": "image", "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob4.png" }
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/imgDesktop.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/desk1.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/desk2.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob1.png",
+                "capture_of": "mobile"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob2.png",
+                "capture_of": "mobile"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob3.png",
+                "capture_of": "mobile"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob4.png",
+                "capture_of": "mobile"
+            }
         ]
     }
 ]

@@ -3,6 +3,8 @@ const sectionMain = document.getElementById('section-main');
 const sectionsInMain = document.querySelectorAll('main > section');
 const sectionsInSectionMain = document.querySelectorAll('section#section-main > section');
 const navSectionMainSvgs = document.querySelectorAll('#nav-section-main > li svg');
+const cursorIndicator = document.getElementById('mobile-cursor-indicator');
+var confirmAlternateClasse = true;
 
 document.addEventListener('DOMContentLoaded', function() {
   function getZoomLevel() {
@@ -29,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function checkSecundarySection() {
     const scrollPosition = sectionMain.scrollTop;
-    const zoom = getZoomLevel();
     
     sectionsInSectionMain.forEach((section) => {
       const rect = section.getBoundingClientRect();
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
       alterIcon_chevronIcon("notFill");
       headerAdjust("show");
       SecundarySection("noShow");
+      confirmAlternateClasse = true;
       if (chevronIcon.classList.contains("chevron-icon-focus")) {
         chevronIcon.classList.remove("chevron-icon-focus");
       }
@@ -74,9 +76,15 @@ document.addEventListener('DOMContentLoaded', function() {
       alterIcon_chevronIcon("fill");
       headerAdjust("noShow");
       SecundarySection("show");
+      confirmAlternateClasse = false;
     }
 
     function alterIcon_chevronIcon(mode) {
+      if (!cursorIndicator.classList.contains('attach')) {
+        cursorIndicator.classList.add('attach');
+        console.log(1);
+      }
+
       const svg = document.getElementById("chevronIcon");
       const paths = svg.querySelectorAll("path");
 
@@ -178,5 +186,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
   });
+
+  const timeValue = 2500;
+
+  function alternarClasse() {
+    if (confirmAlternateClasse) {
+      setTimeout(alternarClasse, timeValue);
+    } else {
+      if (!cursorIndicator.classList.contains('attach')) {
+        cursorIndicator.classList.add('attach')
+      }
+      setTimeout(alternarClasse, timeValue);
+      return;
+    }
+
+    cursorIndicator.classList.toggle('attach');
+  }
+
+  const root = document.documentElement;
+  const timeAdjusted = timeValue / 1000 + 's';
+
+  root.style.setProperty('--time-indicator', timeAdjusted);
+
+  alternarClasse();
 
 });

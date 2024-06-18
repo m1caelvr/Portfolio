@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/scrollRevel.css">
     <link rel="stylesheet" href="./css/tailwind.css">
     <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="./css/scroll-indicator.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -107,7 +108,7 @@
                         </svg>
                     </li>
                     <li data-section="section-skills">
-                        <img class="color-icon-primary shadow" src="./svg/logo-nav/skills2.svg" alt="">
+                        <img class="color-icon-primary shadow" src="./svg/logo-nav/skills.svg" alt="">
                         <svg class="ionicon chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="48" d="M184 112l144 144-144 144" />
@@ -155,31 +156,44 @@
                 </a>
                 <div class="contact-area">
                     <ul>
-                        <li><a href="https://www.linkedin.com/in/micael-silva-67077621b" target="_blank"
-                                rel="noopener noreferrer">LinkedIn</a></li>
-                        <li><a href="https://github.com/m1caelvr" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <li>
+                            <a href="https://www.linkedin.com/in/micael-silva-67077621b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                         </li>
-                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=micael.vitor222@gmail.com"
-                                target="_blank" rel="noopener noreferrer">Gmail</a></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=8196123305" target="_blank"
-                                rel="noopener noreferrer">WhatsApp</a></li>
+                        <li>
+                            <a href="https://github.com/m1caelvr" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                        <li>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=micael.vitor222@gmail.com" target="_blank" rel="noopener noreferrer">Gmail</a>
+                        </li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=8196123305" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <aside class="landing-reveal">
                 <img src="./img/me1.jpg" alt="retrato de um homem">
-                <!-- <img class="opacity-reveal" src="./img/me.jpg" alt="retrato de um homem"> -->
             </aside>
             <div class="scroll-lading landing-reveal">
                 <img data-section="section-main" class="color-icon-primary" src="./svg/mouse.svg" alt="">
             </div>
+            
+            <div class="mobile-cursor-indicator attach" id="mobile-cursor-indicator">
+                <div class="area-indicator-children">
+                    <div class="arrow-area">
+                        <img class="arrow" src="./svg/arrow-scroll.svg" alt="">
+                        <img class="arrow" src="./svg/arrow-scroll.svg" alt="">
+                    </div>
+                    <img class="touch" src="./svg/touch-svgrepo.svg" alt="">
+                </div>
+            </div>
+
         </section>
 
         <section id="section-main" class="section section-main">
             <section id="section-about" class="about section-secundary">
                 <div class="about-card">
                     <figure class="scale-reveal">
-                        <!-- <img src="./img/Retrato.jpg" alt="retrato do responsável"> -->
                         <img src="./img/me2.jpg" alt="retrato do responsável">
                     </figure>
                     <article class="scale-reveal">
@@ -512,7 +526,8 @@
         <div class="modal-content-inner" id="modal-content-inner"></div>
     </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script><script  src="./script.js"></script>
+<script  src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
