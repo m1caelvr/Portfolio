@@ -23,7 +23,6 @@ function openModal(project) {
     const modalContentInner = document.getElementById('modal-content-inner');
 
     const createSlide = (media) => {
-        let imgSrc = '';
         if (media.capture_of === 'desktop') {
             imgSrc = './svg/desktop.svg';
         } else if (media.capture_of === 'mobile') {
@@ -33,10 +32,13 @@ function openModal(project) {
         if (media.type === 'video') {
             return `<div class="swiper-slide">
                         <article class="gallery__card">
-                            <video controls>
+                            <video class="gallery__img" controls>
                                 <source src="${media.src}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
+                            <div class="gallery__data">
+                                <!-- <img src="${media.video_svg}" alt="${media.capture_of}"> -->
+                            </div>
                         </article>
                     </div>`;
         } else if (media.type === 'image') {
@@ -53,9 +55,10 @@ function openModal(project) {
     };
 
     const createThumbnail = (media) => {
+        let thumbnailSrc = media.type === 'video' ? media.video_svg : media.src;
         return `<div class="swiper-slide">
                     <div class="gallery__thumbnail">
-                        <img src="${media.src}" alt="image thumbnail" class="gallery__thumbnail-img">
+                        <img src="${thumbnailSrc}" alt="image thumbnail" class="gallery__thumbnail-img">
                     </div>
                 </div>`;
     };
@@ -94,14 +97,11 @@ function openModal(project) {
             <div class='window'>
                 <div class='main-content'>
                     <h1>${project.title}</h1>
-                    <h3>deploy.com.br</h3>
+                    <h3>${project.deploy}</h3>
     
                     <div class='description' id='description'>
-                        <h2>Modelo E-commerce</h2>
-                        <p>
-                            Men's minimalistic overcoat in cotton-blend. Features a stand-up collar, concealed front closure and
-                            single back vent. Slim fit with clean, straight shape. Above-knee length.
-                        </p>
+                        <h2>${project.subTitle}</h2>
+                        <p>${project.description}</p>
                     </div>
                     
                     <div class='size-picker'>
@@ -116,7 +116,9 @@ function openModal(project) {
                     <div class='divider'></div>
     
                     <div class='purchase-info'>
-                        <button>ACESSAR GITHUB</button>
+                        <a href="${project.github}" target="_blank" rel="noopener noreferrer">
+                            <button>ACESSAR GITHUB</button>
+                        </a>
                     </div>
                 </div>
             </div>

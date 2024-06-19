@@ -14,6 +14,13 @@
   --primary-border-value: 1px solid var(--border-color);
   --h1-font-defalt: 4rem;
   --paragraph-font-defalt: 16px;
+
+  --first-color: hsl(30, 16%, 50%);
+	--text-color-black: hsl(30, 8%, 15%);
+	--small-font-size: 1.4rem;
+  --paragrafy-color: rgb(157, 157, 157);
+  --time-animation: .85s;
+  --background-info-projects: #222;
 }
 
 body[color-mode="dark"] {
@@ -25,8 +32,8 @@ body[color-mode="dark"] {
   --box-shadow: #ffffff33;
   --prymary-hover-color: #27272a;
   --primary-text-color: #fafafa;
-  --secundary-text-color: #888888;
-  --paragraph-primary-color: #a1a1aa;
+  --secundary-text-color: #b2b2b6;
+  --paragraph-primary-color: #b2b2b6;
 }
 
 body[color-mode="ligth"] {

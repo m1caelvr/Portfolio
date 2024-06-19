@@ -58,9 +58,10 @@ header {
             padding: 0.8rem 1.4rem;
             border-radius: 0.7rem;
             transition: 0.25s ease;
-        }
-        li:has(> a):hover {
-            background: var(--prymary-hover-color);
+
+            &:hover {
+                background: var(--prymary-hover-color);
+            }
         }
 
         li.about_li_button {
@@ -93,12 +94,14 @@ header {
                 right: 0;
 
                 ul {
+                    --padding-about-header: 1.6rem;
+                    --radius-about-header: .5rem;
                     animation: extend-about var(--time-animation) ease forwards;
                     width: 30rem;
                     overflow: hidden;
                     margin-top: 1rem;
-                    padding: 1.6rem;
-                    border-radius: 0.5rem;
+                    padding: var(--padding-about-header);
+                    border-radius: var(--radius-about-header);
                     flex-direction: column;
                     border: var(--primary-border-value);
                     background: var(--background-hover-color);
@@ -108,7 +111,7 @@ header {
                         justify-content: space-between;
                         width: 100%;
                         /* border-bottom: 1px solid var(--primary-text-color); */
-                        padding: 1rem 1.2rem;
+                        /* padding: 1rem 1.2rem; */
                         align-items: center;
 
                         .theme-checkbox {
@@ -162,16 +165,17 @@ header {
                         flex-direction: column;
                         white-space: nowrap;
                         display: flex;
-                        gap: 0.5rem;
+                        gap: .5rem;
 
                         span {
-                            border-radius: 0.5rem;
                             padding: 1.2rem;
                             transition: 0.25s ease;
                             font-weight: 500;
                             line-height: 1;
                             font-size: 1.5rem;
-                            /* cursor: pointer; */
+                            border-radius:
+                                calc(
+                                    var(--radius-about-header)*.7);
 
                             p {
                                 margin-top: 0.5rem;
@@ -207,15 +211,14 @@ header.header-mobile {
     &.header-no-show {
         transform:
             translate(
-                -50%, calc(-100% - var(--viewport-padding)
-            ));
+                -50%, calc(-100% - var(--viewport-padding))
+            );
     }
     strong:has(> img)  img {
         height: 3.5rem;
     }
 
     ul li:has(> a) {
-        /* border: 1px solid red; */
         display: none;
     }
 

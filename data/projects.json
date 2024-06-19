@@ -2,10 +2,10 @@
     {
         "id": "grshop",
         "title": "GRshop",
+        "subTitle": "Modelo E-commerce",
         "description": "Projeto freelancer de um modelo de E-commerce WEB de roupas",
-        "link": "https://grcloset.netlify.app",
+        "deploy": "https://grcloset.netlify.app",
         "github": "http://github.com/m1caelvr/GRshop",
-        "moreInfo": "Aqui vai uma descrição mais detalhada do projeto GRshop.",
         "media": [
             {
                 "type": "image",
@@ -41,6 +41,117 @@
                 "type": "image",
                 "src": "https://raw.githubusercontent.com/m1caelvr/GRshop/main/GRshop/imgProjects/mob4.png",
                 "capture_of": "mobile"
+            }
+        ]
+    },
+    {
+        "id": "weightcalculator",
+        "title": "Weight calculator",
+        "subTitle": "Calculadora de IMC",
+        "description": "Projeto pessoal com base no estudo de IMCs ideais para cada pessoa.",
+        "deploy": "weightcalculator-webmind.netlify.app",
+        "github": "https://github.com/m1caelvr/pesoIdeal",
+        "media": [
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/pesoIdeal/main/pesoIdeal/imgProject/desk.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/pesoIdeal/main/pesoIdeal/imgProject/deskResult.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/pesoIdeal/main/pesoIdeal/imgProject/mobile.png",
+                "capture_of": "mobile"
+            }
+        ]
+    },
+    {
+        "id": "calendschool",
+        "title": "CalendSchool",
+        "subTitle": "Agenda WEB",
+        "description": "Agenda WEB criada para Escola Técnica Gil Rodrigues [Jaboatão - PE]",
+        "deploy": "",
+        "github": "https://github.com/m1caelvr/CalendSchool",
+        "media": [
+            {
+                "type": "video",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/video.mp4",
+                "video_svg": "./svg/video.svg",
+                "capture_of": ""
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/a.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/b.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/c.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/d.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/e.png",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/f.png",
+                "capture_of": "mobile"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/g.png",
+                "capture_of": "mobile"
+            }
+        ]
+    },
+    {
+        "id": "boracodar-chat",
+        "title": "Chat design",
+        "subTitle": "Modelo de chat",
+        "description": "Projeto front-end do #boracodar da ROCKETSEAT",
+        "deploy": "",
+        "github": "https://github.com/m1caelvr/ChatDesign",
+        "media": [
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/ChatDesign/main/chat-project/IMG/Chat-template.PNG",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/ChatDesign/main/chat-project/IMG/Chat-template-mobile.PNG",
+                "capture_of": "mobile"
+            }
+        ]
+    },
+    {
+        "id": "aesthetkit",
+        "title": "Aesthetkit",
+        "subTitle": "Framework",
+        "description": "Framework CSS feito com JS.",
+        "deploy": "",
+        "github": "https://github.com/m1caelvr/Aesthetkit",
+        "media": [
+            {
+                "type": "",
+                "src": "",
+                "capture_of": ""
             }
         ]
     }
