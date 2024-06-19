@@ -8,6 +8,7 @@
   --transition-primary: .3s ease;
   --transition-outline: .3s ease;
   --transition-button: .25s ease;
+  --delay: 3.8s;
   --viewport-padding: 15vw;
   --projects-grid: repeat(3, 1fr);
   --border-color: #e5e7eb29;
