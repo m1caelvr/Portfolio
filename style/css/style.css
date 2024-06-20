@@ -27,6 +27,10 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --projects-grid: repeat(3, 1fr);
+}
+
 body {
   background: #000;
   color: #fafafa;
@@ -462,22 +466,19 @@ main > section {
   filter: drop-shadow(0 0 4px rgb(250, 250, 250));
 }
 .section-main section.projects .area-projects .grid-indicator.start {
-  justify-content: start;
-  width: 3.48rem;
+  justify-content: start !important;
 }
 .section-main section.projects .area-projects .grid-indicator.center {
-  justify-content: center;
-  width: 3.48rem;
+  justify-content: center !important;
 }
 .section-main section.projects .area-projects .grid-indicator.end {
-  justify-content: end;
-  width: 3.48rem;
+  justify-content: end !important;
 }
 .section-main section.projects .area-projects .grid-indicator:hover {
   width: 94.12px;
 }
 .section-main section.projects .projects-list {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: var(--projects-grid);
   overflow: auto hidden;
   margin-top: 2rem;
   display: grid;
@@ -577,7 +578,7 @@ main > section {
   line-height: 1;
 }
 .section-main section.projects .projects-list > article .legend h1 {
-  font-size: 1.8rem;
+  font-size: 1.8rem !important;
 }
 .section-main section.projects .projects-list > article .legend p {
   color: #b2b2b6;
@@ -838,6 +839,9 @@ main > section {
   }
 }
 @media screen and (max-width: 1050px) {
+  :root {
+    --projects-grid: repeat(2, 1fr);
+  }
   .tittle-landing {
     width: 100% !important;
   }
@@ -867,7 +871,7 @@ main > section {
     display: none;
   }
   section.projects .projects-list {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: var(--projects-grid) !important;
   }
   section.contact {
     margin-block: 5rem;
@@ -940,6 +944,9 @@ main > section {
   }
 }
 @media screen and (max-width: 470px) {
+  :root {
+    --projects-grid: 1fr;
+  }
   .grid-indicator {
     justify-content: start !important;
   }
@@ -952,7 +959,7 @@ main > section {
     font-size: 1.54rem;
   }
   section.projects .projects-list {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: var(--projects-grid) !important;
   }
 }
 @media screen and (max-height: 700px) {

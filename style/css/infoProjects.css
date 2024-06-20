@@ -74,7 +74,7 @@ a {
 }
 
 .background-area {
-  animation-delay: 3.8s !important;
+  animation-delay: 0.25s !important;
   height: 100%;
   width: 100%;
   background: #222;

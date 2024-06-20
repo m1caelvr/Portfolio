@@ -1,8 +1,9 @@
 @import 'globals';
 
+$delay: .25s;
+$quantity: 2;
+
 .container {
-  $delay: .25s;
-  $quantity: 2;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -26,7 +27,7 @@
     display: flex;
     transform: translate(-50%, -200%);
     animation: more-info-inner $time-animation ease forwards;
-    animation-delay: calc($delay*$quantity) !important;
+    animation-delay: calc($delay * $quantity) !important;
   }
   &.show .background-element {
     display: flex;
