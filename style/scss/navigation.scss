@@ -1,3 +1,5 @@
+@import 'globals';
+
 nav {
   position: fixed;
   bottom: 50%;
@@ -8,7 +10,7 @@ nav {
   z-index: 1;
 
   &, * {
-    transition: var(--transition-primary);
+    transition: $transition-primary;
   }
 
   ul {
@@ -19,11 +21,11 @@ nav {
     gap: 0.5rem;
 
     a {
-      --width: 1.7rem;
-      width: var(--width);
+      $width: 1.7rem;
+      width: $width;
       position: relative;
       aspect-ratio: 1;
-      color: var(--primary-text-color);
+      color: $primary-text-color;
       cursor: default;
 
       .ionicon {
@@ -39,14 +41,14 @@ nav {
         }
 
         ol {
-          --distance: -9rem;
-          transition: var(--transition-primary);
-          top: calc(var(--width) + 0.5rem);
-          width: calc(var(--width) * 2.1);
+          $distance: -9rem;
+          transition: $transition-primary;
+          top: calc($width + 0.5rem);
+          width: calc($width * 2.1);
           flex-direction: column;
           position: absolute;
           align-items: end;
-          left: var(--distance);
+          left: $distance;
           display: flex;
           gap: 0.8rem;
   
@@ -56,8 +58,8 @@ nav {
             }
             .ionicon {
               position: relative;
-              color: var(--primary-text-color);
-              width: var(--width);
+              color: $primary-text-color;
+              width: $width;
               aspect-ratio: 1;
               padding: 0.085rem;
               border-radius: 50%;
@@ -67,10 +69,12 @@ nav {
                 left 0.3s ease;
   
               &.visible {
-                left: calc(-1 * var(--distance));
+                left: calc(-1 * $distance);
               }
               &.focus {
-                filter: drop-shadow(0 0 0.5rem var(--primary-text-color)) drop-shadow(0 0 1rem var(--primary-text-color));
+                filter:
+                  drop-shadow(0 0 0.5rem $primary-text-color)
+                  drop-shadow(0 0 1rem $primary-text-color);
                 transform: rotate(90deg);
               }
             }
@@ -104,10 +108,10 @@ nav {
       order: 2;
       width: 0.02rem;
       height: 3rem;
-      background: var(--primary-text-color);
+      background: $primary-text-color;
       position: relative;
       border-radius: 50%;
-      transition: var(--transition-primary);
+      transition: $transition-primary;
     }
     a:nth-child(2) {
       order: 3;
@@ -124,7 +128,7 @@ header.header-mobile + nav {
 
   ul {
     border: 1px solid rgba(250, 250, 250, 0.2);
-    background: var(--background-color2);
+    background: $background-color2;
     flex-direction: row;
     padding: 1.3rem 2rem;
     border-radius: 999px;
@@ -139,7 +143,7 @@ header.header-mobile + nav {
     &::after {
       height: 0.02rem;
       width: 3rem;
-      transition: var(--transition-primary);
+      transition: $transition-primary;
     }
 
     &:has(.chevron-icons ol .ionicon.visible) {
@@ -153,8 +157,8 @@ header.header-mobile + nav {
     }
 
     a {
-      --width-icon-mobile: 2.5rem;
-      width: var(--width-icon-mobile);
+      $width-icon-mobile: 2.5rem;
+      width: $width-icon-mobile;
 
       &:nth-child(1) {z-index: 5;}
       &:nth-child(2) {z-index: 4;}
@@ -181,7 +185,7 @@ header.header-mobile + nav {
           }
           
           li {
-            width: var(--width-icon-mobile);
+            width: $width-icon-mobile;
             transform: translateY(10rem);
             align-items: center;
             flex-direction: column;
@@ -206,14 +210,14 @@ header.header-mobile + nav {
             }
 
             .ionicon {
-              width: var(--width-icon-mobile);
+              width: $width-icon-mobile;
               transform: rotate(90deg);
               opacity: 0;
               transition:
                 all 0.3s ease,
                 transform 0.3s ease;
               
-              &.chevron {width: calc(var(--width-icon-mobile) - .5rem);}
+              &.chevron {width: calc($width-icon-mobile - .5rem);}
 
               &.visible {
                 left: 0;

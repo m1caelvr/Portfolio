@@ -1,3 +1,5 @@
+@import 'globals';
+
 .color-icon-primary {
     filter: invert(1);
 
@@ -52,19 +54,19 @@
     text-shadow: 1px 1px 2px #427388; 
 }
 .button-outline-hover {
-    --transition-value:
-        var(--transition-button),
-        outline-color var(--transition-outline-color),
-        outline-offset var(--transition-outline),
-        outline var(--transition-outline);
+    $transition-value:
+        $transition-button,
+        outline-color $transition-outline-color,
+        outline-offset $transition-outline,
+        outline $transition-outline;
 
     outline: 1px solid;
-    outline-color: var(--primary-text-color);
+    outline-color: $primary-text-color;
     outline-offset: 0px;
-    transition: var(--transition-value);
-    -o-transition: var(--transition-value);
-    -moz-transition: var(--transition-value);
-    -webkit-transition: var(--transition-value);
+    transition: $transition-value;
+    -o-transition: $transition-value;
+    -moz-transition: $transition-value;
+    -webkit-transition: $transition-value;
     
     &:hover {
         transform: scale(1.05);

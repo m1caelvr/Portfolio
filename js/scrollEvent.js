@@ -203,11 +203,6 @@ document.addEventListener('DOMContentLoaded', function() {
     cursorIndicator.classList.toggle('attach');
   }
 
-  const root = document.body;
-  const timeAdjusted = timeValue / 1000 + 's';
-
-  root.style.setProperty('--time-indicator', timeAdjusted);
-
   alternarClasse();
 
 });

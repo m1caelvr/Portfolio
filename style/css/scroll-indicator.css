@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+:root {
+  font-size: 62.5%;
+}
+
+/* $background-secundary-color: #09090b; */
+/* :root {
+  $background-color: #fff;
+  $background-color2: rgba(5, 5, 5, 0.05);
+  $background-color-hover: #050505;
+  $background-secundary-color: rgb(237, 237, 237);
+  $background-hover-color: rgb(246, 246, 239);
+  $box-shadow: rgba(0, 0, 0, .2);
+  $prymary-hover-color: rgb(216, 216, 213);
+  $primary-text-color: rgb(5, 5, 5);
+  $secundary-text-color: rgb(119, 119, 119);
+  $paragraph-primary-color: rgb(94, 94, 85);
+  $border-color: rgba(26, 24, 20, 0.161);
+  $primary-border-value: 1px solid var($border-color);
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  line-height: 1;
+  font-family: "Manrope", sans-serif;
+}
+
+html, html * {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mobile-cursor-indicator.attach {
+  opacity: 0;
+}
+.mobile-cursor-indicator.attach, .mobile-cursor-indicator.attach * {
+  animation-play-state: running;
+}
+
+.mobile-cursor-indicator {
+  transition: opacity 0.3s ease;
+  display: none;
+  position: fixed;
+  bottom: 5vw;
+  right: 15vw;
+  z-index: 9;
+  transform: scale(0.8);
+  opacity: 0.72;
+}
+.mobile-cursor-indicator, .mobile-cursor-indicator * {
+  animation-play-state: paused;
+}
+.mobile-cursor-indicator .area-indicator-children {
+  position: relative;
+  /* border: 1px solid blue; */
+}
+.mobile-cursor-indicator .area-indicator-children .arrow-area {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  width: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 90%;
+  overflow: hidden;
+  /* border: 1px solid red; */
+  gap: 200%;
+}
+.mobile-cursor-indicator .area-indicator-children .arrow-area > img {
+  position: absolute;
+  top: 100%;
+}
+.mobile-cursor-indicator .area-indicator-children .arrow-area > img:first-child {
+  animation: arrow-top-first 2s ease infinite;
+}
+.mobile-cursor-indicator .area-indicator-children .arrow-area > img:last-child {
+  animation: arrow-top-last 2s ease infinite;
+}
+.mobile-cursor-indicator .area-indicator-children .touch {
+  position: relative;
+  top: 0;
+  transform: rotate(-35deg);
+  animation: indicator 2s ease infinite;
+}
+
+@keyframes indicator {
+  0%, 35%, 70%, 100% {
+    transform: rotate(-35deg);
+    top: 0;
+  }
+  20%, 55% {
+    transform: rotate(-60deg);
+    top: 1rem;
+  }
+}
+@keyframes indicator {
+  0%, 50%, 100% {
+    transform: rotate(-35deg);
+    top: 0;
+  }
+  25%, 75% {
+    transform: rotate(-60deg);
+    top: 1rem;
+  }
+}
+@keyframes arrow-top-first {
+  0%, 25% {
+    top: 100%;
+    opacity: 0;
+    transform: scale(0);
+  }
+  37% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50%, 100% {
+    transform: scale(0);
+    opacity: 0;
+    top: -100%;
+  }
+}
+@keyframes arrow-top-last {
+  0%, 75% {
+    top: 100%;
+    opacity: 0;
+    transform: scale(0);
+  }
+  87% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    top: -100%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .mobile-cursor-indicator {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=scroll-indicator.css.map */

@@ -1,7 +1,8 @@
+@import 'globals';
 
 .container {
-  --delay: .25s;
-  --quantity: 2;
+  $delay: .25s;
+  $quantity: 2;
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -9,7 +10,7 @@
   top: 0;
   left: 0;
   display: none;
-  animation: display var(--time-animation) ease forwards;
+  animation: display $time-animation ease forwards;
 
   &.show {
     display: flex;
@@ -19,27 +20,27 @@
   &.show .background-area {
     display: flex;
     transform: translateY(-200%);
-    animation: more-info var(--time-animation) ease forwards;
+    animation: more-info $time-animation ease forwards;
   }
   &.show .modal-content-inner {
     display: flex;
     transform: translate(-50%, -200%);
-    animation: more-info-inner var(--time-animation) ease forwards;
-    animation-delay: calc(var(--delay)*var(--quantity)) !important;
+    animation: more-info-inner $time-animation ease forwards;
+    animation-delay: calc($delay*$quantity) !important;
   }
   &.show .background-element {
     display: flex;
-    animation: more-info-element var(--time-animation) ease forwards;
+    animation: more-info-element $time-animation ease forwards;
   }
 }
 
 .background-element,
 .background-area {
-  animation: no-more-info var(--time-animation) ease-in;
+  animation: no-more-info $time-animation ease-in;
 }
 
 .background-element {
-  background: var(--background-info-projects);
+  background: $background-info-projects;
   position: absolute;
   width: 120%;
   height: 400px;
@@ -51,15 +52,15 @@
     0 2rem 5rem rgba(0, 0, 0, .6);
 }
 .background-area {
-  animation-delay: var(--delay) !important;
+  animation-delay: $delay !important;
   height: 100%;
   width: 100%;
-  background: var(--background-info-projects);
+  background: $background-info-projects;
   z-index: 1;
 }
 .modal-content-inner {
-  --spacing: 3rem;
-  animation: no-more-info-inner var(--time-animation) ease-in;
+  $spacing: 3rem;
+  animation: no-more-info-inner $time-animation ease-in;
   min-height: 100vh;
   max-height: 100vh;
   min-width: 100vw;
@@ -99,7 +100,7 @@
         height: 400px;
         width: 1px;
         border-radius: 100%;
-        background-color: var(--border-color);
+        background-color: $border-color;
         filter: opacity(.6);
       }
     }
@@ -126,7 +127,7 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
     width: 100%;
     height: 100%;
     flex-flow: column;
@@ -145,7 +146,7 @@
   }
   
   h3 {
-    color: var(--paragrafy-color);
+    color: $paragrafy-color;
     font-size: 19px;
     font-size: 1.2rem;
     margin-top: .3rem;
@@ -156,8 +157,8 @@
     width: 100%;
 
     p {
-      margin-top: calc(var(--spacing)/3);
-      color: var(--paragrafy-color);
+      margin-top: calc($spacing / 3);
+      color: $paragrafy-color;
     }
   }
   
@@ -176,12 +177,12 @@
       width: 100%;
 
       button {
-        background: var(--primary-text-color);
+        background: $primary-text-color;
         border: none;
         font-weight: 600;
         height: 40px;
         padding-inline: 25px;
-        color: var(--background-info-projects);
+        color: $background-info-projects;
         cursor: pointer;
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease;
@@ -202,7 +203,7 @@
   .size-picker {
     display: flex;
     flex-flow: column;
-    margin-top: var(--spacing);
+    margin-top: $spacing;
 
     .range-picker {
       font-size: 16px;
@@ -248,7 +249,7 @@
     width: 85%;
     height: 1px;
     background: rgba(255, 255, 255, 0.09);
-    margin: var(--spacing) auto;
+    margin: $spacing auto;
     border-radius: 100%;
   }
 }
@@ -366,10 +367,10 @@
 .gallery-thumbs { height: 132px;}
 
 .swiper-pagination-fraction {
-	font-size: var(--small-font-size);
+	font-size: $small-font-size;
 	letter-spacing: -1px;
 	font-weight: 500;
-	color: var(--first-color);
+	color: $first-color;
 	bottom: 0;
 }
 
@@ -381,7 +382,7 @@
 .swiper-button-next,
 .swiper-button-prev {
 	font-size: 1.5rem;
-	color: var(--text-color-black);
+	color: $text-color-black;
 	top: 5.5rem;
 }
 
@@ -500,20 +501,17 @@
 }
 
 @media screen and (max-width: 615px) {
-  :root {
-    --width: 40rem;
-  }
+  $width: 40rem;
+
   .gallery-cards,
   .gallery-thumbs {
-    width: var(--width);
+    width: $width;
   }
   .window {
-    max-width: var(--width) !important;
+    max-width: $width !important;
   }
 }
 
 @media screen and (max-width: 530px) {
-  :root {
-    --width: 35rem;
-  }
+  $width: 35rem;
 }

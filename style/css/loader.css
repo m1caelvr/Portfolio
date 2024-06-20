@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+:root {
+  font-size: 62.5%;
+}
+
+/* $background-secundary-color: #09090b; */
+/* :root {
+  $background-color: #fff;
+  $background-color2: rgba(5, 5, 5, 0.05);
+  $background-color-hover: #050505;
+  $background-secundary-color: rgb(237, 237, 237);
+  $background-hover-color: rgb(246, 246, 239);
+  $box-shadow: rgba(0, 0, 0, .2);
+  $prymary-hover-color: rgb(216, 216, 213);
+  $primary-text-color: rgb(5, 5, 5);
+  $secundary-text-color: rgb(119, 119, 119);
+  $paragraph-primary-color: rgb(94, 94, 85);
+  $border-color: rgba(26, 24, 20, 0.161);
+  $primary-border-value: 1px solid var($border-color);
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  line-height: 1;
+  font-family: "Manrope", sans-serif;
+}
+
+html, html * {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1.tittle {
+  display: none;
+}
+
+.loader[loading] {
+  background-color: #000;
+  position: fixed;
+  z-index: 15;
+  inset: 0;
+  display: none;
+  display: flex;
+  opacity: 1;
+  animation: close 1s forwards;
+  animation-delay: 4.1s;
+}
+.loader[loading] > .area-loader {
+  /* border: 1px solid rgba(255, 0, 0, 0.257); */
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  padding: 2rem;
+  margin: auto;
+  gap: 3rem;
+}
+.loader[loading] > .area-loader h1.tittle {
+  font-size: 3.5rem !important;
+  display: flex;
+  justify-content: center;
+  animation: close-loading 0.3s ease forwards;
+  animation-delay: 3.8s;
+  overflow: hidden;
+}
+.loader[loading] > .area-loader h1.tittle span {
+  transform: translateY(100%);
+  animation: up 3.5s ease forwards;
+  animation-delay: 0.8s;
+}
+.loader[loading] > .area-loader h1.tittle span:last-child {
+  transform: translateY(-100%);
+  animation-delay: 1s;
+}
+.loader[loading] > .area-loader .loading {
+  width: 100%;
+  height: 5px;
+  border-radius: 99rem;
+  opacity: 1;
+  animation: close-loading 0.3s ease forwards;
+  animation-delay: 3.8s;
+}
+.loader[loading] > .area-loader .loading span {
+  background-color: #fafafa;
+  box-shadow: 0 0 1rem #fff, 0 0 0.4rem rgba(255, 255, 255, 0.4823529412);
+  border-radius: 999rem;
+  display: block;
+  height: 100%;
+  width: 0%;
+  animation: loading 3s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes up {
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes loading {
+  to {
+    width: 100%;
+  }
+}
+@keyframes close-loading {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=loader.css.map */

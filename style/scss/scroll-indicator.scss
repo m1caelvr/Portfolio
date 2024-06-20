@@ -1,3 +1,7 @@
+@import 'globals';
+
+$time-indicator: 2s;
+
 .mobile-cursor-indicator.attach {
     opacity: 0;
 
@@ -11,21 +15,21 @@
     display: none;
     position: fixed;
     bottom: 5vw;
-    right: var(--viewport-padding);
+    right: $viewport-padding;
     z-index: 9;
     transform: scale(.8);
     opacity: .72;
     
     &, & * {
         animation-play-state: paused;
-    } 
+    }
     
     .area-indicator-children {
         position: relative;
         /* border: 1px solid blue; */
 
         .arrow-area {
-            --margin: -6.5rem;
+            $margin: -6.5rem;
             position: absolute;
             display: flex;
             flex-direction: column;
@@ -44,10 +48,10 @@
                 top: 100%;
 
                 &:first-child {
-                    animation: arrow-top-first var(--time-indicator) ease infinite;
+                    animation: arrow-top-first $time-indicator ease infinite;
                 }
                 &:last-child {
-                    animation: arrow-top-last var(--time-indicator) ease infinite;
+                    animation: arrow-top-last $time-indicator ease infinite;
                 }
             }
         }
@@ -56,7 +60,7 @@
             position: relative;
             top: 0;
             transform: rotate(-35deg);
-            animation: indicator var(--time-indicator) ease infinite;
+            animation: indicator $time-indicator ease infinite;
         }
     }
 }

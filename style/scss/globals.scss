@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  font-size: 62.5%;
+}
+
+/* $background-secundary-color: #09090b; */
+$primary-family-font: "Manrope", sans-serif;
+$transition-outline-color: .15s ease;
+$transition-primary: .3s ease;
+$transition-outline: .3s ease;
+$transition-button: .25s ease;
+$delay: 3.8s;
+$viewport-padding: 15vw;
+$projects-grid: repeat(3, 1fr);
+$border-color: #e5e7eb29;
+$primary-border-value: 1px solid $border-color;
+$h1-font-defalt: 4rem;
+$paragraph-font-defalt: 16px;
+
+$first-color: hsl(30, 16%, 50%);
+$text-color-black: hsl(30, 8%, 15%);
+$small-font-size: 1.4rem;
+$paragrafy-color: rgb(157, 157, 157);
+$time-animation: .85s;
+$background-info-projects: #222;
+
+$background-color: #000;
+$background-color2: #fafafa05;
+$background-color-hover: #050505;
+$background-secundary-color: #121212;
+$background-hover-color: #09090b;
+$box-shadow: #ffffff33;
+$prymary-hover-color: #27272a;
+$primary-text-color: #fafafa;
+$secundary-text-color: #b2b2b6;
+$paragraph-primary-color: #b2b2b6;
+
+// body.dark {
+// }
+
+// body.ligth {
+//   $color-brand-primary: #503f9d;
+//   $color-brand-secundary: #706d7e;
+//   $color-brand-accent: #fb6f3c;
+//   $color-brand-accent-secundary: #fff4f0;
+//   $color-brand-accent-bg: #fff6eb;
+
+//   $background-color: #fafafa;
+//   $background-color2: #fff6eb05;
+//   $background-color-hover: #fb6f3c;
+//   $background-secundary-color: #fb6f3c;
+//   $background-hover-color: #09090b;
+//   $box-shadow: #ffffff33;
+//   $prymary-hover-color: #503f9d20;
+//   $primary-text-color: #503f9d;
+//   $secundary-text-color: #fb6f3c;
+//   $paragraph-primary-color: #a1a1aa;
+// }
+/* :root {
+  $background-color: #fff;
+  $background-color2: rgba(5, 5, 5, 0.05);
+  $background-color-hover: #050505;
+  $background-secundary-color: rgb(237, 237, 237);
+  $background-hover-color: rgb(246, 246, 239);
+  $box-shadow: rgba(0, 0, 0, .2);
+  $prymary-hover-color: rgb(216, 216, 213);
+  $primary-text-color: rgb(5, 5, 5);
+  $secundary-text-color: rgb(119, 119, 119);
+  $paragraph-primary-color: rgb(94, 94, 85);
+  $border-color: rgba(26, 24, 20, 0.161);
+  $primary-border-value: 1px solid var($border-color);
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  line-height: 1;
+  font-family: $primary-family-font;
+}
+
+html, html * { scroll-behavior: smooth; }
+::-webkit-scrollbar { display: none; }
+a {text-decoration: none;}

@@ -1,11 +1,13 @@
+@import 'globals';
+
 header {
-    --blur-value: 20px;
-    -webkit-backdrop-filter: blur(var(--blur-value));
-    backdrop-filter: blur(var(--blur-value));
-    border-bottom: 0.05rem solid var(--prymary-hover-color);
-    background: var(--background-color2);
-    padding: 2.5rem var(--viewport-padding);
-    transition: var(--transition-primary);
+    $blur-value: 20px;
+    -webkit-backdrop-filter: blur($blur-value);
+    backdrop-filter: blur($blur-value);
+    border-bottom: 0.05rem solid $prymary-hover-color;
+    background: $background-color2;
+    padding: 2.5rem $viewport-padding;
+    transition: $transition-primary;
     width: clamp(100vw, 100vw, 100vw);
     justify-content: space-between;
     transform: translate(-50%, 0);
@@ -48,7 +50,7 @@ header {
 
         & * {
             cursor: pointer;
-            color: var(--primary-text-color);
+            color: $primary-text-color;
         }
 
         li:has(> a) {
@@ -60,12 +62,12 @@ header {
             transition: 0.25s ease;
 
             &:hover {
-                background: var(--prymary-hover-color);
+                background: $prymary-hover-color;
             }
         }
 
         li.about_li_button {
-            --time-animation: 0.2s;
+            $time-animation: 0.2s;
             position: relative;
             transition: 0.25s ease;
             display: flex;
@@ -84,7 +86,7 @@ header {
             }
 
             &:not([extend]) .about-li-hover-area {
-                animation: no-extend-about var(--time-animation) ease forwards;
+                animation: no-extend-about $time-animation ease forwards;
             }
 
             .about-li-hover-area {
@@ -94,28 +96,27 @@ header {
                 right: 0;
 
                 ul {
-                    --padding-about-header: 1.6rem;
-                    --radius-about-header: .5rem;
-                    animation: extend-about var(--time-animation) ease forwards;
+                    $padding-about-header: 1.6rem;
+                    $radius-about-header: .5rem;
+                    animation: extend-about $time-animation ease forwards;
                     width: 30rem;
                     overflow: hidden;
                     margin-top: 1rem;
-                    padding: var(--padding-about-header);
-                    border-radius: var(--radius-about-header);
+                    padding: $padding-about-header;
+                    border-radius: $radius-about-header;
                     flex-direction: column;
-                    border: var(--primary-border-value);
-                    background: var(--background-hover-color);
+                    border: $primary-border-value;
+                    background: $background-hover-color;
 
                     li:nth-child(1) {
+                        $padding-value: 0.45rem;
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
-                        /* border-bottom: 1px solid var(--primary-text-color); */
-                        /* padding: 1rem 1.2rem; */
                         align-items: center;
 
                         .theme-checkbox {
-                            --toggle-size: 16px;
+                            $toggle-size: 16px;
                             -webkit-appearance: none;
                             -moz-appearance: none;
                             appearance: none;
@@ -131,16 +132,15 @@ header {
                             border-radius: 99em;
                             position: relative;
                             cursor: pointer;
-                            font-size: var(--toggle-size);
+                            font-size: $toggle-size;
                         }
                         .theme-checkbox::before {
-                            --padding-value: 0.45rem;
                             content: "";
                             width: 1.3rem;
                             aspect-ratio: 1;
                             position: absolute;
                             top: 50%;
-                            transform: translate(var(--padding-value), -50%);
+                            transform: translate($padding-value, -50%);
                             left: 0;
                             background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
                             background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
@@ -153,7 +153,7 @@ header {
                         }
                         .theme-checkbox:checked::before {
                             left: 100%;
-                            transform: translate(calc(-100% - var(--padding-value)), -50%);
+                            transform: translate(calc(-100% - $padding-value), -50%);
                             background-position: 0;
                         }
                         .theme-checkbox:checked {
@@ -173,20 +173,18 @@ header {
                             font-weight: 500;
                             line-height: 1;
                             font-size: 1.5rem;
-                            border-radius:
-                                calc(
-                                    var(--radius-about-header)*.7);
+                            border-radius: calc($radius-about-header *.7);
 
                             p {
                                 margin-top: 0.5rem;
-                                color: var(--paragraph-primary-color);
+                                color: $paragraph-primary-color;
                                 white-space: normal;
                                 line-height: 1.4;
                                 font-weight: 300;
                             }
 
                             &:hover {
-                                background-color: var(--prymary-hover-color);
+                                background-color: $prymary-hover-color;
                             }
                         }
                     }
@@ -202,16 +200,16 @@ header {
 
 header.header-mobile {
     border: 1px solid rgba(250, 250, 250, 0.2);
-    background: var(--background-color2);
+    background: $background-color2;
     border-radius: 10rem;
     margin-top: 5vw;
     width: 90vw;
-    padding: 1rem var(--viewport-padding);
+    padding: 1rem $viewport-padding;
     
     &.header-no-show {
         transform:
             translate(
-                -50%, calc(-100% - var(--viewport-padding))
+                -50%, calc(-100% - $viewport-padding)
             );
     }
     strong:has(> img)  img {
@@ -232,7 +230,7 @@ header.header-mobile {
 @media screen and (min-width: 1051px) {
     li.about_li_button:hover,
     li.about_li_button:focus {
-        background: var(--prymary-hover-color);
+        background: $prymary-hover-color;
 
         img {
             transform: rotate(180deg);
@@ -242,7 +240,7 @@ header.header-mobile {
 @media screen and (max-width: 1050px) {
     li.about_li_button[extend],
     li.about_li_button[extend] {
-        background: var(--prymary-hover-color);
+        background: $prymary-hover-color;
 
         img {
             transform: rotate(180deg);

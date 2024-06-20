@@ -1,13 +1,16 @@
+@import 'globals';
+$width-indicator: 2.5rem;
+$padding: .4rem;
 
 body {
-  background: var(--background-color);
-  color: var(--primary-text-color);
+  background: $background-color;
+  color: $primary-text-color;
   min-height: 100vh;
   min-width: 100vw;
   font-size: 16px;
   line-height: 1;
 
-  p { font-size: var(--paragraph-font-defalt); }
+  p { font-size: $paragraph-font-defalt;}
 }
 
 main {
@@ -18,7 +21,7 @@ main {
   scroll-snap-type: y mandatory;
   height: 100vh;
   width: 100%;
-  padding-inline: var(--viewport-padding);
+  padding-inline: $viewport-padding;
 
   & > section {
     scroll-snap-align: start;
@@ -51,7 +54,7 @@ main {
       text-align: center;
       line-height: 1;
       height: max-content;
-      font-size: var(--h1-font-defalt);
+      font-size: $h1-font-defalt;
       font-weight: 900;
       white-space: nowrap;
       animation: move-title 4s ease forwards;
@@ -71,7 +74,7 @@ main {
     h3 {
       font-size: 1.4rem;
       font-weight: 400;
-      color: var(--paragraph-primary-color);
+      color: $paragraph-primary-color;
       line-height: 1;
     }
 
@@ -90,8 +93,8 @@ main {
       border-radius: 50%;
       aspect-ratio: 1;
       height: 1rem;
-      background-color: var(--paragraph-primary-color);
-      filter: drop-shadow(0 0 1px var(--background-color));
+      background-color: $paragraph-primary-color;
+      filter: drop-shadow(0 0 1px $background-color);
       animation: shadow-circle 1s infinite ease;
     }
     
@@ -108,15 +111,15 @@ main {
       width: 80%;
       border-radius: 2rem;
       font-weight: 500;
-      color: var(--background-color);
-      background: var(--primary-text-color);
+      color: $background-color;
+      background: $primary-text-color;
       white-space: nowrap;
       cursor: pointer;
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
       overflow: hidden;
-      transition: var(--transition-button);
+      transition: $transition-button;
 
       &:hover {
         box-shadow:
@@ -139,14 +142,14 @@ main {
           left: 0;
           aspect-ratio: 1;
           height: calc(100% - 1rem);
-          transition: var(--transition-button);
+          transition: $transition-button;
         }
         img:nth-child(2) {
           top: 7rem;
           left: -5rem;
           aspect-ratio: 1;
           height: calc(100% - 1rem);
-          transition: var(--transition-button);
+          transition: $transition-button;
         }
       }
       &:hover .arrow-icon img:nth-child(1) {
@@ -172,12 +175,12 @@ main {
         align-items: center;
 
         &, & * {
-          color: var(--paragraph-primary-color);
+          color: $paragraph-primary-color;
           transition: .3s ease;
         }
 
         li a:hover {
-          color:  var(--primary-text-color);
+          color:  $primary-text-color;
         }
         
         &::before,
@@ -185,7 +188,7 @@ main {
           content: "";
           position: relative;
           display: inline;
-          background-color: var(--paragraph-primary-color);
+          background-color: $paragraph-primary-color;
           width: 100%;
           height: 1px;
           border-radius: 99rem;
@@ -255,7 +258,7 @@ main {
     width: 100%;
   }
   h1 {
-    font-size: var(--h1-font-defalt);
+    font-size: $h1-font-defalt;
     font-weight: 900;
   }
   
@@ -306,21 +309,21 @@ main {
       }
 
       article {
-        --gap: 2rem;
-        --border-radius: 1.5rem;
+        $gap: 2rem;
+        $border-radius: 1.5rem;
         display: flex;
         justify-content: center;
         align-items: start;
         flex-direction: column;
         text-align: left;
         padding: 3rem;
-        gap: var(--gap);
-        border-radius: var(--border-radius);
-        border: var(--primary-border-value);
-        background-color: var(--background-secundary-color);
+        gap: $gap;
+        border-radius: $border-radius;
+        border: $primary-border-value;
+        background-color: $background-secundary-color;
 
         > h1 {
-          font-size: var(--h1-font-defalt);
+          font-size: $h1-font-defalt;
           white-space: nowrap;
           margin-bottom: 1rem;
         }
@@ -328,7 +331,7 @@ main {
         p, p a {
           line-height: 1.55;
           font-weight: 300;
-          color: var(--paragraph-primary-color);
+          color: $paragraph-primary-color;
           
           a { text-decoration: underline;}
         }
@@ -358,9 +361,9 @@ main {
         gap: 2rem;
 
         li {
-          --height: 12rem;
-          background-color: var(--background-secundary-color);
-          border: 1px solid var(--border-color);
+          $height: 12rem;
+          background-color: $background-secundary-color;
+          border: 1px solid $border-color;
           border-radius: 1rem;
           padding-inline: 2rem;
           display: flex;
@@ -373,12 +376,12 @@ main {
           width: 100%;
           max-width: 19rem;
           height: 100%;
-          max-height: var(--height);
+          max-height: $height;
           transition: filter .2s ease;
 
           > * {
-            min-height: var(--height);
-            max-height: var(--height);
+            min-height: $height;
+            max-height: $height;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -393,7 +396,7 @@ main {
             transition: margin-top .4s ease;
           }
           &:hover .area-skill {
-            margin-top: calc(var(--height)*-1);
+            margin-top: calc($height *-1);
           }
 
         }
@@ -409,21 +412,17 @@ main {
   }
 
   section.projects {
-    --spacing: 2rem;
+    $spacing: 2rem;
+    $spacing_: $spacing * 1.2;
     flex-direction: column;
     line-height: 1;
     display: flex;
     flex-direction: column;
     min-height: max-content;
-    
-    gap:
-      var(--spacing)
-      calc(
-        var(--spacing) * 1.2
-      );
+    gap: $spacing $spacing_;
 
     h2 {
-      color: var(--paragraph-primary-color);
+      color: $paragraph-primary-color;
       white-space: normal;
       font-size: 1.6rem;
       line-height: 1.4;
@@ -435,7 +434,7 @@ main {
 
 
     .area-projects {
-      margin-top: calc(var(--spacing)/3.5);
+      margin-top: $spacing / 3.5;
       justify-content: space-between;
       align-items: center;
       display: flex;
@@ -445,8 +444,8 @@ main {
         width: max-content;
   
         button.git-button {
-          background-color: var(--primary-text-color);
-          color: var(--background-color);
+          background-color: $primary-text-color;
+          color: $background-color;
           border-radius: 1rem;
           padding: .8rem 1.4rem;
           gap: .5rem;
@@ -469,13 +468,11 @@ main {
       }
 
       .grid-indicator {
-        --width-indicator: 2.5rem;
-        --padding: .4rem;
-        background-color: var(--background-secundary-color);
-        border-radius: calc(var(--padding) * 1.3);
-        border: var(--primary-border-value);
-        gap: calc(var(--padding) * 1.1);
-        padding: var(--padding);
+        background-color: $background-secundary-color;
+        border-radius: $padding * 1.3;
+        border: $primary-border-value;
+        gap: $padding * 1.1;
+        padding: $padding;
         justify-content: end;
         align-items: center;
         height: max-content;
@@ -520,26 +517,26 @@ main {
     }
 
     .projects-list {
-      grid-template-columns: var(--projects-grid);
+      grid-template-columns: $projects-grid;
       overflow: auto hidden;
       margin-top: 2rem;
       display: grid;
       gap: 2rem;
       
       & > article {
-        --gap: 2.5rem;
-        --border-radius: 1.5rem;
+        $gap: 2.5rem;
+        $border-radius: 1.5rem;
         padding: 2.5rem;
         display: grid;
         grid-template-rows: max-content 1fr max-content;
-        gap: var(--gap);
-        border-radius: var(--border-radius);
-        border: var(--primary-border-value);
-        background-color: var(--background-secundary-color);
+        gap: $gap;
+        border-radius: $border-radius;
+        border: $primary-border-value;
+        background-color: $background-secundary-color;
 
         figure {
-          --transition: .3s;
-          border-radius: calc(var(--border-radius) / 2);
+          $transition: .3s;
+          border-radius: $border-radius / 2;
           box-shadow: 0 1rem 2.5rem #000;
           position: relative;
           overflow: hidden;
@@ -552,10 +549,10 @@ main {
             width: 100%;
             aspect-ratio: 6/3;
             object-fit: cover;
-            border-radius: calc(var(--border-radius) / 2);
+            border-radius: $border-radius / 2;
             position: relative;
             transform: scale(1);
-            transition: var(--transition) ease;
+            transition: $transition ease;
           }
 
           &::after {
@@ -574,7 +571,7 @@ main {
             justify-content: center;
             text-align: center;
             opacity: 0;
-            transition: var(--transition) ease;
+            transition: $transition ease;
             background-image:
               linear-gradient(to top, rgba(0, 0, 0, 0.8) 20%, #00000000),
               linear-gradient(to top, rgba(0, 0, 0, 0.6) 50%, #00000000);
@@ -628,7 +625,7 @@ main {
         }
 
         .legend {
-          padding-top: var(--gap);
+          padding-top: $gap;
           position: relative;
           width: 100%;
           display: flex;
@@ -641,7 +638,7 @@ main {
           }
 
           p {
-            color: var(--paragraph-primary-color);
+            color: $paragraph-primary-color;
             white-space: normal;
             font-size: 1.4rem;
             line-height: 1.4;
@@ -649,7 +646,7 @@ main {
           }
 
           a {
-            color: var(--primary-text-color);
+            color: $primary-text-color;
             margin-top: .7rem;
             font-size: 1.4rem;
           }
@@ -659,7 +656,7 @@ main {
             width: 100%;
             height: 1px;
             border-radius: 999px;
-            background-color: var(--border-color);
+            background-color: $border-color;
             position: absolute;
             top: 0;
             left: 0;
@@ -680,13 +677,13 @@ main {
             
             button.git-button {
               display: flex;
-              background-color: var(--background-color);
-              border: var(--primary-border-value);
+              background-color: $background-color;
+              border: $primary-border-value;
               border-radius: 1rem;
               padding: .8rem 1.3rem;
               width: 100%;
               gap: .5rem;
-              color: var(--primary-text-color);
+              color: $primary-text-color;
               justify-content: center;
               align-items: center;
               cursor: pointer;
@@ -702,7 +699,7 @@ main {
 
               &:hover {
                 transform: scale(103%);
-                background-color: var(--background-color-hover);
+                background-color: $background-color-hover;
               }
             }
           }
@@ -720,8 +717,8 @@ main {
     min-height: max-content;
     
     footer {
-      background-color: var(--background-secundary-color);
-      border: var(--primary-border-value);
+      background-color: $background-secundary-color;
+      border: $primary-border-value;
       border-radius: 1.5rem;
       position: relative;
       width: 100%;
@@ -733,19 +730,19 @@ main {
         gap: 2rem;
         
         p {
-          color: var(--paragraph-primary-color);
+          color: $paragraph-primary-color;
           font-weight: 300;
         }
 
         label.send-button {
           display: flex;
-          background-color: var(--primary-text-color);
+          background-color: $primary-text-color;
           border: none;
           border-radius: 3rem;
           padding: 1.3rem 2.5rem;
           width: max-content;
           gap: .5rem;
-          color: var(--background-color);
+          color: $background-color;
           font-weight: 700;
           justify-content: center;
           align-items: center;
@@ -755,7 +752,7 @@ main {
           
           a {
             position: relative;
-            color: var(--background-color);
+            color: $background-color;
             inset: 0;
             display: flex;
             justify-content: center;
@@ -772,22 +769,22 @@ main {
       
       ul {
         padding: 2.4rem;
-        border-top: 1px solid var(--border-color);
+        border-top: 1px solid $border-color;
         justify-content: center;
         display: flex;
         gap: 1rem;
         
         li a {
-          transition: var(--transition-primary);
+          transition: $transition-primary;
           display: flex;
           flex-direction: column;
           text-align: center;
           justify-content: center;
           align-items: center;
-          border: var(--primary-border-value);
+          border: $primary-border-value;
           border-radius: .6rem;
           padding: .7rem;
-          background-color: var(--background-color);
+          background-color: $background-color;
           
           img {
             aspect-ratio: 1;
@@ -797,8 +794,8 @@ main {
 
           &:hover {
             box-shadow:
-              inset 0 0 15px var(--box-shadow),
-              0 0 10px var(--box-shadow);
+              inset 0 0 15px $box-shadow,
+              0 0 10px $box-shadow;
           }
         }
       }
@@ -912,11 +909,11 @@ main {
   }
 }
 @keyframes width {
-  to { width: calc((var(--width-indicator)*3)+(var(--padding)*6)); }
+  to { width: $width-indicator*3 + $padding * 6; }
 }
 @keyframes width-out {
   to {
-    width: calc( var(--width-indicator) + var(--padding) * 2 );
+    width: $width-indicator + $padding * 2 ;
   }
 }
 
@@ -926,10 +923,8 @@ main {
   }
 }
 @media screen and (max-width: 1050px) {
-  :root {
-    --viewport-padding: 7vw;
-    --projects-grid: repeat(2, 1fr);
-  }
+  $viewport-padding: 7vw;
+  $projects-grid: repeat(2, 1fr);
 
   .grid-indicator {
     justify-content: center !important;
@@ -958,7 +953,7 @@ main {
   
   section.projects {
     .projects-list {
-      grid-template-columns: var(--projects-grid) !important;
+      grid-template-columns: $projects-grid !important;
     }
   }
 
@@ -969,8 +964,8 @@ main {
 }
 @media screen and (max-width: 768px) {
   :root {
-    --h1-font-defalt: 3.7rem;
-    --paragraph-font-defalt: 1.5rem;
+    $h1-font-defalt: 3.7rem;
+    $paragraph-font-defalt: 1.5rem;
   }
   ul.skills-area-li {
     grid-template-columns: repeat(2, 1fr);
@@ -1032,24 +1027,24 @@ main {
 
 @media screen and (max-width: 515px) {
   :root {
-    --h1-font-defalt: 3.5rem;
+    $h1-font-defalt: 3.5rem;
   }
 }
 
 @media screen and (max-width: 470px) {
   :root {
-    --projects-grid: 1fr;
-    --h1-font-defalt: 2.2rem;
+    $projects-grid: 1fr;
+    $h1-font-defalt: 2.2rem;
   }
   .grid-indicator {
     justify-content: start !important;
   }
   h2 {
-    font-size: calc(var(--h1-font-defalt)*.7);
+    font-size: $h1-font-defalt * .7;
   }
   section.projects {
     .projects-list {
-      grid-template-columns: var(--projects-grid) !important;
+      grid-template-columns: $projects-grid !important;
     }
   }
 }

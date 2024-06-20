@@ -1,7 +1,8 @@
-h1.tittle { display: none; }
+@import 'globals';
 
+h1.tittle { display: none; }
 .loader[loading] {
-    background-color: var(--background-color);
+    background-color: $background-color;
     position: fixed;
     z-index: 15;
     inset: 0;
@@ -9,7 +10,7 @@ h1.tittle { display: none; }
     display: flex;
     opacity: 1;
     animation: close 1s forwards;
-    animation-delay: calc(var(--delay) + .3s);
+    animation-delay: calc($delay + .3s);
 
     & > .area-loader {
         /* border: 1px solid rgba(255, 0, 0, 0.257); */
@@ -25,12 +26,12 @@ h1.tittle { display: none; }
             display: flex;
             justify-content: center;
             animation: close-loading .3s ease forwards;
-            animation-delay: var(--delay);
+            animation-delay: $delay;
             overflow: hidden;
 
             span {
                 transform: translateY(100%);
-                animation: up calc(var(--delay) - .3s) ease forwards;
+                animation: up calc($delay - .3s) ease forwards;
                 animation-delay: .8s;
             }
             span:last-child {
@@ -45,10 +46,10 @@ h1.tittle { display: none; }
             border-radius: 99rem;
             opacity: 1;
             animation: close-loading .3s ease forwards;
-            animation-delay: var(--delay);
+            animation-delay: $delay;
 
             span {
-                background-color: var(--primary-text-color);
+                background-color: $primary-text-color;
                 box-shadow: 0 0 1rem #fff, 0 0 .4rem #ffffff7b;
                 border-radius: 999rem;
                 display: block;
