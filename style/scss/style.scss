@@ -963,10 +963,9 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
-  :root {
-    $h1-font-defalt: 3.7rem;
-    $paragraph-font-defalt: 1.5rem;
-  }
+  $h1-font-defalt: 3.7rem;
+  $paragraph-font-defalt: 1.5rem;
+
   ul.skills-area-li {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
@@ -1026,16 +1025,13 @@ main {
 }
 
 @media screen and (max-width: 515px) {
-  :root {
-    $h1-font-defalt: 3.5rem;
-  }
+  $h1-font-defalt: 3.5rem;
 }
 
 @media screen and (max-width: 470px) {
-  :root {
-    $projects-grid: 1fr;
-    $h1-font-defalt: 2.2rem;
-  }
+  $projects-grid: 1fr;
+  $h1-font-defalt: 2.2rem;
+
   .grid-indicator {
     justify-content: start !important;
   }
