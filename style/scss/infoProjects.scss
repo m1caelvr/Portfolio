@@ -396,16 +396,6 @@
 	transform: rotate(-15deg);
 }
 
-/* .gallery-cards::after {
-	content: "";
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10;
-} */
-
 .swiper-horizontal.swiper-css-mode > .swiper-wrapper {
 	scroll-snap-type: initial;
 }
@@ -514,4 +504,12 @@
 
 @media screen and (max-width: 530px) {
   $width: 35rem;
+
+  .gallery-cards,
+  .gallery-thumbs {
+    width: $width;
+  }
+  .window {
+    max-width: $width !important;
+  }
 }
