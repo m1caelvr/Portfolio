@@ -52,7 +52,8 @@ main {
     
     > .tittle-landing {
       font-size: $h1-font-defalt;
-      width: max-content;
+      min-width: max-content;
+      max-width: max-content;
       position: relative;
       display: flex;
       justify-content: center;
@@ -348,7 +349,7 @@ main {
     justify-content: center;
     align-items: start;
     min-height: max-content;
-    padding-bottom: 20vh;
+    padding-bottom: 15vh;
 
     .skills-area {
       display: grid;
