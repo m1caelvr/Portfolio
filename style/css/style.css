@@ -2,23 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 :root {
   font-size: 62.5%;
+  --viewport-padding: 15vw;
 }
 
 /* $background-secundary-color: #09090b; */
-/* :root {
-  $background-color: #fff;
-  $background-color2: rgba(5, 5, 5, 0.05);
-  $background-color-hover: #050505;
-  $background-secundary-color: rgb(237, 237, 237);
-  $background-hover-color: rgb(246, 246, 239);
-  $box-shadow: rgba(0, 0, 0, .2);
-  $prymary-hover-color: rgb(216, 216, 213);
-  $primary-text-color: rgb(5, 5, 5);
-  $secundary-text-color: rgb(119, 119, 119);
-  $paragraph-primary-color: rgb(94, 94, 85);
-  $border-color: rgba(26, 24, 20, 0.161);
-  $primary-border-value: 1px solid var($border-color);
-} */
 * {
   padding: 0;
   margin: 0;
@@ -85,6 +72,7 @@ main > section {
   gap: 3rem;
 }
 .section-landing .initial-text > .tittle-landing {
+  font-size: 4rem;
   width: max-content;
   position: relative;
   display: flex;
@@ -92,7 +80,6 @@ main > section {
   text-align: center;
   line-height: 1;
   height: max-content;
-  font-size: 4rem;
   font-weight: 900;
   white-space: nowrap;
   animation: move-title 4s ease forwards;
@@ -851,6 +838,15 @@ main > section {
   }
 }
 @media screen and (max-width: 1050px) {
+  .tittle-landing {
+    width: 100% !important;
+  }
+  header.header-mobile {
+    padding: 1rem 7vw;
+  }
+  main {
+    padding-inline: 7vw;
+  }
   .grid-indicator {
     justify-content: center !important;
   }
@@ -879,6 +875,11 @@ main > section {
   }
 }
 @media screen and (max-width: 768px) {
+  .section-main h1,
+  .tittle-landing,
+  .about-card article > h1 {
+    font-size: 3.7rem !important;
+  }
   ul.skills-area-li {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
@@ -931,15 +932,27 @@ main > section {
     object-fit: cover;
   }
 }
+@media screen and (max-width: 515px) {
+  .section-main h1,
+  .tittle-landing,
+  .about-card article > h1 {
+    font-size: 3.5rem !important;
+  }
+}
 @media screen and (max-width: 470px) {
   .grid-indicator {
     justify-content: start !important;
   }
+  .section-main h1,
+  .tittle-landing,
+  .about-card article > h1 {
+    font-size: 2.2rem !important;
+  }
   h2 {
-    font-size: 2.8rem;
+    font-size: 1.54rem;
   }
   section.projects .projects-list {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: 1fr !important;
   }
 }
 @media screen and (max-height: 700px) {

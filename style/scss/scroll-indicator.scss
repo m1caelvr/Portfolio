@@ -15,7 +15,7 @@ $time-indicator: 2s;
     display: none;
     position: fixed;
     bottom: 5vw;
-    right: $viewport-padding;
+    right: var(--viewport-padding);
     z-index: 9;
     transform: scale(.8);
     opacity: .72;

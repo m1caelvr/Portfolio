@@ -1,6 +1,7 @@
 @import 'globals';
 $width-indicator: 2.5rem;
 $padding: .4rem;
+$border-radius: 1.5rem;
 
 body {
   background: $background-color;
@@ -310,7 +311,6 @@ main {
 
       article {
         $gap: 2rem;
-        $border-radius: 1.5rem;
         display: flex;
         justify-content: center;
         align-items: start;
@@ -434,7 +434,7 @@ main {
 
 
     .area-projects {
-      margin-top: $spacing / 3.5;
+      margin-top: calc($spacing / 3.5);
       justify-content: space-between;
       align-items: center;
       display: flex;
@@ -536,7 +536,7 @@ main {
 
         figure {
           $transition: .3s;
-          border-radius: $border-radius / 2;
+          border-radius: calc($border-radius / 2);
           box-shadow: 0 1rem 2.5rem #000;
           position: relative;
           overflow: hidden;
@@ -549,7 +549,7 @@ main {
             width: 100%;
             aspect-ratio: 6/3;
             object-fit: cover;
-            border-radius: $border-radius / 2;
+            border-radius: calc($border-radius / 2);
             position: relative;
             transform: scale(1);
             transition: $transition ease;
@@ -926,6 +926,14 @@ main {
   $viewport-padding: 7vw;
   $projects-grid: repeat(2, 1fr);
 
+  .tittle-landing {
+    width: 100% !important;
+  }
+
+  header.header-mobile {
+    padding: 1rem $viewport-padding;
+  }
+
   main {
     padding-inline: $viewport-padding;
   }
@@ -966,7 +974,7 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
-  $h1-font-defalt: 3.7rem;
+  $h1-font-defalt: 3.7rem !important;
   $paragraph-font-defalt: 1.5rem;
 
   .section-main h1,
@@ -1039,7 +1047,7 @@ main {
   .section-main h1,
   .tittle-landing,
   .about-card article > h1 {
-    font-size: $h1-font-defalt;
+    font-size: $h1-font-defalt !important;
   }
 }
 
@@ -1054,7 +1062,7 @@ main {
   .section-main h1,
   .tittle-landing,
   .about-card article > h1 {
-    font-size: $h1-font-defalt;
+    font-size: $h1-font-defalt !important;
   }
 
   h2 {
