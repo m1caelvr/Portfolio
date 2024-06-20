@@ -33,7 +33,7 @@
 .skills-reveal {
     --delay: .1s;
     opacity: 0;
-    transform: scale(.95);
+    transform: scale(.9);
 
     
     &.show {
@@ -64,7 +64,7 @@
 
 .opacity-reveal {
     opacity: 0;
-    transition: .4s ease;
+    transition: .55s ease;
     
     &.show {
         opacity: 1;

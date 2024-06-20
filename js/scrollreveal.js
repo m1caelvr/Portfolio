@@ -30,6 +30,9 @@ const sectionsToReveal = [
 
 document.addEventListener('DOMContentLoaded', function() {
     const loader = document.getElementById('loader');
+
+    console.log(sectionsToReveal.length);
+
     const observer = new MutationObserver(function(mutationsList) {
         for (const mutation of mutationsList) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'loading') {

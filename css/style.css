@@ -342,6 +342,7 @@ main {
     justify-content: center;
     align-items: start;
     min-height: max-content;
+    padding-bottom: 20vh;
 
     .skills-area {
       display: grid;
@@ -357,21 +358,44 @@ main {
         gap: 2rem;
 
         li {
+          --height: 12rem;
           background-color: var(--background-secundary-color);
-          border-radius: 1rem;
-          padding: 2rem;
           border: 1px solid var(--border-color);
+          border-radius: 1rem;
+          padding-inline: 2rem;
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: center;
+          justify-content: start;
           height: max-content;
           box-sizing: border-box;
+          overflow: hidden;
           width: 100%;
           max-width: 19rem;
           height: 100%;
-          gap: 1rem;
+          max-height: var(--height);
           transition: filter .2s ease;
+
+          > * {
+            min-height: var(--height);
+            max-height: var(--height);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            /* border: 1px solid red; */
+            gap: 1rem;
+          }
+
+          .area-skill {
+            margin-top: 0;
+            transition: margin-top .4s ease;
+          }
+          &:hover .area-skill {
+            margin-top: calc(var(--height)*-1);
+          }
+
         }
       }
       &:has(li:hover) li:not(:hover) {
@@ -391,7 +415,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: max-content;
-    padding-top: 10vh;
+    
     gap:
       var(--spacing)
       calc(
@@ -405,7 +429,7 @@ main {
       line-height: 1.4;
       font-weight: 300;
     }
-    > h2:has(>i) {
+    > h2:has(i) {
       font-size: 1.4rem;
     }
 
@@ -548,6 +572,7 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
             opacity: 0;
             transition: var(--transition) ease;
             background-image:
@@ -646,6 +671,9 @@ main {
           height: max-content;
           display: flex;
           justify-content: center;
+          display: flex;
+          justify-content: space-between;
+          gap: .2rem;
           
           a {
             width: 100%;
@@ -673,7 +701,7 @@ main {
               }
 
               &:hover {
-                transform: scale(103.5%);
+                transform: scale(103%);
                 background-color: var(--background-color-hover);
               }
             }
@@ -905,6 +933,11 @@ main {
 
   .grid-indicator {
     justify-content: center !important;
+
+  }
+  
+  .area-projects:has(.end) ~ .projects-list .button-project {
+    flex-direction: column;
   }
 
   section.about {
