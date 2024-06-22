@@ -15,7 +15,7 @@
 }
 
 html, html * {
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
 }
 
 ::-webkit-scrollbar {

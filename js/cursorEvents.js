@@ -28,27 +28,32 @@ function aboutButton() {
     }
 }
 
+function hoverIsExtend() {
+    if (hoverArea.getAttribute('extend')) {
+        return true;
+    }
+}
+
+function hoverAreaAdd() {
+    hoverArea.setAttribute('extend', 'true');
+}
+function hoverAreaRemove() {
+    if (hoverIsExtend()) {
+        hoverArea.removeAttribute('extend');
+    }
+}
+
 function desktopButtonAbout() {
-    const handleMouseEnter = () => {
-        hoverArea.setAttribute('extend', 'true');
-    };
+    hoverArea.addEventListener('mouseenter', hoverAreaAdd);
+    hoverArea.addEventListener('mouseleave', hoverAreaRemove);
 
-    const handleMouseLeave = () => {
-        hoverAreaRemove();
-    };
-
-    hoverArea.addEventListener('mouseenter', handleMouseEnter);
-    hoverArea.addEventListener('mouseleave', handleMouseLeave);
-
-    hoverArea.__handleMouseEnter = handleMouseEnter;
-    hoverArea.__handleMouseLeave = handleMouseLeave;
+    hoverArea.__handleMouseEnter = hoverAreaAdd;
+    hoverArea.__handleMouseLeave = hoverAreaRemove;
 }
 
 function mobileButtonAbout() {
     const handleMouse = () => {
-        const isExtended = hoverArea.getAttribute('extend') === 'true';
-
-        if (!isExtended) {
+        if (!hoverIsExtend()) {
             hoverArea.setAttribute('extend', 'true');
         } else {
             hoverAreaRemove();
@@ -69,13 +74,6 @@ function removeDesktopListeners() {
 function removeMobileListeners() {
     if (hoverArea && hoverArea.__handleMouse) {
         hoverArea.removeEventListener('click', hoverArea.__handleMouse);
-    }
-}
-function hoverAreaRemove() {
-    const isExtended = hoverArea.getAttribute('extend') === 'true';
-
-    if (isExtended) {
-        hoverArea.removeAttribute('extend');
     }
 }
 
@@ -137,3 +135,46 @@ function heigthProjectList(el) {
         console.error('Nenhum item na lista.');
     }
 }
+
+function createCursor() {
+    const cursor = document.createElement('div');
+    cursor.classList.add('cursor');
+    cursor.id = 'cursor';
+
+    document.body.appendChild(cursor);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    createCursor();
+    var timeout = null;
+    var inatividadeDelay = 1500;
+
+    var cursor = document.getElementById('cursor');
+
+    function hideCursor() {
+        let cursor = document.getElementById('cursor');
+        cursor.classList.remove('show');
+    }
+    
+    function showCursor() {
+        let cursor = document.getElementById('cursor');
+        cursor.classList.add('show');
+    }
+
+    document.addEventListener('mousemove', function(e) {
+        showCursor();
+
+        cursor.style.left = e.pageX + 'px';
+        cursor.style.top = e.pageY + 'px';
+
+        clearTimeout(timeout);
+        timeout = setTimeout(hideCursor, inatividadeDelay);
+    });
+
+    setTimeout(hideCursor, inatividadeDelay);
+
+    document.addEventListener('mouseleave', function() {
+        hideCursor();
+    });
+
+});

@@ -2,6 +2,7 @@
 $width-indicator: 2.5rem;
 $padding: .4rem;
 $border-radius: 1.5rem;
+$padding-distance: 15vh;
 :root {
   --projects-grid: repeat(3, 1fr);
 }
@@ -304,6 +305,8 @@ main {
 
         &::after {
           content: "";
+          white-space: nowrap;
+          text-align: center;
           position: absolute;
           inset: 0;
           box-shadow: -3rem 0 3rem #000 inset;
@@ -350,7 +353,7 @@ main {
     justify-content: center;
     align-items: start;
     min-height: max-content;
-    padding-bottom: 15vh;
+    padding-bottom: calc($padding-distance / 2);
 
     .skills-area {
       display: grid;
@@ -424,6 +427,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: max-content;
+    padding-top: calc($padding-distance / 2);
     gap: $spacing $spacing_;
 
     h2 {

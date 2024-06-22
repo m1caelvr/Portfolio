@@ -67,6 +67,6 @@ $paragraph-primary-color: #b2b2b6;
   font-family: $primary-family-font;
 }
 
-html, html * { scroll-behavior: smooth; }
+html, html * { scroll-behavior: auto !important; }
 ::-webkit-scrollbar { display: none; }
 a {text-decoration: none;}

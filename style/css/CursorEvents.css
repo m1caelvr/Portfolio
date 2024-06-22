@@ -26,4 +26,23 @@ a {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=globals.css.map */
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 14;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #e9fdff;
+  mix-blend-mode: difference;
+  transition: 0.3s ease, top 0.05s ease, left 0.05s ease;
+}
+.cursor.show {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=CursorEvents.css.map */

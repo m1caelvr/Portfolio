@@ -5,6 +5,14 @@ const sectionsInSectionMain = document.querySelectorAll('section#section-main > 
 const navSectionMainSvgs = document.querySelectorAll('#nav-section-main > li svg');
 const cursorIndicator = document.getElementById('mobile-cursor-indicator');
 var confirmAlternateClasse = true;
+var confirmationScroll = false;
+
+function lookValue() {
+  console.log(confirmationScroll);
+  setTimeout(lookValue, 500);
+}
+
+// lookValue();
 
 document.addEventListener('DOMContentLoaded', function() {
   function getZoomLevel() {
@@ -36,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
       const rect = section.getBoundingClientRect();
       const sectionTop = rect.top + scrollPosition * 0.8;
       const sectionBottom = sectionTop + rect.height;
-
 
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
         iconSecundarySectionInFocus(section);
@@ -76,22 +83,30 @@ document.addEventListener('DOMContentLoaded', function() {
       alterIcon_chevronIcon("fill");
       headerAdjust("noShow");
       SecundarySection("show");
+      removeAboutHover();
       confirmAlternateClasse = false;
+    }
+
+    function removeAboutHover() {
+      setTimeout(() => {
+        if (hoverIsExtend()) hoverAreaRemove();
+        if (confirmationScroll) {
+          toAboutBehavior();
+        } else {
+          confirmationScroll = true;
+        }
+      }, 300);
     }
 
     function alterIcon_chevronIcon(mode) {
       if (!cursorIndicator.classList.contains('attach')) {
         cursorIndicator.classList.add('attach');
-        console.log(1);
       }
 
       const svg = document.getElementById("chevronIcon");
       const paths = svg.querySelectorAll("path");
 
       if (mode === "fill") {
-        const sectionAbout = document.getElementById('section-about');
-        sectionAbout.scrollIntoView({ behavior: 'smooth' });
-
         paths[0].setAttribute("fill", "");
         paths[1].setAttribute("fill", "none");
         paths[1].setAttribute("stroke", "#000");
@@ -102,6 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         console.error("Ação não reconhecida.");
       }
+    }
+
+    function toAboutBehavior() {
+      const sectionAbout = document.getElementById('section-about');
+      sectionAbout.scrollIntoView({ behavior: 'smooth' });
     }
 
     function alterIcon_home(svgId, mode) {
@@ -179,6 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelectorAll('[data-section]').forEach(svg => {
     svg.addEventListener('click', function() {
+      confirmationScroll = false;
       const sectionId = this.getAttribute('data-section');
       const section = document.getElementById(sectionId);
 
