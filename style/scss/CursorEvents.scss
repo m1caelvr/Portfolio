@@ -1,29 +1,90 @@
 @import 'globals';
 
-.cursor {
-    $timer: .05s;
-    pointer-events: none;
-    position: fixed;
-    z-index: 14;
-    opacity: 0;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.cursor { display: none; }
 
-    width: 15px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: #e9fdff;
-    mix-blend-mode: difference;
+@media screen and (min-width: 1051px) {
+    .cursor {
+        display: block;
+        $timer: .05s;
+        pointer-events: none;
+        position: fixed;
+        z-index: 14;
+        opacity: 0;
+    
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        width: 15px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: #fafafa;
+        mix-blend-mode: difference;
+    
+        transition: 
+            .3s ease,
+            top $timer ease,
+            left $timer ease
+        ;
+    
+        &.show {
+            $time-animation-after: .5s;
+            opacity: 1;
+            box-shadow: 0 .5rem 2rem #050505;
 
-    transition: 
-        .3s ease,
-        top $timer ease,
-        left $timer ease
-    ;
+            &::after {
+                white-space: pre-line;
+                text-align: center;
+                font-size: 1.2rem;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #050505;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                opacity: 0;
+                animation:
+                    reverse-opacity-after
+                    $time-animation-after
+                    ease forwards;
+            }
 
-    &.show {
+            &.projects-section {
+                width: 80px;
+                mix-blend-mode: normal;
+                transform: translate(-85%, -85%);
+
+                &::after {
+                    content: 'Tente clicar\Ana imagem';
+                    animation: opacity-after $time-animation-after ease forwards;
+                    animation-delay: .1s;
+                }
+            }
+            &.contact-section {
+                width: 80px;
+                mix-blend-mode: normal;
+                transform: translate(-85%, -85%);
+
+                &::after {
+                    content: 'Tente\A alt + h';
+                    animation: opacity-after $time-animation-after ease forwards;
+                    animation-delay: .1s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes opacity-after {
+    to {
         opacity: 1;
+    }
+}
+@keyframes reverse-opacity-after {
+    to {
+        opacity: 0;
     }
 }

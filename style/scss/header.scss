@@ -100,7 +100,6 @@ header {
                     $radius-about-header: .5rem;
                     animation: extend-about $time-animation ease forwards;
                     width: 30rem;
-                    overflow: hidden;
                     margin-top: 1rem;
                     padding: $padding-about-header;
                     border-radius: $radius-about-header;
@@ -162,10 +161,20 @@ header {
                     }
 
                     li:nth-child(2) {
+                        $distance: .5rem;
                         flex-direction: column;
                         white-space: nowrap;
                         display: flex;
                         gap: .5rem;
+
+                        .line {
+                            display: block;
+                            height: 1px;
+                            width: 100%;
+                            border-radius: 50%;
+                            margin-block: $distance;
+                            background-color: $border-color;
+                        }
 
                         span {
                             padding: 1.2rem;
@@ -181,6 +190,38 @@ header {
                                 white-space: normal;
                                 line-height: 1.4;
                                 font-weight: 300;
+                            }
+
+                            &:last-child {
+                                text-align: center;
+                                position: relative;
+
+                                ul {
+                                    pointer-events: none;
+                                    filter: opacity(0);
+                                    transform: scale(.9);
+                                    animation: no-extend-shortcut $time-animation ease forwards;
+                                    position: absolute;
+                                    right: calc(100% + $padding-about-header * 1.3);
+                                    bottom: calc(-1 * $padding-about-header);
+                                    width: max-content;
+                                    margin-top: 1rem;
+                                    flex-direction: column;
+                                    padding: $padding-about-header;
+                                    border-radius: $radius-about-header;
+                                    border: $primary-border-value;
+                                    background: $background-hover-color;
+
+                                    li {
+                                        font-weight: 500;
+                                        line-height: 1;
+                                        font-size: 1.5rem;
+                                    }
+                                }
+
+                                &:hover ul {
+                                    animation: extend-shortcut $time-animation ease forwards;
+                                }
                             }
 
                             &:hover {
@@ -224,6 +265,19 @@ header.header-mobile {
         ul {
             margin-top: 2rem !important;
         }
+    }
+}
+
+@keyframes extend-shortcut {
+    to {
+        filter: opacity(1);
+        transform: scale(1);
+    }
+}
+@keyframes no-extend-shortcut {
+    to {
+        filter: opacity(0);
+        transform: scale(.9);
     }
 }
 

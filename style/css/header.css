@@ -112,7 +112,6 @@ header > ul li.about_li_button .about-li-hover-area {
 header > ul li.about_li_button .about-li-hover-area ul {
   animation: extend-about 0.2s ease forwards;
   width: 30rem;
-  overflow: hidden;
   margin-top: 1rem;
   padding: 1.6rem;
   border-radius: 0.5rem;
@@ -175,6 +174,14 @@ header > ul li.about_li_button .about-li-hover-area ul li:nth-child(2) {
   display: flex;
   gap: 0.5rem;
 }
+header > ul li.about_li_button .about-li-hover-area ul li:nth-child(2) .line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  border-radius: 50%;
+  margin-block: 0.5rem;
+  background-color: rgba(229, 231, 235, 0.1607843137);
+}
 header > ul li.about_li_button .about-li-hover-area ul li:nth-child(2) span {
   padding: 1.2rem;
   transition: 0.25s ease;
@@ -189,6 +196,34 @@ header > ul li.about_li_button .about-li-hover-area ul li:nth-child(2) span p {
   white-space: normal;
   line-height: 1.4;
   font-weight: 300;
+}
+header > ul li.about_li_button .about-li-hover-area ul li:nth-child(2) span:last-child {
+  text-align: center;
+  position: relative;
+}
+header > ul li.about_li_button .about-li-hover-area ul li:nth-child(2) span:last-child ul {
+  pointer-events: none;
+  filter: opacity(0);
+  transform: scale(0.9);
+  animation: no-extend-shortcut 0.2s ease forwards;
+  position: absolute;
+  right: calc(100% + 2.08rem);
+  bottom: -1.6rem;
+  width: max-content;
+  margin-top: 1rem;
+  flex-direction: column;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(229, 231, 235, 0.1607843137);
+  background: #09090b;
+}
+header > ul li.about_li_button .about-li-hover-area ul li:nth-child(2) span:last-child ul li {
+  font-weight: 500;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+header > ul li.about_li_button .about-li-hover-area ul li:nth-child(2) span:last-child:hover ul {
+  animation: extend-shortcut 0.2s ease forwards;
 }
 header > ul li.about_li_button .about-li-hover-area ul li:nth-child(2) span:hover {
   background-color: #27272a;
@@ -219,6 +254,18 @@ header.header-mobile .about-li-hover-area ul {
   margin-top: 2rem !important;
 }
 
+@keyframes extend-shortcut {
+  to {
+    filter: opacity(1);
+    transform: scale(1);
+  }
+}
+@keyframes no-extend-shortcut {
+  to {
+    filter: opacity(0);
+    transform: scale(0.9);
+  }
+}
 @media screen and (min-width: 1051px) {
   li.about_li_button:hover,
   li.about_li_button:focus {

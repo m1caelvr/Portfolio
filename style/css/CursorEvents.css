@@ -27,22 +27,75 @@ a {
 }
 
 .cursor {
-  pointer-events: none;
-  position: fixed;
-  z-index: 14;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 15px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: #e9fdff;
-  mix-blend-mode: difference;
-  transition: 0.3s ease, top 0.05s ease, left 0.05s ease;
+  display: none;
 }
-.cursor.show {
-  opacity: 1;
+
+@media screen and (min-width: 1051px) {
+  .cursor {
+    display: block;
+    pointer-events: none;
+    position: fixed;
+    z-index: 14;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #fafafa;
+    mix-blend-mode: difference;
+    transition: 0.3s ease, top 0.05s ease, left 0.05s ease;
+  }
+  .cursor.show {
+    opacity: 1;
+    box-shadow: 0 0.5rem 2rem #050505;
+  }
+  .cursor.show::after {
+    white-space: pre-line;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #050505;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    animation: reverse-opacity-after 0.5s ease forwards;
+  }
+  .cursor.show.projects-section {
+    width: 80px;
+    mix-blend-mode: normal;
+    transform: translate(-85%, -85%);
+  }
+  .cursor.show.projects-section::after {
+    content: "Tente clicar\ana imagem";
+    animation: opacity-after 0.5s ease forwards;
+    animation-delay: 0.1s;
+  }
+  .cursor.show.contact-section {
+    width: 80px;
+    mix-blend-mode: normal;
+    transform: translate(-85%, -85%);
+  }
+  .cursor.show.contact-section::after {
+    content: "Tente\a alt + h";
+    animation: opacity-after 0.5s ease forwards;
+    animation-delay: 0.1s;
+  }
+}
+@keyframes opacity-after {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes reverse-opacity-after {
+  to {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=CursorEvents.css.map */

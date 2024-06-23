@@ -5,14 +5,6 @@ const sectionsInSectionMain = document.querySelectorAll('section#section-main > 
 const navSectionMainSvgs = document.querySelectorAll('#nav-section-main > li svg');
 const cursorIndicator = document.getElementById('mobile-cursor-indicator');
 var confirmAlternateClasse = true;
-var confirmationScroll = false;
-
-function lookValue() {
-  console.log(confirmationScroll);
-  setTimeout(lookValue, 500);
-}
-
-// lookValue();
 
 document.addEventListener('DOMContentLoaded', function() {
   function getZoomLevel() {
@@ -90,11 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function removeAboutHover() {
       setTimeout(() => {
         if (hoverIsExtend()) hoverAreaRemove();
-        if (confirmationScroll) {
-          toAboutBehavior();
-        } else {
-          confirmationScroll = true;
-        }
       }, 300);
     }
 
@@ -119,11 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    function toAboutBehavior() {
-      const sectionAbout = document.getElementById('section-about');
-      sectionAbout.scrollIntoView({ behavior: 'smooth' });
-    }
-
     function alterIcon_home(svgId, mode) {
       navSectionMainSvgs.forEach(svg => svg.classList.remove('visible'));
 
@@ -143,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
       navSectionMainSvgs.forEach(section => section.classList.remove('focus'));
 
       firstSection.classList.add('focus');
-      if (show_icon === 'show') {      
+      if (show_icon === 'show') {
         navSectionMainSvgs.forEach(svg => {
           svg.classList.add('visible');
         });
@@ -179,7 +161,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const sectionContact = document.getElementById('section-contact');
     if (isElementInViewport(sectionContact)) {
       iconSecundarySectionInFocus(sectionContact);
-      // console.log('O elemento #section-contact está dentro da janela visível.');
     }
   }
 
@@ -199,11 +180,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelectorAll('[data-section]').forEach(svg => {
     svg.addEventListener('click', function() {
-      confirmationScroll = false;
       const sectionId = this.getAttribute('data-section');
       const section = document.getElementById(sectionId);
 
       section.scrollIntoView({ behavior: 'smooth' });
+
+      setTimeout(() => {
+        if (svg.id === 'chevronIcon') {
+          const sectionAbout = document.getElementById('section-about');
+          sectionAbout.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 200);
 
     });
   });

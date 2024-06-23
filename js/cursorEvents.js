@@ -144,12 +144,26 @@ function createCursor() {
     document.body.appendChild(cursor);
 }
 
+function cursorInProject(elements, cursor, className) {
+    elements.forEach(function(element) {
+        element.addEventListener('mouseenter', function() {
+            cursor.classList.add(className);
+        });
+
+        element.addEventListener('mouseleave', function() {
+            cursor.classList.remove(className);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     createCursor();
     var timeout = null;
     var inatividadeDelay = 1500;
 
-    var cursor = document.getElementById('cursor');
+    const cursor = document.getElementById('cursor');
+    const projects = document.querySelectorAll('article.itens-section');
+    const sectionContact = document.querySelectorAll('section.contact');
 
     function hideCursor() {
         let cursor = document.getElementById('cursor');
@@ -163,11 +177,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('mousemove', function(e) {
         showCursor();
+        clearTimeout(timeout);
+        cursorInProject(projects, cursor, 'projects-section');
+        cursorInProject(sectionContact, cursor, 'contact-section');
 
         cursor.style.left = e.pageX + 'px';
         cursor.style.top = e.pageY + 'px';
 
-        clearTimeout(timeout);
         timeout = setTimeout(hideCursor, inatividadeDelay);
     });
 
