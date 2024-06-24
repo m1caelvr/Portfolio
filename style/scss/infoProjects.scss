@@ -1,4 +1,4 @@
-@import 'globals';
+@import 'colorMode';
 
 $delay: .25s;
 $quantity: 2;
@@ -41,7 +41,7 @@ $quantity: 2;
 }
 
 .background-element {
-  background: $background-info-projects;
+  background: var(--background-info-projects);
   position: absolute;
   width: 120%;
   height: 400px;
@@ -56,7 +56,7 @@ $quantity: 2;
   animation-delay: $delay !important;
   height: 100%;
   width: 100%;
-  background: $background-info-projects;
+  background: var(--background-info-projects);
   z-index: 1;
 }
 .modal-content-inner {
@@ -128,7 +128,7 @@ $quantity: 2;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    color: $primary-text-color;
+    color: var(--primary-text-color);
     width: 100%;
     height: 100%;
     flex-flow: column;
@@ -147,7 +147,7 @@ $quantity: 2;
   }
   
   h3 {
-    color: $paragrafy-color;
+    color: var(--paragrafy-color);
     font-size: 19px;
     font-size: 1.2rem;
     margin-top: .3rem;
@@ -159,7 +159,7 @@ $quantity: 2;
 
     p {
       margin-top: calc($spacing / 3);
-      color: $paragrafy-color;
+      color: var(--paragrafy-color);
     }
   }
   
@@ -178,12 +178,12 @@ $quantity: 2;
       width: 100%;
 
       button {
-        background: $primary-text-color;
+        background: var(--primary-text-color);
         border: none;
         font-weight: 600;
         height: 40px;
         padding-inline: 25px;
-        color: $background-info-projects;
+        color: var(--background-info-projects);
         cursor: pointer;
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease;
@@ -371,7 +371,7 @@ $quantity: 2;
 	font-size: $small-font-size;
 	letter-spacing: -1px;
 	font-weight: 500;
-	color: $first-color;
+	color: var(--first-color);
 	bottom: 0;
 }
 
@@ -383,7 +383,7 @@ $quantity: 2;
 .swiper-button-next,
 .swiper-button-prev {
 	font-size: 1.5rem;
-	color: $text-color-black;
+	color: var(--text-color-black);
 	top: 5.5rem;
 }
 

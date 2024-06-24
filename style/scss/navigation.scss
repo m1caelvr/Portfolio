@@ -1,4 +1,4 @@
-@import 'globals';
+@import 'colorMode';
 
 nav {
   position: fixed;
@@ -25,7 +25,7 @@ nav {
       width: $width;
       position: relative;
       aspect-ratio: 1;
-      color: $primary-text-color;
+      color: var(--primary-text-color);
       cursor: default;
 
       .ionicon {
@@ -58,7 +58,7 @@ nav {
             }
             .ionicon {
               position: relative;
-              color: $primary-text-color;
+              color: var(--primary-text-color);
               width: $width;
               aspect-ratio: 1;
               padding: 0.085rem;
@@ -73,8 +73,8 @@ nav {
               }
               &.focus {
                 filter:
-                  drop-shadow(0 0 0.5rem $primary-text-color)
-                  drop-shadow(0 0 1rem $primary-text-color);
+                  drop-shadow(0 0 0.5rem var(--primary-text-color))
+                  drop-shadow(0 0 1rem var(--primary-text-color));
                 transform: rotate(90deg);
               }
             }
@@ -108,7 +108,7 @@ nav {
       order: 2;
       width: 0.02rem;
       height: 3rem;
-      background: $primary-text-color;
+      background: var(--primary-text-color);
       position: relative;
       border-radius: 50%;
       transition: $transition-primary;
@@ -128,7 +128,7 @@ header.header-mobile + nav {
 
   ul {
     border: 1px solid rgba(250, 250, 250, 0.2);
-    background: $background-color2;
+    background: var(--background-color2);
     flex-direction: row;
     padding: 1.3rem 2rem;
     border-radius: 999px;

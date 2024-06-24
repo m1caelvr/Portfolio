@@ -1,7 +1,7 @@
-@import 'globals';
+@import 'colorMode';
 
 .color-icon-primary {
-    filter: invert(1);
+    filter: var(--image-filter);
 
     &.shadow {
         filter:
@@ -61,7 +61,7 @@
         outline $transition-outline;
 
     outline: 1px solid;
-    outline-color: $primary-text-color;
+    outline-color: var(--primary-text-color);
     outline-offset: 0px;
     transition: $transition-value;
     -o-transition: $transition-value;

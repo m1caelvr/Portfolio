@@ -1,33 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-:root {
-  font-size: 62.5%;
-  --viewport-padding: 15vw;
+body.light {
+  --border-color: #e5e7eb;
+  --primary-border-value: 1px solid rgba(229, 231, 235, 0.1607843137);
+  --first-color: #94806b;
+  --text-color-black: #292623;
+  --paragrafy-color: #9d9d9d;
+  --background-info-projects: #fff;
+  --background-color: #dedede;
+  --background-color2: rgba(0, 0, 0, 0.0196078431);
+  --background-secundary-color: #4f5053;
+  --background-hover-color: #e0e0e0;
+  --prymary-hover-color: #d0d0d0;
+  --primary-text-color: #7f7f7f;
+  --paragraph-primary-color: #333;
+  --image-filter: invert(0);
 }
-
-/* $background-secundary-color: #09090b; */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  line-height: 1;
-  font-family: "Manrope", sans-serif;
-}
-
-html, html * {
-  scroll-behavior: auto !important;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-a {
-  text-decoration: none;
+body.dark {
+  --border-color: rgba(229, 231, 235, 0.1607843137);
+  --primary-border-value: 1px solid rgba(229, 231, 235, 0.1607843137);
+  --first-color: #94806b;
+  --text-color-black: #292623;
+  --paragrafy-color: #9d9d9d;
+  --background-info-projects: #222;
+  --background-color: #000;
+  --background-color2: rgba(255, 255, 255, 0.0196078431);
+  --background-secundary-color: #121212;
+  --background-hover-color: #09090b;
+  --prymary-hover-color: #27272a;
+  --primary-text-color: #fafafa;
+  --paragraph-primary-color: #b2b2b6;
+  --image-filter: invert(1);
 }
 
 .color-icon-primary {
-  filter: invert(1);
+  filter: var(--image-filter);
 }
 .color-icon-primary.shadow {
   filter: invert(1) drop-shadow(0 0 0.2rem #000) drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.4862745098));
@@ -78,7 +83,7 @@ a {
 
 .button-outline-hover {
   outline: 1px solid;
-  outline-color: #fafafa;
+  outline-color: var(--primary-text-color);
   outline-offset: 0px;
   transition: 0.25s ease, outline-color 0.15s ease, outline-offset 0.3s ease, outline 0.3s ease;
   -o-transition: 0.25s ease, outline-color 0.15s ease, outline-offset 0.3s ease, outline 0.3s ease;

@@ -1,0 +1,97 @@
+$primary-family-font: "Manrope", sans-serif;
+$transition-outline-color: .15s ease;
+$transition-primary: .3s ease;
+$transition-outline: .3s ease;
+$transition-button: .25s ease;
+$delay: 3.8s;
+$viewport-padding: 15vw;
+$h1-font-defalt: 4rem;
+$paragraph-font-defalt: 16px;
+$time-animation: .85s;
+$small-font-size: 1.4rem;
+
+
+// Variáveis de Tema Claro
+$border-color-light: #e5e7eb;
+$primary-border-value: 1px solid $border-color-light;
+$first-color-light: #94806b;
+$text-color-black-light: #292623;
+$paragrafy-color-light: #9d9d9d;
+$background-info-projects-light: #fff;
+
+$background-color-light: #dedede;
+$background-color2-light: #00000005;
+$background-secundary-color-light: #4f5053;
+$background-hover-color-light: #e0e0e0;
+$prymary-hover-color-light: #d0d0d0;
+$primary-text-color-light: #7f7f7f;
+$paragraph-primary-color-light: #333;
+$image-filter-light: invert(0);
+
+// Variáveis de Tema Escuro
+$border-color: #e5e7eb29;
+$primary-border-value: 1px solid $border-color;
+$first-color: #94806b;
+$text-color-black: #292623;
+$paragrafy-color: #9d9d9d;
+$background-info-projects: #222;
+
+$background-color: #000;
+$background-color2: #ffffff05;
+$background-secundary-color: #121212;
+$background-hover-color: #09090b;
+$prymary-hover-color: #27272a;
+$primary-text-color: #fafafa;
+$paragraph-primary-color: #b2b2b6;
+$image-filter: invert(1);
+
+// Mixins para temas
+@mixin light-theme {
+    --border-color: #{$border-color-light};
+    --primary-border-value: #{$primary-border-value};
+    --first-color: #{$first-color-light};
+    --text-color-black: #{$text-color-black-light};
+    --paragrafy-color: #{$paragrafy-color-light};
+    --background-info-projects: #{$background-info-projects-light};
+    --background-color: #{$background-color-light};
+    --background-color2: #{$background-color2-light};
+    --background-secundary-color: #{$background-secundary-color-light};
+    --background-hover-color: #{$background-hover-color-light};
+    --prymary-hover-color: #{$prymary-hover-color-light};
+    --primary-text-color: #{$primary-text-color-light};
+    --paragraph-primary-color: #{$paragraph-primary-color-light};
+    --image-filter: #{$image-filter-light};
+}
+
+@mixin dark-theme {
+    --border-color: #{$border-color};
+    --primary-border-value: #{$primary-border-value};
+    --first-color: #{$first-color};
+    --text-color-black: #{$text-color-black};
+    --paragrafy-color: #{$paragrafy-color};
+    --background-info-projects: #{$background-info-projects};
+    --background-color: #{$background-color};
+    --background-color2: #{$background-color2};
+    --background-secundary-color: #{$background-secundary-color};
+    --background-hover-color: #{$background-hover-color};
+    --prymary-hover-color: #{$prymary-hover-color};
+    --primary-text-color: #{$primary-text-color};
+    --paragraph-primary-color: #{$paragraph-primary-color};
+    --image-filter: #{$image-filter};
+}
+
+// Aplicar os temas
+body {
+    &.light {
+        @include light-theme;
+    }
+    &.dark {
+        @include dark-theme;
+    }
+}
+
+// body.ligth {
+//     $color-brand-secundary: #706d7e;
+//     $box-shadow: #ffffff33;
+//     $paragraph-primary-color: #a1a1aa;
+// }

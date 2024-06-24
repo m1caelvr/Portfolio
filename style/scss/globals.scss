@@ -1,62 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import 'colorMode';
 
 :root {
   font-size: 62.5%;
   --viewport-padding: 15vw;
 }
-
-/* $background-secundary-color: #09090b; */
-$primary-family-font: "Manrope", sans-serif;
-$transition-outline-color: .15s ease;
-$transition-primary: .3s ease;
-$transition-outline: .3s ease;
-$transition-button: .25s ease;
-$delay: 3.8s;
-$viewport-padding: 15vw;
-$border-color: #e5e7eb29;
-$primary-border-value: 1px solid $border-color;
-$h1-font-defalt: 4rem;
-$paragraph-font-defalt: 16px;
-
-$first-color: hsl(30, 16%, 50%);
-$text-color-black: hsl(30, 8%, 15%);
-$small-font-size: 1.4rem;
-$paragrafy-color: rgb(157, 157, 157);
-$time-animation: .85s;
-$background-info-projects: #222;
-
-$background-color: #000;
-$background-color2: #fafafa05;
-$background-color-hover: #050505;
-$background-secundary-color: #121212;
-$background-hover-color: #09090b;
-$box-shadow: #ffffff33;
-$prymary-hover-color: #27272a;
-$primary-text-color: #fafafa;
-$secundary-text-color: #b2b2b6;
-$paragraph-primary-color: #b2b2b6;
-
-// body.dark {
-// }
-
-// body.ligth {
-//   $color-brand-primary: #503f9d;
-//   $color-brand-secundary: #706d7e;
-//   $color-brand-accent: #fb6f3c;
-//   $color-brand-accent-secundary: #fff4f0;
-//   $color-brand-accent-bg: #fff6eb;
-
-//   $background-color: #fafafa;
-//   $background-color2: #fff6eb05;
-//   $background-color-hover: #fb6f3c;
-//   $background-secundary-color: #fb6f3c;
-//   $background-hover-color: #09090b;
-//   $box-shadow: #ffffff33;
-//   $prymary-hover-color: #503f9d20;
-//   $primary-text-color: #503f9d;
-//   $secundary-text-color: #fb6f3c;
-//   $paragraph-primary-color: #a1a1aa;
-// }
 
 * {
   padding: 0;

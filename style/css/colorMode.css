@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 body.light {
   --border-color: #e5e7eb;
   --primary-border-value: 1px solid rgba(229, 231, 235, 0.1607843137);
@@ -32,30 +31,4 @@ body.dark {
   --image-filter: invert(1);
 }
 
-:root {
-  font-size: 62.5%;
-  --viewport-padding: 15vw;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style-type: none;
-  line-height: 1;
-  font-family: "Manrope", sans-serif;
-}
-
-html, html * {
-  scroll-behavior: auto !important;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-/*# sourceMappingURL=globals.css.map */
+/*# sourceMappingURL=colorMode.css.map */

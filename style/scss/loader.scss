@@ -1,8 +1,8 @@
-@import 'globals';
+@import 'colorMode';
 
 h1.tittle { display: none; }
 .loader[loading] {
-    background-color: $background-color;
+    background-color: var(--background-color);
     position: fixed;
     z-index: 15;
     inset: 0;
@@ -49,7 +49,7 @@ h1.tittle { display: none; }
             animation-delay: $delay;
 
             span {
-                background-color: $primary-text-color;
+                background-color: var(--primary-text-color);
                 box-shadow: 0 0 1rem #fff, 0 0 .4rem #ffffff7b;
                 border-radius: 999rem;
                 display: block;
