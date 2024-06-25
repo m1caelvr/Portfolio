@@ -4,14 +4,14 @@ body.light {
   --first-color: #94806b;
   --text-color-black: #292623;
   --paragrafy-color: #9d9d9d;
-  --background-info-projects: #fff;
+  --background-info-projects: #c7c7c7;
   --background-color: #dedede;
   --background-color2: rgba(0, 0, 0, 0.0196078431);
   --background-secundary-color: #4f5053;
   --background-hover-color: #e0e0e0;
   --prymary-hover-color: #d0d0d0;
   --primary-text-color: #7f7f7f;
-  --paragraph-primary-color: #333;
+  --paragraph-primary-color: #9d9d9d;
   --image-filter: invert(0);
 }
 body.dark {
