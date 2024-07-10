@@ -145,12 +145,21 @@ function createCursor() {
 }
 
 function cursorInProject(elements, cursor, className) {
+    let timeoutId;
+
     elements.forEach(function(element) {
         element.addEventListener('mouseenter', function() {
+            clearTimeout(timeoutId);
+
             cursor.classList.add(className);
+
+            timeoutId = setTimeout(function() {
+                cursor.classList.remove(className);
+            }, 2000);
         });
 
         element.addEventListener('mouseleave', function() {
+            clearTimeout(timeoutId);
             cursor.classList.remove(className);
         });
     });
