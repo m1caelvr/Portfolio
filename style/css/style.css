@@ -863,7 +863,7 @@ main > section {
 }
 @media screen and (max-width: 768px) {
   .area-projects:has(:is(.end, .center)) + #projects-list > article {
-    min-width: calc((85vw - 2rem) / 2);
+    min-width: calc(85vw - 2rem);
   }
   .section-main h1,
   .tittle-landing,
@@ -932,9 +932,6 @@ main > section {
 @media screen and (max-width: 470px) {
   :root {
     --projects-grid: 1fr !important;
-  }
-  .area-projects:has(:is(.end, .center)) + #projects-list > article {
-    min-width: 85vw;
   }
   .section-main h1,
   .tittle-landing,

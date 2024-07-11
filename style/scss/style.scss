@@ -969,7 +969,7 @@ main {
   $paragraph-font-defalt: 1.5rem;
 
   .area-projects:has(:is(.end, .center)) + #projects-list > article {
-    min-width: calc((100vw - $viewport-padding - 2rem)/2);
+    min-width: calc(100vw - $viewport-padding - 2rem);
   }
 
   .section-main h1,
@@ -1052,9 +1052,9 @@ main {
   }
   $h1-font-defalt: 2.2rem;
 
-  .area-projects:has(:is(.end, .center)) + #projects-list > article {
-    min-width: calc(100vw - $viewport-padding);
-  }
+  // .area-projects:has(:is(.end, .center)) + #projects-list > article {
+  //   min-width: calc(100vw - $viewport-padding);
+  // }
 
   .section-main h1,
   .tittle-landing,
