@@ -9,6 +9,13 @@
             drop-shadow(0 0 .2rem #000)
             drop-shadow(0 0 .3rem #0000007c);
     }
+    &.flet{
+        filter:
+            invert(1)
+            saturate(0)
+            drop-shadow(0 0 .2rem #000)
+            drop-shadow(0 0 .3rem #0000007c);
+    }
 }
 
 .user-select {

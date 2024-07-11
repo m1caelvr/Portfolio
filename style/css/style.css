@@ -489,22 +489,21 @@ main > section {
 .section-main section.projects .area-projects .grid-indicator:hover {
   width: 94.12px;
 }
-.section-main section.projects body:has(.grid-indicator.center) #projects-list > article {
-  background-color: red !important;
-}
 .section-main section.projects .projects-list {
   grid-template-columns: var(--projects-grid);
   overflow: auto hidden;
+  scroll-snap-type: x mandatory;
   margin-top: 2rem;
   display: grid;
   gap: 2rem;
 }
 .section-main section.projects .projects-list > article {
+  scroll-snap-align: center;
   padding: 2.5rem;
   display: grid;
-  grid-template-rows: max-content 1fr max-content;
   gap: 2.5rem;
   border-radius: 1.5rem;
+  grid-template-rows: max-content 1fr max-content;
   border: var(--primary-border-value);
   background-color: var(--background-secundary-color);
 }
@@ -830,7 +829,7 @@ main > section {
 }
 @media screen and (max-width: 1050px) {
   :root {
-    --projects-grid: repeat(2, 1fr);
+    --projects-grid: repeat(2, 1fr) !important;
   }
   .tittle-landing {
     min-width: 100% !important;
@@ -840,12 +839,6 @@ main > section {
   }
   main > * {
     padding-inline: 7vw;
-  }
-  .grid-indicator {
-    justify-content: center !important;
-  }
-  .area-projects:has(.end) ~ .projects-list .button-project {
-    flex-direction: column;
   }
   section.about {
     align-items: start !important;
@@ -861,7 +854,7 @@ main > section {
     display: none;
   }
   section.projects .projects-list {
-    grid-template-columns: var(--projects-grid) !important;
+    grid-template-columns: var(--projects-grid);
   }
   section.contact {
     margin-block: 5rem;
@@ -869,6 +862,9 @@ main > section {
   }
 }
 @media screen and (max-width: 768px) {
+  .area-projects:has(:is(.end, .center)) + #projects-list > article {
+    min-width: calc((85vw - 2rem) / 2);
+  }
   .section-main h1,
   .tittle-landing,
   .about-card article > h1 {
@@ -935,10 +931,10 @@ main > section {
 }
 @media screen and (max-width: 470px) {
   :root {
-    --projects-grid: 1fr;
+    --projects-grid: 1fr !important;
   }
-  .grid-indicator {
-    justify-content: start !important;
+  .area-projects:has(:is(.end, .center)) + #projects-list > article {
+    min-width: 85vw;
   }
   .section-main h1,
   .tittle-landing,
@@ -949,7 +945,7 @@ main > section {
     font-size: 1.54rem;
   }
   section.projects .projects-list {
-    grid-template-columns: var(--projects-grid) !important;
+    grid-template-columns: var(--projects-grid);
   }
 }
 @media screen and (max-height: 700px) {

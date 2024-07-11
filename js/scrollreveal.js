@@ -25,7 +25,7 @@ const sectionsToReveal = [
     { selector: '.scale-reveal-footer', delay: 100, threshold: 0 },
     { selector: '.scale-reveal', delay: 200, threshold: 0 },
     { selector: '.skills-reveal', delay: 100, threshold: 0 },
-    { selector: '.itens-section', delay: 100, threshold: 0.3 }
+    { selector: '.itens-section', delay: 100, threshold: 0.15 }
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         for (const mutation of mutationsList) {
             if (mutation.type === 'attributes' && mutation.attributeName === 'loading') {
                 if (!loader.hasAttribute('loading')) {
-                    // console.log('O atributo loading foi removido.');
                     sectionsToReveal.forEach(section => {
                         const elements = document.querySelectorAll(section.selector);
                         addIntersectionObserver(elements, section.delay, section.threshold);

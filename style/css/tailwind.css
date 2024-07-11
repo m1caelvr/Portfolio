@@ -37,6 +37,9 @@ body.dark {
 .color-icon-primary.shadow {
   filter: invert(1) drop-shadow(0 0 0.2rem #000) drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.4862745098));
 }
+.color-icon-primary.flet {
+  filter: invert(1) saturate(0) drop-shadow(0 0 0.2rem #000) drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.4862745098));
+}
 
 .user-select {
   -webkit-user-select: none;

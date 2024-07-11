@@ -528,13 +528,10 @@ main {
       }
     }
 
-    body:has(.grid-indicator.center) #projects-list > article {
-      background-color: red !important;
-    }
-
     .projects-list {
       grid-template-columns: var(--projects-grid);
       overflow: auto hidden;
+      scroll-snap-type: x mandatory;
       margin-top: 2rem;
       display: grid;
       gap: 2rem;
@@ -542,11 +539,12 @@ main {
       > article {
         $gap: 2.5rem;
         $border-radius: 1.5rem;
+        scroll-snap-align: center;
         padding: 2.5rem;
         display: grid;
-        grid-template-rows: max-content 1fr max-content;
         gap: $gap;
         border-radius: $border-radius;
+        grid-template-rows: max-content 1fr max-content;
         border: var(--primary-border-value);
         background-color: var(--background-secundary-color);
 
@@ -817,7 +815,6 @@ main {
     }
   }
 }
-  
 
 /* @keyframes loading-title {
   to {
@@ -914,7 +911,7 @@ main {
 }
 @media screen and (max-width: 1050px) {
   :root {
-    --projects-grid: repeat(2, 1fr);
+    --projects-grid: repeat(2, 1fr) !important;
   }
   $viewport-padding: 7vw;
   
@@ -932,13 +929,13 @@ main {
     }
   }
 
-  .grid-indicator {
-    justify-content: center !important;
-  }
+  // .grid-indicator {
+  //   justify-content: center !important;
+  // }
   
-  .area-projects:has(.end) ~ .projects-list .button-project {
-    flex-direction: column;
-  }
+  // .area-projects:has(.end) ~ .projects-list .button-project {
+  //   flex-direction: column;
+  // }
 
   section.about {
     align-items: start !important;
@@ -958,7 +955,7 @@ main {
   
   section.projects {
     .projects-list {
-      grid-template-columns: var(--projects-grid) !important;
+      grid-template-columns: var(--projects-grid);
     }
   }
 
@@ -970,6 +967,10 @@ main {
 @media screen and (max-width: 768px) {
   $h1-font-defalt: 3.7rem !important;
   $paragraph-font-defalt: 1.5rem;
+
+  .area-projects:has(:is(.end, .center)) + #projects-list > article {
+    min-width: calc((100vw - $viewport-padding - 2rem)/2);
+  }
 
   .section-main h1,
   .tittle-landing,
@@ -1047,12 +1048,12 @@ main {
 
 @media screen and (max-width: 470px) {
   :root {
-    --projects-grid: 1fr;
+    --projects-grid: 1fr !important;
   }
   $h1-font-defalt: 2.2rem;
 
-  .grid-indicator {
-    justify-content: start !important;
+  .area-projects:has(:is(.end, .center)) + #projects-list > article {
+    min-width: calc(100vw - $viewport-padding);
   }
 
   .section-main h1,
@@ -1066,7 +1067,7 @@ main {
   }
   section.projects {
     .projects-list {
-      grid-template-columns: var(--projects-grid) !important;
+      grid-template-columns: var(--projects-grid);
     }
   }
 }

@@ -92,25 +92,44 @@ const indicators = gridIndicator.querySelectorAll('input[name="indicator"]');
 const root = document.documentElement;
 
 document.addEventListener('DOMContentLoaded', function () {
-
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('change', () => {
-            gridIndicator.classList.remove('start', 'center', 'end');
-            if (index === 0) {
-                gridIndicator.classList.add('start');
-                root.style.setProperty('--projects-grid', 'repeat(1, 1fr)');
-            } else if (index === 1) {
-                gridIndicator.classList.add('center');
-                root.style.setProperty('--projects-grid', 'repeat(2, 1fr)');
-            } else if (index === 2) {
-                gridIndicator.classList.add('end');
-                root.style.setProperty('--projects-grid', 'repeat(3, 1fr)');
-            }
-
+            updateGridIndicatorClass(index);
             heigthProjectList(indicator);
         });
     });
+
+    adjustGridIndicatorJustifyContent();
 });
+
+window.addEventListener('resize', adjustGridIndicatorJustifyContent);
+
+function updateGridIndicatorClass(index) {
+    gridIndicator.classList.remove('start', 'center', 'end');
+
+    if (index === 0) {
+        gridIndicator.classList.add('start');
+        projectsList.style.gridTemplateColumns = 'repeat(1, 1fr)';
+    } else if (index === 1) {
+        gridIndicator.classList.add('center');
+        projectsList.style.gridTemplateColumns = 'repeat(2, 1fr)';
+    } else if (index === 2) {
+        gridIndicator.classList.add('end');
+        projectsList.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    }
+}
+
+function adjustGridIndicatorJustifyContent() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 470) {
+        gridIndicator.classList.add('start');
+    } else if (screenWidth <= 1050) {
+        gridIndicator.classList.add('center');
+    } else {
+        gridIndicator.classList.add('end');
+    }
+}
 
 function heigthProjectList(el) {
     if (projectsList.children.length > 0) {
