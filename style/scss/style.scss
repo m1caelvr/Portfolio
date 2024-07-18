@@ -528,6 +528,8 @@ main {
       }
     }
 
+    .grid-indicator-numbers {display: none;}
+
     .projects-list {
       grid-template-columns: var(--projects-grid);
       overflow: auto hidden;
@@ -968,8 +970,19 @@ main {
   $h1-font-defalt: 3.7rem !important;
   $paragraph-font-defalt: 1.5rem;
 
-  .area-projects:has(:is(.end, .center)) + #projects-list > article {
-    min-width: calc(100vw - $viewport-padding - 2rem);
+  .grid-indicator-numbers {
+    display: inline !important;
+    cursor: default;
+    width: 100%;
+    
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .area-projects:has(:is(.center, .end)) ~ #projects-list > article {
+    min-width: calc(100vw - $viewport-padding);
   }
 
   .section-main h1,

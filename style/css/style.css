@@ -489,6 +489,9 @@ main > section {
 .section-main section.projects .area-projects .grid-indicator:hover {
   width: 94.12px;
 }
+.section-main section.projects .grid-indicator-numbers {
+  display: none;
+}
 .section-main section.projects .projects-list {
   grid-template-columns: var(--projects-grid);
   overflow: auto hidden;
@@ -862,8 +865,17 @@ main > section {
   }
 }
 @media screen and (max-width: 768px) {
-  .area-projects:has(:is(.end, .center)) + #projects-list > article {
-    min-width: calc(85vw - 2rem);
+  .grid-indicator-numbers {
+    display: inline !important;
+    cursor: default;
+    width: 100%;
+  }
+  .grid-indicator-numbers ul {
+    display: flex;
+    justify-content: center;
+  }
+  .area-projects:has(:is(.center, .end)) ~ #projects-list > article {
+    min-width: 85vw;
   }
   .section-main h1,
   .tittle-landing,

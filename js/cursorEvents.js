@@ -91,18 +91,28 @@ const gridIndicator = document.getElementById('grid-indicator');
 const indicators = gridIndicator.querySelectorAll('input[name="indicator"]');
 const root = document.documentElement;
 
+const currentPageSpan = document.querySelector('.current-page');
+const totalPagesSpan = document.querySelector('.total-pages');
+
+TotalPagesGlobal = 1
+
 document.addEventListener('DOMContentLoaded', function () {
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('change', () => {
             updateGridIndicatorClass(index);
-            heigthProjectList(indicator);
+            heightProjectList(indicator);
+            updateGridIndicatorNumbersTotalPages(index + 1);
+            TotalPagesGlobal = index + 1
         });
     });
 
-    adjustGridIndicatorJustifyContent();
+    adjustGridIndicator();
+    updateGridIndicatorNumbersTotalPages(1);
+
+    setupIntersectionObserver();
 });
 
-window.addEventListener('resize', adjustGridIndicatorJustifyContent);
+window.addEventListener('resize', adjustGridIndicator);
 
 function updateGridIndicatorClass(index) {
     gridIndicator.classList.remove('start', 'center', 'end');
@@ -119,9 +129,11 @@ function updateGridIndicatorClass(index) {
     }
 }
 
-function adjustGridIndicatorJustifyContent() {
+function adjustGridIndicator() {
     const screenWidth = window.innerWidth;
 
+    gridIndicator.classList.remove('start', 'center', 'end');
+    
     if (screenWidth <= 470) {
         gridIndicator.classList.add('start');
     } else if (screenWidth <= 1050) {
@@ -131,7 +143,61 @@ function adjustGridIndicatorJustifyContent() {
     }
 }
 
-function heigthProjectList(el) {
+function updateGridIndicatorNumbersTotalPages(totalPages) {
+    totalPagesSpan.textContent = totalPages;
+}
+function updateGridIndicatorNumbersCurrentPage(currentPage) {
+    currentPageSpan.textContent = currentPage;
+}
+
+function setupIntersectionObserver() {
+    const options = {
+        root: projectsList,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const articlesPerRow = getArticlesPerRow();
+                const index = Array.from(projectsList.children).indexOf(entry.target) + 1;
+                const asides = document.querySelectorAll('#projects-list > article').length;
+                
+                let currentPage = Math.ceil(index / articlesPerRow);
+                currentPage -= Math.floor(asides / 2);
+
+                console.log("TotalPagesGlobal: " + TotalPagesGlobal);
+
+                if (TotalPagesGlobal == 1 || TotalPagesGlobal == 2){
+                    currentPage -= 1;
+                }
+
+                if (TotalPagesGlobal == 1){
+                    currentPage = 1;
+                }
+
+                updateGridIndicatorNumbersCurrentPage(currentPage);
+            }
+        });
+    }, options);
+
+    projectsList.querySelectorAll('#projects-list > article').forEach(article => {
+        observer.observe(article);
+    });
+}
+
+function getArticlesPerRow() {
+    const testArticle = projectsList.querySelector('#projects-list > article');
+    if (!testArticle) return 1;
+
+    const articleWidth = testArticle.offsetWidth;
+    const listWidth = projectsList.offsetWidth;
+
+    return Math.floor(listWidth / articleWidth);
+}
+
+function heightProjectList(el) {
     if (projectsList.children.length > 0) {
         const firstItem = projectsList.querySelector('#projects-list > *:first-child');
         const itemHeight = firstItem.getBoundingClientRect().height;
