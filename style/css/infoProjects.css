@@ -185,6 +185,10 @@ body.dark {
   position: relative;
   background-position: center top;
 }
+.modal-content-inner .highlight-window h1 {
+  text-align: center;
+  align-self: flex-end;
+}
 .modal-content-inner .purchase-info {
   display: flex;
 }
@@ -250,7 +254,7 @@ body.dark {
   transition: background 0.5s ease;
   padding: 0.3rem;
   border-radius: 0.45rem;
-  filter: opacity(0.85) invert(1);
+  filter: opacity(0.85) invert(1) saturate(0) contrast(80%);
 }
 .modal-content-inner .divider {
   width: 85%;

@@ -323,6 +323,9 @@ header.header-mobile .about-li-hover-area ul {
   li.about_li_button[extend] img {
     transform: rotate(180deg);
   }
+  .line, .see-shortcuts {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

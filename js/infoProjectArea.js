@@ -23,6 +23,7 @@ function openModal(project) {
     const modalContentInner = document.getElementById('modal-content-inner');
 
     const createSlide = (media) => {
+        let imgSrc;
         if (media.capture_of === 'desktop') {
             imgSrc = './svg/desktop.svg';
         } else if (media.capture_of === 'mobile') {
@@ -63,14 +64,25 @@ function openModal(project) {
                 </div>`;
     };
 
-    const slides = project.media.map(createSlide).join('');
-    const thumbnails = project.media.map(createThumbnail).join('');
+    let slides = '';
+    let thumbnails = '';
+    if (project.media && project.media.length > 0) {
+        slides = project.media.map(createSlide).join('');
+        thumbnails = project.media.map(createThumbnail).join('');
+    } else {
+        slides = '<h1>Sem pré-visualização disponível.</h1>';
+    }
+
+    const technologies = project.tecs.map(tec => 
+        `<img src="./svg/logos-skills/${tec}.svg" alt="${tec}" class="utilited-skills">`
+    ).join('');
 
     modalContentInner.innerHTML = `
         <span class="close-btn">^</span>
         <div class="mophirsm-area">
             <div class='highlight-window' id='product-img'>
                 <div class="gallery">
+                    ${slides.length > 0 ? `
                     <div class="swiper gallery-cards">
                         <div class="swiper-wrapper">
                             ${slides}
@@ -91,7 +103,7 @@ function openModal(project) {
                         <div class="swiper-button-prev">
                             <i class="ri-arrow-left-line"></i>
                         </div>
-                    </div>
+                    </div>` : '<h1>Sem pré-visualização disponível.</h1>'}
                 </div>
             </div>
             <div class='window'>
@@ -107,9 +119,7 @@ function openModal(project) {
                     <div class='size-picker'>
                         <h2>Tecnologias utilizadas:</h2>
                         <div class='range-picker' id='range-picker'>
-                            <img src="./svg/logos-skills/html.svg" alt="" class="utilited-skills">
-                            <img src="./svg/logos-skills/css.svg" alt="" class="utilited-skills">
-                            <img src="./svg/logos-skills/js.svg" alt="" class="utilited-skills">
+                            ${technologies}
                         </div>
                     </div>
     
@@ -124,34 +134,36 @@ function openModal(project) {
             </div>
         </div>
     `;
-
+    
     modal.classList.add('show');
     document.querySelector('.close-btn').addEventListener('click', closeModal);
 
-    let swiperCards = new Swiper(".gallery-cards", {
-        loop: true,
-        loopedSlides: project.media.length,
-        effect: "fade"
-    });
-    
-    let swiperThumbs = new Swiper(".gallery-thumbs", {
-        loop: true,
-        loopedSlides: project.media.length,
-        slidesPerView: 3,
-        centeredSlides: true,
-        slideToClickedSlide: true,
-    
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction"
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        }
-    });
-    
-    swiperThumbs.controller.control = swiperCards;
+    if (project.media && project.media.length > 0) {
+        let swiperCards = new Swiper(".gallery-cards", {
+            loop: true,
+            loopedSlides: project.media.length,
+            effect: "fade"
+        });
+        
+        let swiperThumbs = new Swiper(".gallery-thumbs", {
+            loop: true,
+            loopedSlides: project.media.length,
+            slidesPerView: 3,
+            centeredSlides: true,
+            slideToClickedSlide: true,
+        
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction"
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+        
+        swiperThumbs.controller.control = swiperCards;
+    }
 }
 
 function closeModal() {

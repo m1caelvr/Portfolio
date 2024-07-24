@@ -168,6 +168,11 @@ $quantity: 2;
     z-index: 10;
     position: relative;
     background-position: center top;
+
+    h1 {
+      text-align: center;
+      align-self: flex-end;
+    }
   }
 
   .purchase-info {
@@ -240,7 +245,7 @@ $quantity: 2;
         transition: background 0.5s ease;
         padding: .3rem;
         border-radius: .45rem;
-        filter: opacity(.85) invert(1);
+        filter: opacity(.85) invert(1) saturate(0) contrast(80%);
       }
     }
 

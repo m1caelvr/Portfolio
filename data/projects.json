@@ -1,11 +1,43 @@
 [
     {
+        "id": "cleansheets",
+        "title": "Cleansheets",
+        "subTitle": "App editor de planilhas",
+        "description": "Projeto construído para uma empresa no Recife buscando solucionar um problema diário com as planilhas e o alto número de dados.",
+        "deploy": "",
+        "github": "http://github.com/m1caelvr/GRshop",
+        "tecs":["python", "flet"],
+        "media": [
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CleanSheets/main/imagens_project/Capturar.PNG",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CleanSheets/main/imagens_project/Capturar2.PNG",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CleanSheets/main/imagens_project/Capturar3.PNG",
+                "capture_of": "desktop"
+            },
+            {
+                "type": "image",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CleanSheets/main/imagens_project/Capturar4.PNG",
+                "capture_of": "desktop"
+            }
+        ]
+    },
+    {
         "id": "grshop",
         "title": "GRshop",
         "subTitle": "Modelo E-commerce",
         "description": "Projeto freelancer de um modelo de E-commerce WEB de roupas",
         "deploy": "https://grcloset.netlify.app",
         "github": "http://github.com/m1caelvr/GRshop",
+        "tecs":["html", "css", "js"],
         "media": [
             {
                 "type": "image",
@@ -51,6 +83,7 @@
         "description": "Projeto pessoal com base no estudo de IMCs ideais para cada pessoa.",
         "deploy": "weightcalculator-webmind.netlify.app",
         "github": "https://github.com/m1caelvr/pesoIdeal",
+        "tecs":["html", "css", "js"],
         "media": [
             {
                 "type": "image",
@@ -76,46 +109,41 @@
         "description": "Agenda WEB criada para Escola Técnica Gil Rodrigues [Jaboatão - PE]",
         "deploy": "",
         "github": "https://github.com/m1caelvr/CalendSchool",
+        "tecs":["html", "css", "js", "php", "scrum"],
         "media": [
             {
-                "type": "video",
-                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/video.mp4",
-                "video_svg": "./svg/video.svg",
-                "capture_of": ""
-            },
-            {
                 "type": "image",
-                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/a.png",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/imgProject/d.png",
                 "capture_of": "desktop"
             },
             {
                 "type": "image",
-                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/b.png",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/imgProject/a.png",
                 "capture_of": "desktop"
             },
             {
                 "type": "image",
-                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/c.png",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/imgProject/b.png",
                 "capture_of": "desktop"
             },
             {
                 "type": "image",
-                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/d.png",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/imgProject/c.png",
                 "capture_of": "desktop"
             },
             {
                 "type": "image",
-                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/e.png",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/imgProject/e.png",
                 "capture_of": "desktop"
             },
             {
                 "type": "image",
-                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/f.png",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/imgProject/f.png",
                 "capture_of": "mobile"
             },
             {
                 "type": "image",
-                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/CalendSchool/imgProject/g.png",
+                "src": "https://raw.githubusercontent.com/m1caelvr/CalendSchool/main/imgProject/g.png",
                 "capture_of": "mobile"
             }
         ]
@@ -127,6 +155,7 @@
         "description": "Projeto front-end do #boracodar da ROCKETSEAT",
         "deploy": "",
         "github": "https://github.com/m1caelvr/ChatDesign",
+        "tecs":["html", "css"],
         "media": [
             {
                 "type": "image",
@@ -147,12 +176,7 @@
         "description": "Framework CSS feito com JS.",
         "deploy": "",
         "github": "https://github.com/m1caelvr/Aesthetkit",
-        "media": [
-            {
-                "type": "",
-                "src": "",
-                "capture_of": ""
-            }
-        ]
+        "tecs":["js"],
+        "media": ""
     }
 ]
