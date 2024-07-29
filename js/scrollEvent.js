@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const sectionId = this.getAttribute('data-section');
       const section = document.getElementById(sectionId);
 
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
       setTimeout(() => {
         if (svg.id === 'chevronIcon') {
@@ -191,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
           sectionAbout.scrollIntoView({ behavior: 'smooth' });
         }
       }, 200);
-
     });
   });
 
